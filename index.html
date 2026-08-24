@@ -1583,19 +1583,42 @@ button {
 }
 
 /* ============================================================
-   RESPONSIVE RECOMPOSITION (Breakpoints: 1200 / 768 / 420 / 390)
+   RESPONSIVE RECOMPOSITION & MOBILE ARCHITECTURE
+   Breakpoints: Desktop (1200px) / Tablet (1024px) / Phablet (768px) / Mobile (480px) / Micro (360px)
    ============================================================ */
+
+/* Mobile view baseline resets */
+html, body {
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
+@media (max-width: 1200px) {
+  .hero-grid-layout {
+    gap: 36px;
+  }
+  .display-title {
+    font-size: 42px;
+  }
+  .makers-tier-sectoral {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
 @media (max-width: 1024px) {
+  .section {
+    padding: 72px 0;
+  }
   .hero-grid-layout {
     grid-template-columns: 1fr;
-    gap: 40px;
+    gap: 36px;
     text-align: center;
   }
   .hero-content {
     align-items: center;
   }
   .shuffler-box {
-    min-height: 56px;
+    min-height: 52px;
   }
   .hero-meta-line {
     border-left: none;
@@ -1604,9 +1627,19 @@ button {
   .hero-actions {
     justify-content: center;
   }
-  .centenary-grid, .why-mp-feature-board, .venue-rsvp-split, .footer-top-grid {
+  .hero-mark-col {
+    order: -1;
+    margin-bottom: -10px;
+  }
+  .theme-logo-img {
+    max-width: min(340px, 75vw);
+  }
+  .centenary-grid, 
+  .why-mp-feature-board, 
+  .venue-rsvp-split, 
+  .footer-top-grid {
     grid-template-columns: 1fr;
-    gap: 40px;
+    gap: 36px;
   }
   .why-mp-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -1615,25 +1648,26 @@ button {
     grid-template-columns: repeat(2, 1fr);
   }
   .makers-tier-sectoral {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
   .format-relay-grid {
     display: flex;
     flex-direction: column;
-    gap: 36px;
+    gap: 32px;
   }
   .relay-stop {
     display: block;
     grid-template-rows: none;
-    padding: 0 0 0 26px;
+    padding: 0 0 0 24px;
     border-left: 2px dashed rgba(255, 255, 255, 0.3);
   }
   .relay-stop-num {
     -webkit-text-stroke-width: 1px;
+    font-size: 48px;
   }
   .relay-stop-minor .relay-stop-num,
   .relay-stop-major .relay-stop-num {
-    font-size: 52px;
+    font-size: 48px;
   }
   .relay-dot-row {
     height: auto;
@@ -1649,11 +1683,14 @@ button {
     margin: 0 0 8px;
   }
   .relay-stop-major .relay-title {
-    font-size: 22px;
+    font-size: 20px;
   }
 }
 
 @media (max-width: 768px) {
+  :root {
+    --nav-h: 56px;
+  }
   .nav-center-links, .nav-rsvp-btn {
     display: none;
   }
@@ -1665,81 +1702,153 @@ button {
   }
   .nav-brand-title {
     font-size: 11px;
+    letter-spacing: 0.02em;
     white-space: nowrap;
   }
+  .nav-brand-logo {
+    height: 30px;
+  }
   .section {
-    padding: 72px 0;
+    padding: 56px 0;
+  }
+  .display-title {
+    font-size: clamp(28px, 6.5vw, 36px);
+  }
+  .lead-serif {
+    font-size: 17px;
+  }
+  .hero-title-main {
+    font-size: clamp(34px, 8.5vw, 48px);
+  }
+  .hero-tagline-primary {
+    font-size: clamp(16px, 4.2vw, 19px);
+  }
+  .hero-countdown-wrapper {
+    width: 100%;
+    max-width: 100%;
+    padding: 14px 10px;
+  }
+  .countdown-digits-grid {
+    gap: 8px;
+  }
+  .cd-unit-box {
+    padding: 10px 4px;
+  }
+  .cd-number {
+    font-size: clamp(22px, 5.5vw, 30px);
+  }
+  .cd-label {
+    font-size: 10px;
   }
   .makers-tier-leadership {
     grid-template-columns: 1fr;
   }
   .makers-tier-sectoral {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
   }
   .agenda-monolith-card {
-    padding: 32px 20px;
+    padding: 24px 16px;
   }
   .agenda-timeline::before {
-    left: 20px;
+    left: 16px;
   }
   .agenda-item {
     grid-template-columns: 1fr;
-    gap: 8px;
-    padding-left: 40px;
+    gap: 6px;
+    padding-left: 36px;
     position: relative;
   }
   .agenda-time {
     text-align: left;
+    font-size: 12px;
   }
   .agenda-bullet {
     position: absolute;
-    left: 14px;
-    top: 20px;
+    left: 10px;
+    top: 18px;
+    width: 12px;
+    height: 12px;
+  }
+  .agenda-bullet::after {
+    width: 4px;
+    height: 4px;
+  }
+  .agenda-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+  .agenda-actions .pill-btn {
+    width: 100%;
+    justify-content: center;
   }
   .form-row {
     grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .form-input, .form-select {
+    font-size: 16px; /* Prevents iOS mobile automatic zoom */
+    min-height: 46px;
   }
   .manifesto-card {
-    padding: 40px 24px;
+    padding: 32px 18px;
+  }
+  .quote-monolith {
+    font-size: 18px;
+  }
+  .stats-bar-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+  .stat-card {
+    padding: 18px 14px;
+  }
+  .stat-big-num {
+    font-size: 32px;
+  }
+  .stat-unit {
+    font-size: 18px;
+  }
+  .rsvp-form-card {
+    padding: 28px 18px;
   }
   .footer-bottom-row {
     flex-direction: column;
     gap: 12px;
     text-align: center;
   }
+  .footer-credo-line {
+    font-size: 20px;
+  }
 }
 
-@media (max-width: 420px) {
+@media (max-width: 480px) {
+  .hero-actions {
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+  }
+  .hero-actions .pill-btn {
+    width: 100%;
+    justify-content: center;
+  }
   .why-mp-grid {
     grid-template-columns: 1fr;
   }
-  .makers-tier-sectoral {
+  .stats-bar-grid {
     grid-template-columns: 1fr;
   }
-  .hero-countdown-wrapper {
-    width: 100%;
-    max-width: none;
-  }
-  .countdown-digits-grid {
-    gap: 8px;
-  }
-  .cd-unit-box {
-    padding: 12px 4px;
-  }
-  .cd-number {
-    font-size: 26px;
-  }
   .theme-logo-img {
-    max-width: 320px;
-  }
-  .display-title {
-    font-size: 32px;
+    max-width: min(280px, 85vw);
   }
   .pill-btn {
     width: 100%;
+    justify-content: center;
   }
-  .rsvp-form-card {
-    padding: 32px 20px;
+  .shuffler-box {
+    font-size: 14px;
+  }
+  .maker-card {
+    padding: 18px 14px;
   }
 }
 
@@ -1767,14 +1876,14 @@ button {
 .rsvp-modal-backdrop {
   position: fixed;
   inset: 0;
-  z-index: 9999;
-  background: rgba(16, 37, 74, 0.72);
+  z-index: 99999;
+  background: rgba(16, 37, 74, 0.75);
   backdrop-filter: blur(12px) saturate(140%);
   -webkit-backdrop-filter: blur(12px) saturate(140%);
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 20px;
+  padding: 16px;
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
@@ -1788,23 +1897,24 @@ button {
 .rsvp-modal-window {
   position: relative;
   width: 100%;
-  max-width: 540px;
-  max-height: 92vh;
+  max-width: min(520px, 94vw);
+  max-height: 90vh;
   overflow-y: auto;
   background: #FFFFFF;
   border-radius: var(--r-xl);
   box-shadow: 0 30px 80px -15px rgba(16, 37, 74, 0.5), 0 0 0 1px rgba(255, 255, 255, 0.8) inset;
-  padding: 36px 32px 28px;
-  transform: translateY(24px) scale(0.95);
+  padding: clamp(24px, 5vw, 36px) clamp(18px, 4vw, 32px);
+  transform: translateY(24px) scale(0.96);
   transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  -webkit-overflow-scrolling: touch;
 }
 .rsvp-modal-backdrop.active .rsvp-modal-window {
   transform: translateY(0) scale(1);
 }
 .modal-close-btn {
   position: absolute;
-  top: 18px;
-  right: 18px;
+  top: 14px;
+  right: 14px;
   width: 36px;
   height: 36px;
   border-radius: 50%;
@@ -1826,11 +1936,11 @@ button {
 .modal-header-brand {
   display: flex;
   align-items: center;
-  gap: 14px;
+  gap: 12px;
   margin-bottom: 12px;
 }
 .modal-brand-logo {
-  height: 36px;
+  height: 34px;
   width: auto;
 }
 .modal-eyebrow {
@@ -1840,13 +1950,13 @@ button {
   font-family: var(--font-d);
   font-size: 11px;
   font-weight: 800;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--cerulean);
 }
 .modal-title {
   font-family: var(--font-d);
-  font-size: 24px;
+  font-size: clamp(20px, 4.5vw, 24px);
   font-weight: 800;
   color: var(--indigo);
   line-height: 1.15;
@@ -1860,10 +1970,11 @@ button {
   background: var(--sky-soft);
   border: 1px solid rgba(69, 168, 220, 0.3);
   border-radius: var(--r-pill);
-  font-size: 12px;
+  font-size: 11.5px;
   font-weight: 600;
   color: var(--cerulean-deep);
-  margin-bottom: 18px;
+  margin-bottom: 16px;
+  line-height: 1.35;
 }
 </style>
 </head>
