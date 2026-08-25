@@ -4,71 +4,60 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
 <meta name="description" content="Makers of Progress — Official Launch of the Indian Chamber of Commerce (ICC) Madhya Pradesh State Chapter. Friday, 4th September 2026, Orion Hall, Brilliant Convention Centre, Indore.">
-<meta name="theme-color" content="#1A1D54">
+<meta name="theme-color" content="#0F1E3D">
 
-<!-- Open Graph / Social Meta -->
+<!-- Social Open Graph -->
 <meta property="og:title" content="Makers of Progress — Launching ICC's MP Chapter">
-<meta property="og:description" content="The Forces Driving Madhya Pradesh Forward. Friday, 4th September 2026 · Orion Hall, Brilliant Convention Centre, Indore.">
+<meta property="og:description" content="The forces driving MP forward. Friday, 4th September 2026 · Orion Hall, Brilliant Convention Centre, Indore.">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Indian Chamber of Commerce — Madhya Pradesh">
-<meta property="og:image" content="assets/theme-logo.jpg">
+<meta property="og:image" content="assets/theme-logo.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Makers of Progress — Launching ICC's MP Chapter">
-<meta name="twitter:description" content="The Forces Driving Madhya Pradesh Forward. Friday, 4th September 2026 · Orion Hall, Brilliant Convention Centre, Indore.">
-<meta name="twitter:image" content="assets/theme-logo.jpg">
+<meta name="twitter:description" content="The forces driving MP forward. Friday, 4th September 2026 · Orion Hall, Brilliant Convention Centre, Indore.">
+<meta name="twitter:image" content="assets/theme-logo.png">
 
 <link rel="icon" type="image/png" href="assets/logos/icc100-blue.png">
 
-<!-- Typography: Archivo (Display) + Inter (Body) + Noto Sans Devanagari (Hindi) -->
+<!-- Google Fonts: Plus Jakarta Sans / Inter / Archivo -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,700&family=Inter:wght@300;400;500;600;700;800&family=Noto+Sans+Devanagari:wght@400;500;600;700;800&family=Source+Serif+4:ital,opsz,wght@1,8..60,400;1,8..60,600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <title>Makers of Progress — Launching ICC's MP Chapter</title>
 
 <style>
 /* ============================================================
-   DESIGN TOKENS · MAKERS OF PROGRESS
-   Strict Chromatic Blue Ladder + Gold Sanctions
+   DESIGN SYSTEM · EXACT MATCH TO CLIENT BENCHMARK
    ============================================================ */
 :root {
-  --sky:            #45A8DC;
-  --sky-soft:       #EBF5FB;
-  --paper:          #F7FAFD;
-  --white:          #FFFFFF;
-  --cerulean:       #1B78BE;
-  --cerulean-deep:  #1565A0;
-  --royal:          #21408E;
-  --indigo:         #1A1D54;
-  --indigo-deep:    #0F1138;
+  --navy-dark:     #0F1E3D;
+  --navy-footer:   #0A1329;
+  --royal-blue:    #16388C;
+  --royal-hover:   #102A6B;
+  --cerulean:      #1B78BE;
+  --cyan-accent:   #00A3E0;
+  --gold-btn:      #E5A83B;
+  --gold-hover:    #D4972A;
   
-  --ink:            #10254A;
-  --ink-muted:      #4A607A;
-  --ink-subtle:     #6E8299;
+  --bg-page:       #FAFCFE;
+  --card-bg:       #FFFFFF;
+  --border-light:  #E5EDF5;
+  --border-mid:    #D0DFEE;
   
-  --hairline-light: rgba(27, 120, 190, 0.12);
-  --hairline-mid:   rgba(27, 120, 190, 0.22);
-  --hairline-dark:  rgba(255, 255, 255, 0.15);
+  --text-dark:     #1E293B;
+  --text-heading:  #0F172A;
+  --text-muted:    #64748B;
+  --text-light:    #94A3B8;
   
-  --gold:           #D4AF37;
-  --gold-glow:      #F5D061;
-  --gold-gradient:  linear-gradient(135deg, #FFD97A 0%, #D4AF37 50%, #AA820A 100%);
+  --font-main:     "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --r-sm:          8px;
+  --r-md:          14px;
+  --r-lg:          20px;
+  --r-pill:        9999px;
   
-  --font-d:         "Archivo", "Noto Sans Devanagari", system-ui, sans-serif;
-  --font-b:         "Inter", "Noto Sans Devanagari", system-ui, sans-serif;
-  --font-serif:     "Source Serif 4", Georgia, serif;
-  
-  --nav-h:          76px;
-  --r-sm:           8px;
-  --r-md:           16px;
-  --r-lg:           24px;
-  --r-xl:           32px;
-  --r-pill:         9999px;
-  
-  --shadow-sm:      0 2px 8px rgba(16, 37, 74, 0.06);
-  --shadow-md:      0 12px 32px -8px rgba(16, 37, 74, 0.12);
-  --shadow-lg:      0 24px 60px -12px rgba(16, 37, 74, 0.22);
-  --shadow-gold:    0 12px 30px -6px rgba(212, 175, 55, 0.45);
+  --shadow-card:   0 8px 30px rgba(15, 30, 61, 0.06);
+  --shadow-hover:  0 14px 40px rgba(15, 30, 61, 0.12);
 }
 
 *, *::before, *::after {
@@ -82,9 +71,9 @@ html {
 }
 
 body {
-  background: var(--paper);
-  color: var(--ink);
-  font-family: var(--font-b);
+  background: var(--bg-page);
+  color: var(--text-dark);
+  font-family: var(--font-main);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
@@ -113,848 +102,696 @@ button {
 }
 
 .container {
-  max-width: 1180px;
+  max-width: 1140px;
   margin: 0 auto;
   padding: 0 clamp(16px, 4vw, 32px);
 }
 
-.section {
-  position: relative;
-  padding: clamp(60px, 8vw, 100px) 0;
-  overflow: hidden;
-}
-
-.section-divider {
-  width: 100%;
-  height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(27, 120, 190, 0.18), transparent);
-}
-
 /* ============================================================
-   TOP INSTITUTIONAL HEADER (Exact match to Mockup)
+   1. INSTITUTIONAL HEADER
    ============================================================ */
-.site-topbar {
-  background: var(--white);
-  border-bottom: 1px solid rgba(27, 120, 190, 0.14);
-  padding: 16px 0 14px;
-  position: relative;
-  z-index: 50;
+.site-header {
+  background: var(--card-bg);
+  padding: 16px 0;
+  border-bottom: 1px solid var(--border-light);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  backdrop-filter: blur(10px);
 }
-.topbar-inner {
+.header-inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
   position: relative;
 }
-.topbar-left {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-.topbar-chapter-tag {
-  font-family: var(--font-d);
-  font-size: 11px;
+.header-brand-tag {
+  font-size: 11.5px;
   font-weight: 800;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--cerulean);
-  background: var(--sky-soft);
-  padding: 5px 12px;
-  border-radius: var(--r-pill);
-  border: 1px solid rgba(27, 120, 190, 0.18);
+  color: var(--royal-blue);
 }
-.topbar-center {
+.header-logo-wrap {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
 }
-.topbar-icc-logo {
-  height: 48px;
+.header-logo-img {
+  height: 42px;
   width: auto;
-  transition: transform 0.25s ease;
 }
-.topbar-icc-logo:hover {
-  transform: scale(1.03);
-}
-.topbar-right {
+.header-right-actions {
   display: flex;
   align-items: center;
   gap: 12px;
 }
-
-/* Language Toggle Switch */
-.lang-switch {
+.lang-toggle-pill {
   display: inline-flex;
   align-items: center;
-  padding: 3px;
-  background: var(--paper);
+  background: #F1F5F9;
   border-radius: var(--r-pill);
-  border: 1px solid rgba(27, 120, 190, 0.18);
+  padding: 3px;
+  border: 1px solid var(--border-light);
 }
-.lang-btn {
-  padding: 6px 14px;
-  font-family: var(--font-d);
-  font-size: 12px;
+.lang-pill-btn {
+  padding: 5px 12px;
+  font-size: 11.5px;
   font-weight: 700;
   border-radius: var(--r-pill);
-  color: var(--ink-muted);
+  color: var(--text-muted);
   transition: all 0.2s ease;
 }
-.lang-btn.active {
-  background: var(--royal);
-  color: var(--white);
-  box-shadow: 0 2px 6px rgba(33, 64, 142, 0.25);
+.lang-pill-btn.active {
+  background: var(--royal-blue);
+  color: #FFFFFF;
 }
 
-/* CTA Pill Buttons */
-.pill-btn {
+.btn-reserve-nav {
   display: inline-flex;
   align-items: center;
-  justify-content: center;
-  gap: 10px;
-  padding: 12px 26px;
-  min-height: 46px;
+  gap: 8px;
+  background: var(--royal-blue);
+  color: #FFFFFF;
+  padding: 9px 20px;
   border-radius: var(--r-pill);
-  font-family: var(--font-d);
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 700;
-  letter-spacing: 0.02em;
-  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
-  white-space: nowrap;
+  transition: all 0.2s ease;
 }
-.pill-btn:hover {
-  transform: translateY(-2px);
-}
-.pill-btn:active {
-  transform: scale(0.98);
-}
-.pill-royal {
-  background: var(--royal);
-  color: var(--white);
-  box-shadow: 0 8px 22px -6px rgba(33, 64, 142, 0.35);
-}
-.pill-royal:hover {
-  background: var(--cerulean);
-  box-shadow: 0 12px 28px -6px rgba(27, 120, 190, 0.45);
-}
-.pill-gold {
-  background: var(--gold-gradient);
-  color: #2A1C04;
-  font-weight: 800;
-  box-shadow: var(--shadow-gold);
-}
-.pill-gold:hover {
-  box-shadow: 0 16px 36px -6px rgba(212, 175, 55, 0.6);
-  filter: brightness(1.05);
-}
-.pill-outline {
-  background: transparent;
-  color: var(--royal);
-  border: 1.5px solid rgba(33, 64, 142, 0.3);
-}
-.pill-outline:hover {
-  background: var(--sky-soft);
-  border-color: var(--royal);
-}
-
-/* Mobile Toggle */
-.mobile-toggle {
-  display: none;
-  width: 38px;
-  height: 38px;
-  border-radius: 8px;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 5px;
-  background: var(--sky-soft);
-  border: 1px solid rgba(27, 120, 190, 0.2);
-}
-.mobile-toggle span {
-  display: block;
-  width: 20px;
-  height: 2px;
-  background: var(--royal);
-  border-radius: 2px;
-  transition: transform 0.25s ease, opacity 0.25s ease;
-}
-.mobile-toggle.open span:nth-child(1) {
-  transform: translateY(7px) rotate(45deg);
-}
-.mobile-toggle.open span:nth-child(2) {
-  opacity: 0;
-}
-.mobile-toggle.open span:nth-child(3) {
-  transform: translateY(-7px) rotate(-45deg);
-}
-
-/* Mobile Drawer */
-.mobile-drawer {
-  position: fixed;
-  top: 77px;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(255, 255, 255, 0.98);
-  backdrop-filter: blur(16px);
-  padding: 32px 24px;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  z-index: 45;
-  transform: translateX(100%);
-  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
-  overflow-y: auto;
-}
-.mobile-drawer.open {
-  transform: translateX(0);
-}
-.mobile-drawer-links {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-}
-.mobile-drawer-link {
-  font-family: var(--font-d);
-  font-size: 20px;
-  font-weight: 700;
-  color: var(--indigo);
-  display: block;
-  padding: 10px 0;
-  border-bottom: 1px solid rgba(27, 120, 190, 0.1);
+.btn-reserve-nav:hover {
+  background: var(--royal-hover);
+  transform: translateY(-1px);
 }
 
 /* ============================================================
-   1. HERO CENTERPIECE (Exact Match to Mockup)
+   2. HERO SPLIT SECTION (Exact Match)
    ============================================================ */
-.sec-hero-client {
-  background: var(--white);
-  padding: clamp(48px, 6vw, 76px) 0 clamp(40px, 5vw, 60px);
-  text-align: center;
+.sec-hero-split {
+  padding: clamp(48px, 6vw, 72px) 0 clamp(32px, 4vw, 48px);
+  background: var(--bg-page);
+  position: relative;
+  overflow: hidden;
+}
+.hero-split-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.95fr;
+  gap: clamp(24px, 4vw, 56px);
+  align-items: center;
   position: relative;
 }
-.hero-center-wrap {
+.hero-typo-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+.hero-display-h1 {
+  font-size: clamp(46px, 7vw, 92px);
+  line-height: 0.95;
+  letter-spacing: -0.04em;
+  margin-bottom: 24px;
+}
+.typo-thin {
+  font-weight: 300;
+  color: #94A3B8;
+  display: block;
+}
+.typo-mid {
+  display: block;
+}
+.typo-mid .t-light {
+  font-weight: 300;
+  color: #94A3B8;
+}
+.typo-mid .t-bold-blue {
+  font-weight: 800;
+  color: var(--royal-blue);
+}
+.typo-heavy-blue {
+  font-weight: 900;
+  color: var(--royal-blue);
+  display: block;
+}
+
+.hero-description-p {
+  font-size: clamp(14px, 1.6vw, 16.5px);
+  line-height: 1.65;
+  color: var(--text-muted);
+  max-width: 480px;
+}
+
+.hero-map-col {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.hero-map-col img {
+  width: 100%;
+  max-width: 480px;
+  height: auto;
+  filter: drop-shadow(0 20px 40px rgba(22, 56, 140, 0.16));
+  animation: floatGentle 6s ease-in-out infinite;
+}
+@keyframes floatGentle {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+.hero-butterfly-accent {
+  position: absolute;
+  left: 0;
+  bottom: -20px;
+  width: 28px;
+  height: 28px;
+  color: #CBD5E1;
+}
+
+/* ============================================================
+   3. FLOATING EVENT INFO & COUNTDOWN CARD
+   ============================================================ */
+.sec-event-card-wrap {
+  padding: 0 0 clamp(40px, 5vw, 60px);
+}
+.event-floating-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border-light);
+  border-radius: var(--r-lg);
+  padding: clamp(24px, 3.5vw, 36px);
+  box-shadow: var(--shadow-card);
   max-width: 820px;
   margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.hero-eyebrow-clean {
-  font-family: var(--font-d);
-  font-size: clamp(12px, 1.8vw, 15px);
-  font-weight: 800;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  color: var(--cerulean);
-  margin-bottom: clamp(24px, 3.5vw, 36px);
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-}
-.hero-eyebrow-clean::before,
-.hero-eyebrow-clean::after {
-  content: "";
-  width: 20px;
-  height: 1.5px;
-  background: var(--cerulean);
-  opacity: 0.6;
-}
-
-.hero-map-artwork {
-  width: 100%;
-  max-width: min(420px, 86vw);
-  height: auto;
-  margin: 0 auto clamp(24px, 3.5vw, 36px);
-  filter: drop-shadow(0 20px 40px rgba(27, 120, 190, 0.18));
-  transition: transform 0.4s ease;
-}
-.hero-map-artwork:hover {
-  transform: scale(1.02);
-}
-
-/* ============================================================
-   FORCES DRIVING MP FORWARD · SIGNATURE CANVAS (Exact Match)
-   ============================================================ */
-.sec-forces-canvas {
-  background: var(--white);
-  padding: clamp(70px, 9vw, 120px) 0;
-  position: relative;
-  overflow: hidden;
-  border-top: 1px solid rgba(27, 120, 190, 0.12);
-  border-bottom: 1px solid rgba(27, 120, 190, 0.12);
-}
-.forces-inner-relative {
-  position: relative;
-  min-height: clamp(340px, 45vw, 480px);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-.forces-bg-silhouette {
-  position: absolute;
-  right: -2%;
-  top: 50%;
-  transform: translateY(-50%);
-  width: min(760px, 78vw);
-  pointer-events: none;
-  z-index: 1;
-  opacity: 0.07;
-}
-.forces-bg-silhouette svg {
-  width: 100%;
-  height: auto;
-  fill: #1B78BE;
-}
-.forces-headline-wrap {
-  position: relative;
-  z-index: 2;
-  max-width: 650px;
-}
-.forces-display-title {
-  font-family: var(--font-d);
-  font-size: clamp(44px, 7.6vw, 96px);
-  line-height: 0.94;
-  letter-spacing: -0.04em;
-  display: flex;
-  flex-direction: column;
-  text-transform: lowercase;
-}
-.f-line-1 {
-  font-weight: 300;
-  color: #94A3B8;
-}
-.f-line-2 {
-  display: flex;
-  align-items: baseline;
-  gap: 0.22em;
-}
-.f-line-2 .f-light {
-  font-weight: 300;
-  color: #94A3B8;
-}
-.f-line-2 .f-bold {
-  font-weight: 700;
-  color: #64748B;
-}
-.f-line-3 {
-  font-weight: 900;
-  color: #334155;
-}
-.forces-copy-wrap {
-  position: relative;
-  z-index: 2;
-  align-self: flex-end;
-  max-width: 440px;
-  margin-top: clamp(32px, 5vw, 60px);
-}
-.forces-paragraph {
-  font-size: clamp(14.5px, 1.8vw, 17px);
-  line-height: 1.65;
-  color: #475569;
-  font-weight: 450;
-}
-.forces-accent-mark {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 34px;
-  height: 34px;
-  color: rgba(27, 120, 190, 0.25);
-  z-index: 2;
-}
-
-/* Event Timing Meta Banner */
-.hero-event-meta-pill {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  padding: 8px 20px;
-  background: var(--sky-soft);
-  border: 1px solid rgba(27, 120, 190, 0.2);
-  border-radius: var(--r-pill);
-  font-size: clamp(12.5px, 1.6vw, 14.5px);
-  font-weight: 600;
-  color: var(--royal);
-  margin-bottom: 28px;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-/* Hero IST Countdown */
-.hero-countdown-box {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: clamp(8px, 2vw, 16px);
-  margin-bottom: 32px;
-  flex-wrap: wrap;
-}
-.hero-cd-unit {
-  background: var(--paper);
-  border: 1px solid rgba(27, 120, 190, 0.18);
-  border-radius: var(--r-md);
-  padding: 12px clamp(14px, 2.5vw, 22px);
   text-align: center;
-  min-width: clamp(68px, 10vw, 84px);
-  box-shadow: var(--shadow-sm);
 }
-.hero-cd-num {
-  font-family: var(--font-d);
-  font-size: clamp(24px, 3.8vw, 34px);
+.event-card-meta-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(12px, 3vw, 28px);
+  font-size: clamp(12.5px, 1.5vw, 14px);
+  font-weight: 600;
+  color: var(--text-muted);
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--border-light);
+  flex-wrap: wrap;
+}
+.meta-item-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.event-countdown-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(16px, 4vw, 48px);
+  padding: 24px 0 28px;
+}
+.countdown-unit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.cd-big-num {
+  font-size: clamp(32px, 4.5vw, 44px);
   font-weight: 800;
-  color: var(--royal);
+  color: var(--navy-dark);
   line-height: 1;
 }
-.hero-cd-lab {
-  font-size: 10.5px;
+.cd-unit-lab {
+  font-size: 11px;
   font-weight: 700;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--ink-muted);
-  margin-top: 4px;
+  color: var(--text-light);
+  margin-top: 6px;
 }
 
-.hero-cta-group {
+.event-card-btn-row {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 14px;
   flex-wrap: wrap;
 }
+.btn-card-royal {
+  background: var(--royal-blue);
+  color: #FFFFFF;
+  padding: 12px 28px;
+  border-radius: var(--r-pill);
+  font-size: 14px;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.2s ease;
+}
+.btn-card-royal:hover {
+  background: var(--royal-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(22, 56, 140, 0.25);
+}
+.btn-card-calendar {
+  background: #FFFFFF;
+  color: var(--navy-dark);
+  border: 1px solid var(--border-mid);
+  padding: 12px 24px;
+  border-radius: var(--r-pill);
+  font-size: 14px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.2s ease;
+}
+.btn-card-calendar:hover {
+  background: #F8FAFC;
+  border-color: #94A3B8;
+}
 
 /* ============================================================
-   2. THREE PILLARS & SHUFFLING TAGLINES (Exact Match to Mockup)
+   4. THREE PILLARS CARD CONTAINER (Exact Match)
    ============================================================ */
-.sec-pillars-client {
-  background: var(--paper);
-  padding: clamp(50px, 6vw, 72px) 0;
-  text-align: center;
-  position: relative;
+.sec-three-pillars {
+  padding: 0 0 clamp(50px, 6vw, 80px);
 }
-.pillars-grid {
+.pillars-white-enclosure {
+  background: var(--card-bg);
+  border: 1px solid var(--border-light);
+  border-radius: var(--r-lg);
+  box-shadow: var(--shadow-card);
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: clamp(20px, 3vw, 40px);
-  max-width: 980px;
-  margin: 0 auto clamp(28px, 4vw, 40px);
+  overflow: hidden;
 }
-.pillar-card {
-  background: var(--white);
-  border: 1px solid rgba(27, 120, 190, 0.12);
-  border-radius: var(--r-lg);
-  padding: clamp(28px, 3.5vw, 36px) clamp(16px, 2.5vw, 24px);
+.pillar-single-item {
+  padding: clamp(28px, 4vw, 44px) clamp(20px, 3vw, 32px);
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  box-shadow: var(--shadow-sm);
-  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
-  cursor: pointer;
   position: relative;
+  transition: background 0.25s ease;
 }
-.pillar-card:hover,
-.pillar-card.active {
-  transform: translateY(-6px);
-  border-color: var(--cerulean);
-  box-shadow: var(--shadow-md), 0 0 0 2px rgba(27, 120, 190, 0.15);
+.pillar-single-item:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 15%;
+  height: 70%;
+  width: 1px;
+  background: var(--border-light);
 }
-
-.pillar-icon-badge {
-  width: clamp(64px, 8vw, 76px);
-  height: clamp(64px, 8vw, 76px);
+.pillar-single-item:hover {
+  background: #F8FAFD;
+}
+.pillar-round-icon {
+  width: 58px;
+  height: 58px;
   border-radius: 50%;
-  background: var(--sky-soft);
-  border: 1.5px solid rgba(27, 120, 190, 0.22);
+  background: #EEF4FA;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--cerulean);
-  margin-bottom: 20px;
-  transition: all 0.35s ease;
+  color: var(--royal-blue);
+  margin-bottom: 18px;
 }
-.pillar-card:hover .pillar-icon-badge,
-.pillar-card.active .pillar-icon-badge {
-  background: var(--cerulean);
-  color: var(--white);
-  transform: scale(1.08);
-}
-.pillar-icon-badge svg {
-  width: 32px;
-  height: 32px;
+.pillar-round-icon svg {
+  width: 26px;
+  height: 26px;
   fill: currentColor;
 }
-
-.pillar-title {
-  font-family: var(--font-d);
-  font-size: clamp(17px, 2.2vw, 20px);
-  font-weight: 700;
-  color: var(--ink);
+.pillar-main-title {
+  font-size: clamp(16px, 2vw, 18.5px);
+  font-weight: 800;
+  color: var(--navy-dark);
   line-height: 1.25;
+  margin-bottom: 8px;
 }
-
-/* Shuffling taglines indicator row */
-.shuffling-indicator-wrap {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 12px;
-}
-.shuffling-subtext {
-  font-size: clamp(13px, 1.8vw, 15px);
-  font-weight: 600;
-  color: var(--cerulean);
-}
-.shuffling-dots {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-.shuffling-dot {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background: rgba(27, 120, 190, 0.25);
-  transition: all 0.3s ease;
-  cursor: pointer;
-}
-.shuffling-dot.active {
-  width: 28px;
-  border-radius: var(--r-pill);
-  background: var(--royal);
-  box-shadow: 0 2px 8px rgba(33, 64, 142, 0.35);
+.pillar-sub-desc {
+  font-size: 13.5px;
+  color: var(--text-muted);
+  line-height: 1.5;
 }
 
 /* ============================================================
-   3. EDITORIAL OVERVIEW & CITYSCAPE (Exact Match to Mockup)
+   5. BUILDING A STRONGER MP (Cityscape + Editorial)
    ============================================================ */
-.sec-editorial-client {
-  background: var(--white);
-  padding: clamp(60px, 7vw, 90px) 0;
+.sec-building-mp {
+  padding: clamp(40px, 6vw, 70px) 0 clamp(60px, 8vw, 90px);
 }
-.editorial-grid {
+.building-grid {
   display: grid;
-  grid-template-columns: 1fr 1.15fr;
-  gap: clamp(32px, 5vw, 64px);
+  grid-template-columns: 1fr 1.05fr;
+  gap: clamp(28px, 5vw, 56px);
   align-items: center;
 }
-.editorial-visual-col {
-  position: relative;
-  border-radius: var(--r-lg);
-  overflow: hidden;
-  box-shadow: var(--shadow-md);
-  border: 1px solid rgba(27, 120, 190, 0.15);
-}
-.editorial-cityscape-img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  display: block;
-  transition: transform 0.6s ease;
-}
-.editorial-visual-col:hover .editorial-cityscape-img {
-  transform: scale(1.03);
-}
-
-.editorial-text-col {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-.editorial-quote-paragraph {
-  font-size: clamp(17px, 2.2vw, 21px);
-  line-height: 1.65;
-  color: var(--ink);
-  position: relative;
-}
-.editorial-quote-paragraph strong {
-  color: var(--royal);
-  font-weight: 800;
-  font-family: var(--font-d);
-}
-
-/* ============================================================
-   4. THE MAKERS COUNCIL (14 Members)
-   ============================================================ */
-.sec-makers {
-  background: linear-gradient(180deg, var(--paper) 0%, #EEF5FC 100%);
-  padding: clamp(60px, 8vw, 100px) 0;
-}
-.makers-head {
-  text-align: center;
-  max-width: 780px;
-  margin: 0 auto clamp(36px, 5vw, 54px);
-}
-.sec-eyebrow {
-  font-family: var(--font-d);
-  font-size: 12px;
-  font-weight: 800;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: var(--cerulean);
-  margin-bottom: 12px;
-  display: inline-block;
-}
-.sec-title {
-  font-family: var(--font-d);
-  font-size: clamp(28px, 4.5vw, 44px);
-  font-weight: 900;
-  color: var(--indigo);
-  letter-spacing: -0.02em;
-  line-height: 1.15;
-  margin-bottom: 14px;
-}
-.sec-lead {
-  font-size: clamp(15px, 1.9vw, 18px);
-  color: var(--ink-muted);
-  line-height: 1.6;
-}
-
-.tier-label-row {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  margin: 0 0 24px;
-  font-family: var(--font-d);
-  font-size: 12px;
-  font-weight: 800;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: var(--royal);
-}
-.tier-label-row::after {
-  content: "";
-  flex: 1;
-  height: 1px;
-  background: rgba(27, 120, 190, 0.2);
-}
-
-.makers-grid-lead {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: clamp(16px, 2.5vw, 24px);
-  margin-bottom: 48px;
-}
-.makers-grid-sect {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: clamp(16px, 2.5vw, 24px);
-}
-
-.maker-card {
-  background: var(--white);
-  border: 1px solid rgba(27, 120, 190, 0.14);
-  border-radius: var(--r-lg);
-  padding: 18px;
-  display: flex;
-  flex-direction: column;
-  box-shadow: var(--shadow-sm);
-  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-}
-.maker-card:hover {
-  transform: translateY(-5px);
-  border-color: var(--cerulean);
-  box-shadow: var(--shadow-md);
-}
-.maker-photo-wrap {
-  width: 100%;
-  aspect-ratio: 1;
+.building-visual-frame {
   border-radius: var(--r-md);
   overflow: hidden;
-  background: var(--sky-soft);
-  margin-bottom: 14px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
 }
-.maker-photo {
+.building-visual-frame img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.building-copy-col {
+  display: flex;
+  flex-direction: column;
+}
+.building-tag-heading {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+.cyan-accent-bar {
+  width: 4px;
+  height: 32px;
+  background: var(--cyan-accent);
+  border-radius: 2px;
+  flex-shrink: 0;
+  margin-top: 4px;
+}
+.building-title-text {
+  font-size: clamp(24px, 3.5vw, 34px);
+  font-weight: 800;
+  color: var(--navy-dark);
+  line-height: 1.15;
+}
+.building-body-p {
+  font-size: clamp(14.5px, 1.8vw, 16px);
+  line-height: 1.65;
+  color: var(--text-muted);
+}
+
+/* ============================================================
+   6. MEET THE MAKERS GRID (14 Leaders)
+   ============================================================ */
+.sec-the-makers {
+  padding: 0 0 clamp(60px, 8vw, 100px);
+}
+.makers-head-center {
+  text-align: center;
+  margin-bottom: clamp(32px, 5vw, 48px);
+}
+.makers-eyebrow-rule {
+  font-size: 11.5px;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--royal-blue);
+  margin-bottom: 8px;
+}
+.makers-section-h2 {
+  font-size: clamp(28px, 4vw, 40px);
+  font-weight: 900;
+  color: var(--navy-dark);
+  margin-bottom: 8px;
+}
+.makers-section-sub {
+  font-size: 14.5px;
+  color: var(--text-muted);
+}
+
+.makers-profile-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: clamp(14px, 2vw, 20px);
+  margin-bottom: 32px;
+}
+.maker-profile-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border-light);
+  border-radius: var(--r-md);
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.25s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+}
+.maker-profile-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--border-mid);
+  box-shadow: var(--shadow-card);
+}
+.maker-card-img-wrap {
+  width: 100%;
+  aspect-ratio: 1.05;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #E2E8F0;
+  margin-bottom: 12px;
+}
+.maker-card-img-wrap img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: top center;
-  transition: transform 0.4s ease;
 }
-.maker-card:hover .maker-photo {
-  transform: scale(1.05);
-}
-.maker-initials {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: var(--font-d);
-  font-size: 32px;
+.maker-card-name {
+  font-size: 14.5px;
   font-weight: 800;
-  color: var(--cerulean);
-  background: var(--sky-soft);
-}
-.maker-sector {
-  font-family: var(--font-d);
-  font-size: 10.5px;
-  font-weight: 800;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--cerulean);
-  margin-bottom: 6px;
-}
-.maker-name {
-  font-family: var(--font-d);
-  font-size: 17px;
-  font-weight: 700;
-  color: var(--indigo);
-  letter-spacing: -0.01em;
+  color: var(--royal-blue);
   line-height: 1.2;
 }
-.maker-role {
-  font-size: 12.5px;
-  color: var(--ink-muted);
-  margin-top: 4px;
-  line-height: 1.45;
-}
-.maker-org {
-  margin-top: auto;
-  padding-top: 12px;
-  border-top: 1px solid rgba(27, 120, 190, 0.1);
+.maker-card-role {
   font-size: 11.5px;
-  font-weight: 600;
-  color: var(--ink-subtle);
+  color: var(--text-muted);
+  margin-top: 3px;
+  line-height: 1.35;
+}
+.maker-card-company {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--navy-dark);
+  margin-top: 2px;
+}
+
+.view-all-makers-btn-wrap {
+  text-align: center;
+}
+.btn-view-all-makers {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #EFF6FF;
+  color: var(--royal-blue);
+  font-size: 13.5px;
+  font-weight: 700;
+  padding: 10px 24px;
+  border-radius: var(--r-pill);
+  transition: all 0.2s ease;
+}
+.btn-view-all-makers:hover {
+  background: #DBEAFE;
 }
 
 /* ============================================================
-   5. VENUE & IN-PAGE RSVP SECTION
+   7. DARK NAVY RSVP CARD (Exact Match)
    ============================================================ */
-.sec-rsvp {
-  background: var(--indigo);
-  color: var(--white);
-  padding: clamp(60px, 8vw, 100px) 0;
+.sec-dark-rsvp {
+  padding: 0 0 clamp(60px, 8vw, 100px);
 }
-.rsvp-split-card {
-  background: linear-gradient(135deg, #1B3C73 0%, #1A1D54 60%, #0F1138 100%);
-  border: 1px solid var(--hairline-dark);
-  border-radius: var(--r-xl);
+.dark-rsvp-container-card {
+  background: var(--navy-dark);
+  border-radius: var(--r-lg);
+  padding: clamp(32px, 5vw, 54px);
+  color: #FFFFFF;
   display: grid;
-  grid-template-columns: 1fr 1.05fr;
-  overflow: hidden;
-  box-shadow: 0 30px 70px -20px rgba(0, 0, 0, 0.5);
+  grid-template-columns: 1fr 1.35fr;
+  gap: clamp(28px, 5vw, 60px);
+  box-shadow: 0 30px 70px -10px rgba(15, 30, 61, 0.4);
 }
-.rsvp-left-info {
-  padding: clamp(36px, 5vw, 54px);
+.dark-rsvp-left-info {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-.rsvp-info-title {
-  font-family: var(--font-d);
-  font-size: clamp(28px, 4vw, 40px);
-  font-weight: 900;
-  line-height: 1.1;
-  margin-bottom: 16px;
+.dark-rsvp-title {
+  font-size: clamp(30px, 4vw, 44px);
+  font-weight: 800;
+  line-height: 1.05;
+  margin-bottom: 14px;
 }
-.rsvp-info-sub {
+.dark-rsvp-lead-sub {
   font-size: 15px;
-  color: rgba(255, 255, 255, 0.8);
+  color: #94A3B8;
   line-height: 1.6;
-  margin-bottom: 26px;
-}
-.rsvp-event-badge-box {
-  border-left: 3px solid var(--gold-glow);
-  padding-left: 16px;
   margin-bottom: 28px;
 }
-.rsvp-eb-date {
-  font-family: var(--font-d);
-  font-size: 17px;
-  font-weight: 700;
-  color: var(--white);
-}
-.rsvp-eb-venue {
-  font-size: 14px;
-  color: rgba(255, 255, 255, 0.75);
-  margin-top: 4px;
-}
-.rsvp-utils-row {
+.dark-rsvp-meta-stack {
   display: flex;
-  gap: 12px;
-  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 14px;
+}
+.meta-row-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 14px;
+  color: #E2E8F0;
+}
+.meta-row-item svg {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  margin-top: 2px;
+  color: var(--cyan-accent);
 }
 
-.rsvp-right-form {
-  padding: clamp(36px, 5vw, 54px);
-  background: rgba(10, 14, 44, 0.35);
+.dark-rsvp-form {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  gap: 14px;
 }
-.field-group {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-  margin-bottom: 16px;
-}
-.field-label {
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 0.04em;
-  color: rgba(255, 255, 255, 0.9);
-}
-.field-input {
-  background: rgba(255, 255, 255, 0.96);
-  border: 1.5px solid transparent;
-  border-radius: 12px;
-  padding: 13px 16px;
-  font-size: 15px;
-  font-family: var(--font-b);
-  color: var(--ink);
-  transition: all 0.2s ease;
-  min-height: 48px;
-}
-.field-input:focus {
-  outline: none;
-  border-color: var(--gold-glow);
-  box-shadow: 0 0 0 3px rgba(245, 208, 97, 0.3);
-}
-.form-row-2 {
+.dark-form-grid-2 {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 14px;
 }
-
-.rsvp-success-state {
-  display: none;
+.dark-input-field-wrap {
+  display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  gap: 16px;
+  gap: 5px;
 }
-.rsvp-success-state.show {
-  display: flex;
+.dark-input-label {
+  font-size: 12px;
+  font-weight: 700;
+  color: #E2E8F0;
 }
-.success-tick-circle {
-  width: 52px;
-  height: 52px;
-  border-radius: 50%;
-  background: rgba(255, 217, 122, 0.18);
-  border: 2px solid #FFD97A;
-  color: #FFD97A;
-  display: flex;
+.dark-input-box,
+.dark-select-box {
+  background: #FFFFFF;
+  border: 1.5px solid transparent;
+  border-radius: 8px;
+  padding: 12px 14px;
+  font-size: 14.5px;
+  font-family: var(--font-main);
+  color: var(--text-dark);
+  min-height: 46px;
+  width: 100%;
+}
+.dark-input-box:focus,
+.dark-select-box:focus {
+  outline: none;
+  border-color: var(--gold-btn);
+}
+
+.btn-confirm-seat-gold {
+  background: var(--gold-btn);
+  color: #261704;
+  padding: 14px 28px;
+  border-radius: var(--r-pill);
+  font-size: 15px;
+  font-weight: 800;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  font-size: 26px;
-  font-weight: 800;
+  gap: 8px;
+  transition: all 0.2s ease;
+  margin-top: 6px;
+  box-shadow: 0 10px 24px -4px rgba(229, 168, 59, 0.4);
+}
+.btn-confirm-seat-gold:hover {
+  background: var(--gold-hover);
+  transform: translateY(-2px);
+}
+.dark-form-footer-caption {
+  font-size: 12px;
+  color: #94A3B8;
+  text-align: center;
+  margin-top: 6px;
 }
 
 /* ============================================================
-   6. RSVP POPUP MODAL (8-Second Auto Trigger + Manual Button)
+   8. FOOTER (Exact Match)
+   ============================================================ */
+.site-footer {
+  background: var(--navy-footer);
+  color: #FFFFFF;
+  padding: 48px 0 28px;
+}
+.footer-top-split {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding-bottom: 32px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  flex-wrap: wrap;
+}
+.footer-left-brand {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.footer-icc-logo {
+  height: 40px;
+  width: auto;
+  filter: brightness(0) invert(1);
+}
+.footer-org-name {
+  font-size: 13.5px;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+}
+.footer-chapter-email {
+  font-size: 12px;
+  color: #94A3B8;
+  margin-top: 2px;
+}
+.footer-center-credo {
+  font-size: 14.5px;
+  font-weight: 600;
+  color: #FFD97A;
+}
+.footer-social-icons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.social-circle-link {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #FFFFFF;
+  font-size: 13px;
+  transition: all 0.2s ease;
+}
+.social-circle-link:hover {
+  background: var(--royal-blue);
+  border-color: var(--royal-blue);
+}
+
+.footer-bottom-legal {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding-top: 24px;
+  font-size: 12px;
+  color: #64748B;
+  flex-wrap: wrap;
+}
+
+/* ============================================================
+   9. POPUP MODAL (8-Second Auto-Trigger)
    ============================================================ */
 .rsvp-modal-backdrop {
   position: fixed;
   inset: 0;
   z-index: 99999;
-  background: rgba(16, 37, 74, 0.78);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
+  background: rgba(15, 30, 61, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -962,7 +799,7 @@ button {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
-  transition: opacity 0.35s ease, visibility 0.35s ease;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 .rsvp-modal-backdrop.active {
   opacity: 1;
@@ -972,16 +809,15 @@ button {
 .rsvp-modal-window {
   position: relative;
   width: 100%;
-  max-width: min(520px, 94vw);
+  max-width: 500px;
   max-height: 90vh;
   overflow-y: auto;
-  background: var(--white);
-  border-radius: var(--r-xl);
-  box-shadow: 0 30px 80px -15px rgba(16, 37, 74, 0.5);
-  padding: clamp(24px, 4vw, 36px) clamp(18px, 3.5vw, 32px);
-  transform: translateY(24px) scale(0.96);
-  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
-  -webkit-overflow-scrolling: touch;
+  background: #FFFFFF;
+  border-radius: var(--r-lg);
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.35);
+  padding: clamp(24px, 4vw, 36px);
+  transform: translateY(20px) scale(0.96);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 .rsvp-modal-backdrop.active .rsvp-modal-window {
   transform: translateY(0) scale(1);
@@ -990,368 +826,251 @@ button {
   position: absolute;
   top: 16px;
   right: 16px;
-  width: 36px;
-  height: 36px;
+  width: 32px;
+  height: 32px;
   border-radius: 50%;
-  background: var(--paper);
-  border: 1px solid rgba(27, 120, 190, 0.18);
-  color: var(--ink-muted);
+  background: #F1F5F9;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 16px;
+  color: var(--text-muted);
   cursor: pointer;
   transition: all 0.2s ease;
-  z-index: 10;
 }
 .modal-close-btn:hover {
-  background: var(--royal);
-  color: var(--white);
-  transform: rotate(90deg);
-}
-
-.modal-brand-header {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin-bottom: 12px;
-}
-.modal-brand-logo {
-  height: 36px;
-  width: auto;
-}
-.modal-eyebrow-text {
-  font-family: var(--font-d);
-  font-size: 11px;
-  font-weight: 800;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--cerulean);
-}
-.modal-title-text {
-  font-family: var(--font-d);
-  font-size: clamp(20px, 4vw, 24px);
-  font-weight: 800;
-  color: var(--indigo);
-  line-height: 1.15;
-  margin-bottom: 8px;
-}
-.modal-event-pill {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 6px 14px;
-  background: var(--sky-soft);
-  border: 1px solid rgba(27, 120, 190, 0.25);
-  border-radius: var(--r-pill);
-  font-size: 12px;
-  font-weight: 600;
-  color: var(--royal);
-  margin-bottom: 18px;
+  background: var(--royal-blue);
+  color: #FFFFFF;
 }
 
 /* ============================================================
-   7. FOOTER
-   ============================================================ */
-.site-footer {
-  background: var(--indigo-deep);
-  color: var(--white);
-  padding: 60px 0 32px;
-  border-top: 1px solid var(--hairline-dark);
-}
-.footer-top-row {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 28px;
-  flex-wrap: wrap;
-  margin-bottom: 34px;
-}
-.footer-logo-img {
-  height: 52px;
-  width: auto;
-  filter: brightness(0) invert(1);
-}
-.footer-credo {
-  font-family: var(--font-serif);
-  font-style: italic;
-  font-size: 18px;
-  color: #FFD97A;
-  text-align: center;
-  padding: 24px 0;
-  border-top: 1px solid var(--hairline-dark);
-  border-bottom: 1px solid var(--hairline-dark);
-}
-.footer-bottom-bar {
-  display: flex;
-  justify-content: space-between;
-  gap: 14px;
-  flex-wrap: wrap;
-  padding-top: 24px;
-  font-size: 12.5px;
-  color: rgba(255, 255, 255, 0.65);
-}
-
-/* ============================================================
-   RESPONSIVE OVERRIDES
+   RESPONSIVE QUERIES
    ============================================================ */
 @media (max-width: 1024px) {
-  .topbar-chapter-tag { display: none; }
-  .editorial-grid { grid-template-columns: 1fr; gap: 36px; }
-  .makers-grid-lead, .makers-grid-sect { grid-template-columns: repeat(2, 1fr); }
-  .rsvp-split-card { grid-template-columns: 1fr; }
+  .hero-split-grid { grid-template-columns: 1fr; text-align: center; }
+  .hero-description-p { margin: 0 auto; }
+  .hero-map-col { order: -1; }
+  .hero-map-col img { max-width: 360px; }
+  .pillars-white-enclosure { grid-template-columns: 1fr; }
+  .pillar-single-item:not(:last-child)::after { display: none; }
+  .pillar-single-item:not(:last-child) { border-bottom: 1px solid var(--border-light); }
+  .building-grid { grid-template-columns: 1fr; }
+  .makers-profile-grid { grid-template-columns: repeat(3, 1fr); }
+  .dark-rsvp-container-card { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 768px) {
-  .topbar-right .pill-royal { display: none; }
-  .mobile-toggle { display: flex; }
-  .pillars-grid { grid-template-columns: 1fr; gap: 16px; }
-  .makers-grid-lead, .makers-grid-sect { grid-template-columns: 1fr; }
-  .form-row-2 { grid-template-columns: 1fr; }
-  .hero-cd-unit { padding: 8px 10px; min-width: 60px; }
-  .forces-inner-relative { min-height: auto; gap: 24px; }
-  .forces-copy-wrap { align-self: flex-start; max-width: 100%; margin-top: 20px; }
-  .forces-bg-silhouette { width: 95vw; opacity: 0.05; }
-  .forces-accent-mark { display: none; }
+  .header-brand-tag { display: none; }
+  .meta-item-tag { font-size: 12px; }
+  .event-countdown-row { gap: 20px; }
+  .cd-big-num { font-size: 28px; }
+  .makers-profile-grid { grid-template-columns: repeat(2, 1fr); }
+  .dark-form-grid-2 { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 480px) {
-  .topbar-icc-logo { height: 38px; }
-  .hero-cta-group { flex-direction: column; width: 100%; }
-  .hero-cta-group .pill-btn { width: 100%; }
-  .forces-display-title { font-size: clamp(38px, 12vw, 52px); }
+  .header-logo-img { height: 32px; }
+  .btn-reserve-nav { padding: 7px 14px; font-size: 12px; }
+  .hero-display-h1 { font-size: clamp(38px, 12vw, 54px); }
+  .makers-profile-grid { grid-template-columns: 1fr; }
+  .event-card-btn-row { flex-direction: column; width: 100%; }
+  .btn-card-royal, .btn-card-calendar { width: 100%; justify-content: center; }
 }
 </style>
 </head>
 <body>
 
 <!-- ============================================================
-     TOP INSTITUTIONAL HEADER BAR (Exact Match to Mockup)
+     1. INSTITUTIONAL HEADER BAR
      ============================================================ -->
-<header class="site-topbar">
-  <div class="container topbar-inner">
+<header class="site-header">
+  <div class="container header-inner">
     
-    <!-- Left: State Chapter Badge -->
-    <div class="topbar-left">
-      <span class="topbar-chapter-tag" data-en="Madhya Pradesh State Chapter" data-hi="मध्य प्रदेश स्टेट चैप्टर">Madhya Pradesh State Chapter</span>
+    <!-- Left Chapter Tag -->
+    <div class="header-brand-tag" data-en="MADHYA PRADESH STATE CHAPTER" data-hi="मध्य प्रदेश स्टेट चैप्टर">
+      MADHYA PRADESH STATE CHAPTER
     </div>
 
-    <!-- Center: Official ICC 100 Centenary Logo & Tagline -->
-    <div class="topbar-center">
-      <a href="#hero" title="Indian Chamber of Commerce — 100 Years of Service">
-        <img src="assets/logos/icc100-blue.png" alt="Indian Chamber of Commerce 100 Years" class="topbar-icc-logo">
+    <!-- Center Centenary Logo -->
+    <div class="header-logo-wrap">
+      <a href="#hero" title="Indian Chamber of Commerce — Centenary Launch">
+        <img src="assets/logos/icc100-blue.png" alt="Indian Chamber of Commerce 100 Years" class="header-logo-img">
       </a>
     </div>
 
-    <!-- Right: Language Switch & Quick RSVP CTA -->
-    <div class="topbar-right">
-      <div class="lang-switch" role="group" aria-label="Language Selector">
-        <button type="button" class="lang-btn active" id="btn-lang-en" onclick="setLanguage('en')">EN</button>
-        <button type="button" class="lang-btn" id="btn-lang-hi" onclick="setLanguage('hi')">हिंदी</button>
+    <!-- Right Actions -->
+    <div class="header-right-actions">
+      <div class="lang-toggle-pill" role="group" aria-label="Language Selector">
+        <button type="button" class="lang-pill-btn active" id="btn-lang-en" onclick="setLanguage('en')">EN</button>
+        <button type="button" class="lang-pill-btn" id="btn-lang-hi" onclick="setLanguage('hi')">हिंदी</button>
       </div>
 
-      <a href="#rsvp" onclick="openRSVPModal(); return false;" class="pill-btn pill-royal" data-en="Reserve Seat" data-hi="सीट आरक्षित करें">
-        <span data-en="Reserve Seat" data-hi="सीट आरक्षित करें">Reserve Seat</span>
+      <a href="#rsvp" onclick="openRSVPModal(); return false;" class="btn-reserve-nav" data-en="Reserve Your Seat &rarr;" data-hi="सीट आरक्षित करें &rarr;">
+        <span data-en="Reserve Your Seat" data-hi="सीट आरक्षित करें">Reserve Your Seat</span>
+        <span>&rarr;</span>
       </a>
-
-      <button class="mobile-toggle" id="mobile-toggle-btn" aria-label="Toggle Navigation">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
     </div>
 
   </div>
 </header>
 
-<!-- Mobile Slide-In Navigation Drawer -->
-<div class="mobile-drawer" id="mobile-drawer">
-  <ul class="mobile-drawer-links">
-    <li><a href="#hero" class="mobile-drawer-link" onclick="closeMobileMenu()" data-en="01 · Launch Overview" data-hi="01 · मुख्य शुभारंभ">01 · Launch Overview</a></li>
-    <li><a href="#pillars" class="mobile-drawer-link" onclick="closeMobileMenu()" data-en="02 · Core Pillars" data-hi="02 · प्रमुख आधार">02 · Core Pillars</a></li>
-    <li><a href="#overview" class="mobile-drawer-link" onclick="closeMobileMenu()" data-en="03 · Chapter Vision" data-hi="03 · चैप्टर का विज़न">03 · Chapter Vision</a></li>
-    <li><a href="#makers" class="mobile-drawer-link" onclick="closeMobileMenu()" data-en="04 · The Makers Council" data-hi="04 · नेतृत्व परिषद">04 · The Makers Council</a></li>
-    <li><a href="#rsvp" class="mobile-drawer-link" onclick="closeMobileMenu()" data-en="05 · Reserve Seat" data-hi="05 · सीट आरक्षण">05 · Reserve Seat</a></li>
-  </ul>
-  <div style="margin-top: auto;">
-    <a href="#rsvp" class="pill-btn pill-gold" style="width: 100%;" onclick="openRSVPModal(); closeMobileMenu(); return false;" data-en="Reserve Your Seat" data-hi="अपनी सीट आरक्षित करें">Reserve Your Seat</a>
-  </div>
-</div>
-
 <main id="main">
 
   <!-- ============================================================
-       1. HERO CENTERPIECE SECTION (Exact Match to Mockup)
+       2. HERO SPLIT SECTION (Exact Match to Design)
        ============================================================ -->
-  <section class="sec-hero-client" id="hero">
-    <div class="container hero-center-wrap">
+  <section class="sec-hero-split" id="hero">
+    <div class="container hero-split-grid">
       
-      <!-- Uppercase Eyebrow with Letter Spacing -->
-      <div class="hero-eyebrow-clean" data-en="LAUNCHING ICC'S MP CHAPTER" data-hi="आईसीसी मध्य प्रदेश स्टेट चैप्टर">
-        LAUNCHING ICC'S MP CHAPTER
-      </div>
+      <!-- Left Typography Column -->
+      <div class="hero-typo-col">
+        
+        <h1 class="hero-display-h1">
+          <span class="typo-thin" data-en="the forces" data-hi="शक्तियाँ">the forces</span>
+          <span class="typo-mid">
+            <span class="t-light" data-en="driving" data-hi="आगे बढ़ाने">driving</span>
+            <span class="t-bold-blue" data-en="mp" data-hi="एमपी">mp</span>
+          </span>
+          <span class="typo-heavy-blue" data-en="forward." data-hi="वाली।">forward.</span>
+        </h1>
 
-      <!-- Centerpiece MP State Map with "makers of Progress" Artwork (Transparent PNG) -->
-      <img src="assets/logos/theme-logo-transparent.png" alt="Makers of Progress — Madhya Pradesh" class="hero-map-artwork">
-
-      <!-- Bold Subtitle -->
-      <h1 class="hero-subtitle-clean" data-en="The Forces Driving Madhya Pradesh Forward." data-hi="मध्य प्रदेश को प्रगति के पथ पर आगे ले जाने वाली शक्तियां।">
-        The Forces Driving Madhya Pradesh Forward.
-      </h1>
-
-      <!-- Event Time & Venue Pill -->
-      <div class="hero-event-meta-pill">
-        <span>📅 <strong data-en="Friday, 4th September 2026" data-hi="शुक्रवार, 4 सितंबर 2026">Friday, 4th September 2026</strong></span>
-        <span>·</span>
-        <span>⏰ <span data-en="11:00 AM – 1:30 PM IST" data-hi="प्रातः 11:00 से दोपहर 1:30 बजे">11:00 AM – 1:30 PM IST</span></span>
-        <span>·</span>
-        <span>📍 <span data-en="Orion Hall, Brilliant Convention Centre, Indore" data-hi="ओरियन हॉल, बीसीसी, इंदौर">Orion Hall, Brilliant Convention Centre, Indore</span></span>
-      </div>
-
-      <!-- IST-Anchored Countdown Clock -->
-      <div class="hero-countdown-box" id="hero-countdown">
-        <div class="hero-cd-unit">
-          <div class="hero-cd-num tnum" id="cd-d">00</div>
-          <div class="hero-cd-lab" data-en="Days" data-hi="दिन">Days</div>
-        </div>
-        <div class="hero-cd-unit">
-          <div class="hero-cd-num tnum" id="cd-h">00</div>
-          <div class="hero-cd-lab" data-en="Hours" data-hi="घंटे">Hours</div>
-        </div>
-        <div class="hero-cd-unit">
-          <div class="hero-cd-num tnum" id="cd-m">00</div>
-          <div class="hero-cd-lab" data-en="Minutes" data-hi="मिनट">Minutes</div>
-        </div>
-        <div class="hero-cd-unit">
-          <div class="hero-cd-num tnum" id="cd-s">00</div>
-          <div class="hero-cd-lab" data-en="Seconds" data-hi="सेकंड">Seconds</div>
-        </div>
-      </div>
-
-      <!-- Action Buttons -->
-      <div class="hero-cta-group">
-        <a href="#rsvp" onclick="openRSVPModal(); return false;" class="pill-btn pill-gold" data-en="Reserve Your Seat" data-hi="अपनी सीट आरक्षित करें">
-          <span data-en="Reserve Your Seat" data-hi="अपनी सीट आरक्षित करें">Reserve Your Seat</span>
-          <span>↗</span>
-        </a>
-        <button type="button" class="pill-btn pill-outline" id="btn-hero-ics" onclick="downloadICSFile()" data-en="Add to Calendar (.ics)" data-hi="कैलेंडर में जोड़ें">
-          <span data-en="Add to Calendar (.ics)" data-hi="कैलेंडर में जोड़ें">Add to Calendar (.ics)</span>
-        </button>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ============================================================
-       FORCES DRIVING MP FORWARD · SIGNATURE CANVAS (Exact Match to Slide)
-       ============================================================ -->
-  <section class="sec-forces-canvas" id="forces">
-    <div class="container forces-inner-relative">
-      
-      <!-- Background Subtle MP Map Silhouette Watermark -->
-      <div class="forces-bg-silhouette" aria-hidden="true">
-        <svg viewBox="0 0 1000 723.1">
-          <path d="M312.9 662.1L310.9 666.8L313.2 673.9L294.7 690.3L299.4 696.8L294.9 708.7L279.8 707.8L275.8 718.4L267.5 722.3L242.9 721.9L236.7 711.4L243.5 711L243.5 706.2L240 703.4L242 699.9L234.8 685.5L229.3 688.3L210.9 682.6L186.4 685L179.1 682.9L171.9 685.8L134.1 680.5L122.3 674.1L115.9 661.1L98.8 653.3L84.4 655L59.2 646.8L58.4 642.1L53.6 641.2L55.7 618.1L46.1 610L45.2 603.3L40.3 602.9L28.1 615.3L18 616.3L12.7 613.3L13.2 608.8L6.9 605L16.4 596.4L10.2 594.9L10 580.6L4.3 579.8L3.8 562.7L7.4 561L10.6 565.6L17.7 567.2L19.2 561.4L29.2 558L25.2 553.6L19 552.9L17.8 547.7L17 552L14.3 553.3L13.1 550.3L9.7 554.9L7.9 549.2L4.7 549.2L5.5 543.9L0.7 546.4L0.7 539.6L13.2 542.1L26.1 526.8L39.2 528L45.5 506.4L50.3 500.8L47 492.2L40.8 495.3L34.7 488.3L37.5 484.7L32.5 475L40 468.5L53.7 471.8L57.5 466.3L65.2 464.6L72.5 457.5L77.6 458.6L81.4 454.5L76 455.7L75.8 448.9L68.8 450.6L61.5 445.6L58.3 447.9L54.6 441.5L57.5 440.7L64.9 425.4L70.3 424.8L75.9 419.5L78.9 420.6L84.1 414.6L92.6 413.6L98.9 404.5L102.7 404.1L98.6 397.1L103.2 387.1L99 383.4L98.9 373.6L108 354.5L98.9 344.1L96.3 336.1L98.2 329.4L81.5 325.8L93.4 302.3L88.8 303.3L88.9 299.3L75.5 297.5L80.9 293.7L80.7 286.5L85.6 284.7L84.9 281L89 275.7L84 275.3L87.2 260.6L97.3 278.7L103.5 278.2L105.4 273.1L110.1 272.2L109.1 266.5L111.8 266.5L110.8 261.5L100.3 261.8L94.1 258.2L92.9 260.9L91 238.1L93.9 237.7L95.2 242.4L98.9 241.8L105.2 250.7L114.4 252.3L118.7 247.9L123.3 248.3L122.9 237.2L128.9 232.7L127.4 229L129.8 227.3L149.9 228.9L146.2 232.1L148.3 239L145.7 247.4L142.5 237.3L139.5 237.9L143.5 244.4L140 248.7L145.2 251L158 247.7L157.9 250.1L145.4 257.9L141.7 253L135.5 252.5L138.7 256.4L134.5 257.7L131 264.4L135 270.1L140.1 268.3L161.9 272.9L176.4 268.8L179.4 272.8L196.3 262.8L205 266.5L204 274.5L206.7 277L204.1 281.2L214.2 286.4L214.8 291.7L211.2 294.4L213.8 296.4L212.5 302.6L205.2 306L199.9 298.9L192.9 308.3L194.1 316L197.3 320.5L202.3 320.8L204.6 328.6L198.4 331.8L195.5 339.8L200.3 346.3L205.1 346.3L205.3 350.6L199.2 352.3L197.2 358.6L191.7 361.9L186.4 355.5L177.8 359L169.3 354.7L164 360L162.6 368.4L174.3 375.6L176.5 383.3L184.5 382.9L188.6 389.3L188.6 381L192.2 381.2L193.9 375.6L189.9 373.6L190.4 370.3L199.1 376.6L207.2 371.7L216.8 370.6L221.8 366.6L219.8 355.4L238.4 346.8L237.3 333.5L240.8 328.8L239.5 324L245 316.7L248.1 331.6L255.9 331.9L260.5 327.1L270.9 332.8L271.4 330.2L277.5 329.6L284 338.1L289.6 335.5L290.5 327.3L303.1 322.5L300.9 333.9L303.5 336.7L310.1 336.7L315.3 343.2L326.6 341.7L328.3 334.3L331.8 332.7L319.8 317.5L321.1 299.5L316.9 291.2L322.1 289.3L324.6 292.7L328.4 290L328.4 297.5L335.3 300.2L344.1 292.1L345.3 278.7L341.8 269.4L333.7 263.4L327.2 266.5L321.4 265L315.5 257L318.2 253.4L332.1 249.3L327.9 247L328.7 243.5L325.3 243.1L321.5 232.7L323.7 227.9L337.9 223.7L347.6 226.2L354.7 221.2L356.8 222.5L357.7 219.1L368.6 218.6L373.3 223.1L384.1 219.1L382.6 213.2L386.4 209.6L378.3 200.2L381.2 196.5L380 192.5L376.8 192.9L379.9 182.3L371 180.4L364.5 185.8L361.7 194.9L347.3 191.1L341.4 196.3L330.7 197.7L326.7 192.7L307 192.1L292.1 184.1L287.2 176.5L282.7 167.3L281.3 149.5L277.8 144.6L283.4 142.2L283.2 134.2L290.3 124.5L294.7 124.7L297 119.9L309.8 118.3L309 116L315.1 113.8L326.5 96.8L337.7 92.2L341.4 86.9L348.9 85.4L352.5 80L363.1 78.5L380.5 62.8L388.4 63.3L387.7 58.1L399.2 57.1L414.8 45.6L420.6 45.8L422.7 41.2L431.7 39.7L432.1 34.1L439.7 31.7L440.8 26.2L446.5 26.2L451.8 21.7L462 24.2L465.8 15.3L464.5 9.3L472.7 10.6L471.5 5.6L482 6.9L484.1 1.8L492.6 0L496.8 6.5L501.2 5.4L504.3 10.2L517.6 15L537.4 10.3L544.7 13.3L551.1 21.3L560.6 22.1L559.5 26.7L566.5 24.7L564.9 28.4L567.6 33.5L564.5 36.2L573.5 46.4L571.7 51.8L581.1 53.5L575.8 58.9L575.3 63.7L581.4 66.2L579.1 71.1L570.9 75.9L572.9 80.2L564.8 78.6L568.7 84.5L565 83.8L566.2 89.9L559.9 92.3L567 98L559.8 104.9L558.7 115.5L552.6 119.1L548.7 131.9L545 129.7L546.2 133.8L537.5 139.4L544.8 148.7L544.1 155.7L533.5 157.6L526.8 163.2L522.2 160.3L518.7 163.7L508 160.9L504.7 165L503 161.6L499.6 166.8L500.9 174L496.7 177.7L492.2 176.8L486.2 187.4L490.9 192.1L487.3 195.2L492.1 196.6L492.8 202.9L498.6 206.5L496.8 209.6L503.9 212.5L500.4 213.9L502.6 217.8L498.1 217L490.2 222.4L491.1 231.6L471.3 249.3L483.2 275L481.9 288.9L477.4 292.6L483.1 298.6L482.2 301.6L493.4 309.6L489.3 316.9L496.1 324.9L510.8 309.4L518.5 313.6L527.9 327.8L531.9 329.5L535.4 326.2L537 328.7L538.6 325.4L543.3 335.4L544.6 331.9L552.5 330.3L555.4 320.6L562.5 314.4L564.1 302.7L555.9 300.4L556.6 295.5L558.6 298L562.5 296.1L552.4 277.7L546.8 282.4L537.4 282.9L541.7 256.6L539.5 250.6L528.8 245.7L523.7 238.3L526.1 226.7L520.4 221.2L520.5 214.8L516.5 205L515.1 207L517.6 201.5L512.3 197.6L503.1 200.4L501.3 197.6L505.6 197.4L508.5 193.2L512.5 195.5L514.8 193.2L512.1 189L518.4 189.8L516.3 184.3L519.1 184.9L521.3 181.2L524.1 183.1L526.8 178.1L532.8 179.7L528.6 183.2L527.6 181.3L527 185.2L533.2 186.6L534.5 190.2L540 189L537 181.9L545.4 180.4L538.6 179.8L535.2 176L535.8 171.3L545 174.2L543.9 176.5L547.6 175.5L549.1 177.2L545.3 178.3L547.9 179.7L550.5 175L546.9 170L552.5 168.8L552.3 164L560.3 166L556.6 168.8L559.2 173.1L555.3 177.9L562 178.9L564.5 186.4L558.7 189.8L553.9 186.4L558.7 186.3L560.3 183.2L552 184.9L548.2 192.3L541.5 196.2L546.2 195.3L544 199.3L548.6 204.5L552.3 190.2L557.5 192.7L561.2 190L563.4 198.2L552.1 201.4L552.1 213.4L559 206.5L566.4 208.7L565.8 203.9L563 203.1L565.1 199L572.9 205.4L569.2 215.8L576 209.2L580 213L580.6 219.4L586.9 218.7L587.6 214.8L590.2 219.2L593.6 218.9L595.3 214L597.9 218.4L602.5 214.4L600 207.9L598 209L597.5 202.5L604.2 208.4L605.8 206.6L603.6 204.6L605.7 200.2L595.6 199L599.8 191L605.8 191.9L604 197.1L607.2 200.5L607.7 196.6L612.3 201.1L618.9 197.7L622 199.8L618.4 200L615.9 208.3L610.1 211.8L611.9 219.8L620.1 217.2L618.7 222.1L621.7 223.1L630.5 211.6L634.8 214L634.1 217.1L651 215.6L663.7 221L662.7 217L666.1 215.3L662.7 203.7L669.1 201.8L670.2 204.8L673.7 199.5L680.1 199.7L683.4 190.4L689.7 188.7L694.6 191.4L701.8 185.9L702.7 181.4L708.5 183.1L709.7 180.2L715.5 184.6L715 197.3L725.6 202.7L728.7 211.4L720.4 215.3L720.1 226.1L712.8 225.7L709.6 229.9L717.3 234L721 230.1L724.8 231.6L722.2 226.1L730.8 223.2L736.8 228.4L729 230.1L731.6 235.3L742.2 232.7L734.2 221L749.5 224.9L747.1 221.8L748.7 214.3L752.3 218.5L748.8 220.8L757.6 223.4L757.1 227L769.3 225.4L759.9 217L771.7 216L774.2 220.6L775.1 210.5L780.4 209.7L783.6 213.2L778.6 218.6L779.6 224.9L774.4 229L776.7 234.4L769.9 237.4L772.2 242.7L782.9 241.1L787.4 237.3L788.7 243.3L796.2 242.1L795.4 239.1L803.7 239.7L809.5 247.1L812.7 238.6L818.4 241.5L817.4 234L823.6 226.4L822.3 220.3L825.2 212.3L829.2 212.6L830.2 219L831.7 211.9L839.1 218.2L843.5 216.8L844.5 219.7L840.5 220.1L849.3 223.9L852.6 220.5L848.2 216.6L854.7 213L852.2 210.1L858.8 209.1L864.9 213L861.6 216.7L862.8 221.1L864.7 218.1L866.5 220.7L861.9 223.8L863.2 226L869.5 223.7L872.1 228.2L876.9 227L883.8 232.5L888.7 230.9L895.1 234.4L896.9 232.3L896.4 246.6L903.5 254.6L909.4 252.3L918.6 256L920.6 259.9L926.5 259.8L930.7 255.6L928.5 258.5L932.3 260.9L927.7 266.4L932.7 267.7L931.1 264.6L935.4 264.9L936.1 261.7L933.6 272.7L934.7 275.3L938.1 272.5L942 274.6L941.3 282.2L946.1 280.4L955.1 283.6L953.8 272.8L956.7 270.1L958.7 273.6L967.1 273.3L969.1 277L983.9 270.8L988 278.4L995.6 277.7L994.7 283.4L998.9 283.3L989.4 288.9L992.2 295.8L988.8 310.3L995.1 311.5L995.5 319.4L990.4 340.8L985.3 338.4L983.2 341.8L988.8 348.4L995.7 348.3L993 356.2L999 357.3L1000 362.5L993.2 367.7L982.8 369.2L983.6 373.7L979.8 378L968.2 379.9L970.3 383.8L964.2 384.5L960.6 381.2L933.8 381.8L931.3 376.1L927 380.4L916.8 380.6L908.3 375L898.5 373.8L885.8 381.6L876.2 377.7L869.7 367.1L863 369.7L863.2 378.1L865.9 378.3L867 386.4L872.8 392.5L868.2 399.7L863.6 399.8L863.2 408.2L859.2 409.4L865 422.3L868.6 416.5L873.3 417.3L878.6 411.4L885.7 413.9L888.8 418.7L898.4 415.9L905.8 430.8L910.4 429.4L909.9 434.1L913.9 435.4L919.3 432.8L920.8 438.1L929.3 441.7L929.5 447.8L924 454.1L925.9 464.6L921.5 469.5L915.8 467.8L911.4 472.4L900.9 472.6L898.5 477.3L901.4 487.8L892.2 492.9L891.7 496.2L881.9 498.1L880.3 503.6L884 511.5L879.2 516.5L881.2 523.2L879.5 526.5L877 522.8L871.5 526.3L867.5 530.4L868.7 536.1L864.4 540L853.1 539.9L848.8 546.3L844 545.4L845.8 548.6L842.3 547.3L839.9 552.1L837.1 543.5L830.9 541.5L830.1 546.5L825.6 544.4L821.8 549.9L817.2 550.2L813.2 546.3L806.2 552.7L807.1 570.8L802.6 577.2L795.8 579.5L796 590.5L791 591.8L794.8 595.2L793.9 599.8L790.1 599.9L788.6 593.3L783 593.4L777.2 611.5L773.7 612.3L776.7 625.3L773 638.5L765.8 636.7L762.3 642.8L763.6 672.8L756.1 689.6L748 691L739.7 682.6L731.8 681.6L730.7 685.4L726.6 684.8L724.7 680.9L727.7 676.9L722.5 666.4L710.1 654.8L702.9 652.6L693.5 655.6L687.2 662.7L679.5 665.3L672.3 662.5L667.3 667.2L649.9 656.5L640 662.4L627.1 664.3L622.2 647.8L605.8 647.3L592.1 641.7L591.2 650.9L583.3 649.5L584.9 652.3L576.4 657.2L567.1 657L565.5 654.6L556.2 658.1L558.5 671.2L542.9 670.7L540.2 673.9L537.3 670.3L534.7 674.2L518.4 671.1L510.1 665.9L501.1 669.8L500.5 657.1L494.2 655.3L492.9 659.9L482.1 658L483 660.9L472.5 662.4L471.9 669.5L445.1 683.7L438.4 684.9L429.1 680.7L418.7 687.2L416.7 682.2L414.1 685.8L412.3 683L402 685.8L398.4 679.5L396.4 684.9L393.4 685.1L386.3 664.7L407.5 664.6L403.6 662.6L399.8 644L392.4 635.8L369.8 637.2L370.6 641.7L363.7 642.4L361.8 645.8L357.9 641.3L346.2 642.1L337.8 647.8L337.7 645.5L326.8 657.2L321.2 655.3L318.8 658.3L314.6 657.7L312.9 662.1Z"/>
-        </svg>
-      </div>
-
-      <!-- Top Left: Progressive Display Title -->
-      <div class="forces-headline-wrap">
-        <h2 class="forces-display-title">
-          <span class="f-line-1" data-en="the forces" data-hi="शक्तियाँ">the forces</span>
-          <span class="f-line-2"><span class="f-light" data-en="driving" data-hi="आगे बढ़ाने">driving</span> <span class="f-bold" data-en="mp" data-hi="एमपी">mp</span></span>
-          <span class="f-line-3" data-en="forward." data-hi="वाली।">forward.</span>
-        </h2>
-      </div>
-
-      <!-- Bottom Right: Editorial Manifesto Copy -->
-      <div class="forces-copy-wrap">
-        <p class="forces-paragraph" data-en="Makers of Progress recognises the people &amp; enterprises driving Madhya Pradesh forward, those creating businesses, enabling innovation, shaping industries and translating ambition into tangible economic and social progress." data-hi="मेकर्स ऑफ़ प्रोग्रेस उन व्यक्तियों और उद्यमों को सम्मानित करता है जो मध्य प्रदेश को आगे बढ़ा रहे हैं — जो नए व्यवसाय स्थापित कर रहे हैं, नवाचार को गति दे रहे हैं, उद्योगों को आकार दे रहे हैं और महत्वाकांक्षा को ठोस आर्थिक व सामाजिक प्रगति में बदल रहे हैं।">
+        <p class="hero-description-p" data-en="Makers of Progress recognises the people &amp; enterprises driving Madhya Pradesh forward, those creating businesses, enabling innovation, shaping industries and translating ambition into tangible economic and social progress." data-hi="मेकर्स ऑफ़ प्रोग्रेस उन व्यक्तियों और उद्यमों को सम्मानित करता है जो मध्य प्रदेश को आगे बढ़ा रहे हैं — जो नए व्यवसाय स्थापित कर रहे हैं, नवाचार को गति दे रहे हैं, उद्योगों को आकार दे रहे हैं और महत्वाकांक्षा को ठोस आर्थिक व सामाजिक प्रगति में बदल रहे हैं।">
           Makers of Progress recognises the people &amp; enterprises driving Madhya Pradesh forward, those creating businesses, enabling innovation, shaping industries and translating ambition into tangible economic and social progress.
         </p>
+
+        <!-- Butterfly accent -->
+        <div class="hero-butterfly-accent" aria-hidden="true">
+          <svg viewBox="0 0 32 32" style="width:100%;height:100%;fill:none;stroke:currentColor;stroke-width:1.5;"><path d="M16 14 C12 6, 4 8, 4 16 C4 22, 12 24, 16 18 C20 24, 28 22, 28 16 C28 8, 20 6, 16 14 Z"/></svg>
+        </div>
+
       </div>
 
-      <!-- Bottom Left Subtle Signature Mark -->
-      <div class="forces-accent-mark" aria-hidden="true">
-        <svg viewBox="0 0 32 32" style="width:100%;height:100%;"><path d="M16 14 C12 6, 4 8, 4 16 C4 22, 12 24, 16 18 C20 24, 28 22, 28 16 C28 8, 20 6, 16 14 Z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <!-- Right Artwork Map Column (Transparent PNG) -->
+      <div class="hero-map-col">
+        <img src="assets/logos/theme-logo-transparent.png" alt="Makers of Progress — Madhya Pradesh Chapter Theme Logo">
       </div>
 
     </div>
   </section>
 
   <!-- ============================================================
-       2. THREE PILLARS & SHUFFLING TAGLINES (Exact Match to Mockup)
+       3. FLOATING EVENT INFO & COUNTDOWN CARD
        ============================================================ -->
-  <section class="sec-pillars-client" id="pillars">
+  <section class="sec-event-card-wrap">
     <div class="container">
-      
-      <!-- 3 Pillar Feature Cards with Icons -->
-      <div class="pillars-grid">
+      <div class="event-floating-card">
         
-        <!-- Pillar 1: New-Age Thought Leaders -->
-        <div class="pillar-card active" id="pillar-card-0" onclick="selectPillar(0)">
-          <div class="pillar-icon-badge">
+        <!-- Top Meta Row -->
+        <div class="event-card-meta-row">
+          <div class="meta-item-tag">
+            <span>📍</span>
+            <span data-en="Orion Hall, Brilliant Convention Centre, Indore" data-hi="ओरियन हॉल, ब्रिलियंट कन्वेंशन सेंटर, इंदौर">Orion Hall, Brilliant Convention Centre, Indore</span>
+          </div>
+          <div class="meta-item-tag">
+            <span>📅</span>
+            <strong data-en="Friday, 4th September 2026" data-hi="शुक्रवार, 4 सितंबर 2026">Friday, 4th September 2026</strong>
+          </div>
+          <div class="meta-item-tag">
+            <span>⏰</span>
+            <span data-en="11:00 AM – 1:30 PM IST" data-hi="प्रातः 11:00 से दोपहर 1:30 बजे">11:00 AM – 1:30 PM IST</span>
+          </div>
+        </div>
+
+        <!-- Middle Countdown Units -->
+        <div class="event-countdown-row" id="event-countdown">
+          <div class="countdown-unit">
+            <div class="cd-big-num tnum" id="cd-d">09</div>
+            <div class="cd-unit-lab" data-en="DAYS" data-hi="दिन">DAYS</div>
+          </div>
+          <div class="countdown-unit">
+            <div class="cd-big-num tnum" id="cd-h">18</div>
+            <div class="cd-unit-lab" data-en="HOURS" data-hi="घंटे">HOURS</div>
+          </div>
+          <div class="countdown-unit">
+            <div class="cd-big-num tnum" id="cd-m">18</div>
+            <div class="cd-unit-lab" data-en="MINUTES" data-hi="मिनट">MINUTES</div>
+          </div>
+          <div class="countdown-unit">
+            <div class="cd-big-num tnum" id="cd-s">51</div>
+            <div class="cd-unit-lab" data-en="SECONDS" data-hi="सेकंड">SECONDS</div>
+          </div>
+        </div>
+
+        <!-- Buttons Row -->
+        <div class="event-card-btn-row">
+          <a href="#rsvp" onclick="openRSVPModal(); return false;" class="btn-card-royal" data-en="Reserve Your Seat &rarr;" data-hi="अपनी सीट आरक्षित करें &rarr;">
+            <span data-en="Reserve Your Seat" data-hi="अपनी सीट आरक्षित करें">Reserve Your Seat</span>
+            <span>&rarr;</span>
+          </a>
+          <button type="button" class="btn-card-calendar" onclick="downloadICSFile()" data-en="Add to Calendar 📅" data-hi="कैलेंडर में जोड़ें 📅">
+            <span data-en="Add to Calendar" data-hi="कैलेंडर में जोड़ें">Add to Calendar</span>
+            <span>📅</span>
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       4. THREE PILLARS CARD CONTAINER (Exact Match)
+       ============================================================ -->
+  <section class="sec-three-pillars" id="pillars">
+    <div class="container">
+      <div class="pillars-white-enclosure">
+        
+        <!-- Pillar 1 -->
+        <div class="pillar-single-item">
+          <div class="pillar-round-icon">
             <svg viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
           </div>
-          <h3 class="pillar-title" data-en="New-Age Thought Leaders." data-hi="नवयुग के विचारक।">
-            New-Age<br>Thought Leaders.
-          </h3>
+          <h3 class="pillar-main-title" data-en="People Driving Progress" data-hi="प्रगति के सूत्रधार">People Driving Progress</h3>
+          <p class="pillar-sub-desc" data-en="Visionaries. Founders. Change agents." data-hi="दूरदर्शी। संस्थापक। परिवर्तन के संवाहक।">Visionaries. Founders. Change agents.</p>
         </div>
 
-        <!-- Pillar 2: Transformative Ideas -->
-        <div class="pillar-card" id="pillar-card-1" onclick="selectPillar(1)">
-          <div class="pillar-icon-badge">
+        <!-- Pillar 2 -->
+        <div class="pillar-single-item">
+          <div class="pillar-round-icon">
             <svg viewBox="0 0 24 24"><path d="M9 21c0 .55.45 1 1 1h4c.55 0 1-.45 1-1v-1H9v1zm3-19C8.14 2 5 5.14 5 9c0 2.38 1.19 4.47 3 5.74V17c0 .55.45 1 1 1h6c.55 0 1-.45 1-1v-2.26c1.81-1.27 3-3.36 3-5.74 0-3.86-3.14-7-7-7zm2.85 11.1l-.85.6V16h-4v-1.3l-.85-.6A5.003 5.003 0 0 1 7 9c0-2.76 2.24-5 5-5s5 2.24 5 5c0 1.63-.8 3.16-2.15 4.1z"/></svg>
           </div>
-          <h3 class="pillar-title" data-en="Transformative Ideas." data-hi="परिवर्तनकारी विचार।">
-            Transformative<br>Ideas.
-          </h3>
+          <h3 class="pillar-main-title" data-en="Enterprises Building Impact" data-hi="प्रभावशाली उद्यम">Enterprises Building Impact</h3>
+          <p class="pillar-sub-desc" data-en="Businesses creating scale and opportunities." data-hi="विस्तार और नए अवसर रचते व्यापार।">Businesses creating scale and opportunities.</p>
         </div>
 
-        <!-- Pillar 3: Reimagining MP's Growth Story -->
-        <div class="pillar-card" id="pillar-card-2" onclick="selectPillar(2)">
-          <div class="pillar-icon-badge">
+        <!-- Pillar 3 -->
+        <div class="pillar-single-item">
+          <div class="pillar-round-icon">
             <svg viewBox="0 0 24 24"><path d="M16 6l2.29 2.29-4.88 4.88-4-4L2 16.59 3.41 18l6-6 4 4 6.3-6.29L22 12V6z"/></svg>
           </div>
-          <h3 class="pillar-title" data-en="Reimagining MP's Growth Story." data-hi="एमपी की विकास गाथा।">
-            Reimagining MP's<br>Growth Story.
-          </h3>
+          <h3 class="pillar-main-title" data-en="Innovation Powering Tomorrow" data-hi="भविष्य को गति देता नवाचार">Innovation Powering Tomorrow</h3>
+          <p class="pillar-sub-desc" data-en="Ideas and solutions shaping a better future." data-hi="बेहतर कल को आकार देते समाधान।">Ideas and solutions shaping a better future.</p>
         </div>
 
       </div>
+    </div>
+  </section>
 
-      <!-- Shuffling Subtext & Animated Dots -->
-      <div class="shuffling-indicator-wrap">
-        <p class="shuffling-subtext" data-en="(Shuffling taglines: come and fade, one at a time)" data-hi="(टैगलाइन: एक-एक करके क्रमबद्ध)">
-          (Shuffling taglines: come and fade, one at a time)
-        </p>
-        <div class="shuffling-dots" id="shuffling-dots">
-          <span class="shuffling-dot active" onclick="selectPillar(0)"></span>
-          <span class="shuffling-dot" onclick="selectPillar(1)"></span>
-          <span class="shuffling-dot" onclick="selectPillar(2)"></span>
+  <!-- ============================================================
+       5. BUILDING A STRONGER MP (Cityscape + Story Row)
+       ============================================================ -->
+  <section class="sec-building-mp" id="overview">
+    <div class="container building-grid">
+      
+      <!-- Left Visual Image -->
+      <div class="building-visual-frame">
+        <img src="assets/mp-cityscape.jpg" alt="Building a stronger Madhya Pradesh Skyline">
+      </div>
+
+      <!-- Right Editorial -->
+      <div class="building-copy-col">
+        <div class="building-tag-heading">
+          <div class="cyan-accent-bar"></div>
+          <h2 class="building-title-text" data-en="Building a stronger Madhya Pradesh." data-hi="सशक्त मध्य प्रदेश का निर्माण।">
+            Building a stronger<br>Madhya Pradesh.
+          </h2>
         </div>
-      </div>
 
-    </div>
-  </section>
-
-  <div class="section-divider"></div>
-
-  <!-- ============================================================
-       3. EDITORIAL OVERVIEW & CITYSCAPE (Exact Match to Mockup)
-       ============================================================ -->
-  <section class="sec-editorial-client" id="overview">
-    <div class="container editorial-grid">
-      
-      <!-- Left Column: Modern Architectural Cityscape Graphic -->
-      <div class="editorial-visual-col">
-        <img src="assets/mp-cityscape.jpg" alt="Madhya Pradesh Economic Skyline and Infrastructure" class="editorial-cityscape-img">
-      </div>
-
-      <!-- Right Column: Editorial Paragraph (Exact Match to Mockup) -->
-      <div class="editorial-text-col">
-        <p class="editorial-quote-paragraph" data-en="&lsquo;<strong>Makers of Progress</strong>&rsquo; brings together niche experts and industry leaders from diverse verticals who are shaping MP&rsquo;s growth from the ground up. As a bridge between industry and government, the Chapter will enable informed dialogue and relevant policy thinking to unlock opportunities and write MP&rsquo;s next growth story." data-hi="&lsquo;<strong>मेकर्स ऑफ़ प्रोग्रेस</strong>&rsquo; विविध क्षेत्रों के विशेषज्ञों और उद्योग जगत के अगुआओं को एक मंच पर लाता है, जो ज़मीनी स्तर से मध्य प्रदेश के विकास को आकार दे रहे हैं। उद्योग और सरकार के बीच सेतु के रूप में, यह चैप्टर सार्थक संवाद और प्रासंगिक नीति-चिंतन को सक्षम बनाएगा, ताकि नए अवसर खुलें और एमपी की अगली विकास गाथा लिखी जा सके।">
-          &lsquo;<strong>Makers of Progress</strong>&rsquo; brings together niche experts and industry leaders from diverse verticals who are shaping MP&rsquo;s growth from the ground up. As a bridge between industry and government, the Chapter will enable informed dialogue and relevant policy thinking to unlock opportunities and write MP&rsquo;s next growth story.
+        <p class="building-body-p" data-en="Across sectors and scale, these makers are creating jobs, strengthening communities and driving sustainable growth. Makers of Progress is our tribute to their journey, their resilience and their vision for a better tomorrow." data-hi="हर क्षेत्र और पैमाने पर, ये निर्माता रोज़गार सृजित कर रहे हैं, समुदायों को सशक्त बना रहे हैं और सतत विकास को गति दे रहे हैं। मेकर्स ऑफ़ प्रोग्रेस उनकी यात्रा, उनकी दृढ़ता और एक बेहतर कल के उनके विज़न को हमारा नमन है।">
+          Across sectors and scale, these makers are creating jobs, strengthening communities and driving sustainable growth. Makers of Progress is our tribute to their journey, their resilience and their vision for a better tomorrow.
         </p>
       </div>
 
@@ -1359,257 +1078,243 @@ button {
   </section>
 
   <!-- ============================================================
-       4. THE MAKERS COUNCIL (14 State & Sectoral Leaders)
+       6. MEET THE MAKERS (14 State Leaders & Sectoral Chairs)
        ============================================================ -->
-  <section class="sec-makers" id="makers">
+  <section class="sec-the-makers" id="makers">
     <div class="container">
       
-      <div class="makers-head">
-        <span class="sec-eyebrow" data-en="ICC MP STATE LEADERSHIP COUNCIL" data-hi="आईसीसी मध्य प्रदेश नेतृत्व परिषद">ICC MP STATE LEADERSHIP COUNCIL</span>
-        <h2 class="sec-title" data-en="The Makers" data-hi="द मेकर्स">The Makers</h2>
-        <p class="sec-lead" data-en="Pioneering leaders, founders, and industrialists driving Madhya Pradesh's key sectoral verticals." data-hi="मध्य प्रदेश के प्रमुख क्षेत्रों का नेतृत्व करने वाले अग्रणी उद्यमी, संस्थापक और उद्योगपति।">
-          Pioneering leaders, founders, and industrialists driving Madhya Pradesh's key sectoral verticals.
+      <div class="makers-head-center">
+        <div class="makers-eyebrow-rule" data-en="— MEET THE —" data-hi="— मिलिए इनसे —">— MEET THE —</div>
+        <h2 class="makers-section-h2" data-en="The Makers" data-hi="द मेकर्स">The Makers</h2>
+        <p class="makers-section-sub" data-en="Passionate leaders. Transformative ideas. Unstoppable forward momentum." data-hi="उत्साही नेतृत्वकर्ता। परिवर्तनकारी विचार। निरंतर आगे बढ़ती गति।">
+          Passionate leaders. Transformative ideas. Unstoppable forward momentum.
         </p>
       </div>
 
-      <!-- Leadership Tier -->
-      <div class="tier-label-row" data-en="Leadership" data-hi="राज्य एवं राष्ट्रीय नेतृत्व">Leadership</div>
-      <div class="makers-grid-lead" id="grid-lead"></div>
+      <!-- Grid of Profile Cards -->
+      <div class="makers-profile-grid" id="makers-roster-grid"></div>
 
-      <!-- Sectoral Tier -->
-      <div class="tier-label-row" data-en="Sectoral Chairs" data-hi="विभागीय अध्यक्ष">Sectoral Chairs</div>
-      <div class="makers-grid-sect" id="grid-sect"></div>
+      <div class="view-all-makers-btn-wrap">
+        <a href="#rsvp" class="btn-view-all-makers" onclick="openRSVPModal(); return false;" data-en="View All Makers &rarr;" data-hi="सभी निर्माताओं को देखें &rarr;">
+          <span data-en="View All Makers" data-hi="सभी निर्माताओं को देखें">View All Makers</span>
+          <span>&rarr;</span>
+        </a>
+      </div>
 
     </div>
   </section>
 
   <!-- ============================================================
-       5. VENUE & IN-PAGE RSVP SECTION (SheetDB API Integration)
+       7. DARK NAVY RSVP CARD (Exact Match to Design)
        ============================================================ -->
-  <section class="sec-rsvp" id="rsvp">
+  <section class="sec-dark-rsvp" id="rsvp">
     <div class="container">
-      
-      <div class="rsvp-split-card">
+      <div class="dark-rsvp-container-card">
         
-        <!-- Left Column: Venue & Reservation Info -->
-        <div class="rsvp-left-info">
-          <h2 class="rsvp-info-title" data-en="Reserve your seat." data-hi="अपनी सीट आरक्षित करें।">
+        <!-- Left Info -->
+        <div class="dark-rsvp-left-info">
+          <h2 class="dark-rsvp-title" data-en="Reserve your seat." data-hi="अपनी सीट आरक्षित करें।">
             Reserve your seat.
           </h2>
-          <p class="rsvp-info-sub" data-en="Seats are limited and admission is by confirmation. Leave your details and the secretariat will confirm your place." data-hi="सीटें सीमित हैं और प्रवेश पुष्टिकरण द्वारा है। अपना विवरण दें, सचिवालय आपकी सीट की पुष्टि करेगा।">
-            Seats are limited and admission is by confirmation. Leave your details and the secretariat will confirm your place.
+          <p class="dark-rsvp-lead-sub" data-en="Be part of an evening that celebrates vision, leadership and the spirit of progress." data-hi="एक ऐसी शाम का हिस्सा बनें जो विज़न, नेतृत्व और प्रगति की भावना का उत्सव मनाती है।">
+            Be part of an evening that celebrates vision, leadership and the spirit of progress.
           </p>
 
-          <div class="rsvp-event-badge-box">
-            <div class="rsvp-eb-date" data-en="Friday, 4th September 2026 · 11:00 AM – 1:30 PM" data-hi="शुक्रवार, 4 सितंबर 2026 · सुबह 11:00 से दोपहर 1:30 बजे">
-              Friday, 4th September 2026 · 11:00 AM – 1:30 PM
+          <div class="dark-rsvp-meta-stack">
+            <div class="meta-row-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+              <div>
+                <strong data-en="Friday, 4th September 2026" data-hi="शुक्रवार, 4 सितंबर 2026">Friday, 4th September 2026</strong><br>
+                <span style="font-size: 13px; color: #94A3B8;">11:00 AM – 1:30 PM IST</span>
+              </div>
             </div>
-            <div class="rsvp-eb-venue" data-en="Orion Hall, Brilliant Convention Centre, Indore" data-hi="ओरियन हॉल, ब्रिलियंट कन्वेंशन सेंटर, इंदौर">
-              Orion Hall, Brilliant Convention Centre, Indore
-            </div>
-          </div>
 
-          <div class="rsvp-utils-row">
-            <button type="button" class="pill-btn pill-outline" style="color: var(--white); border-color: rgba(255,255,255,0.4);" onclick="downloadICSFile()" data-en="Add to Calendar" data-hi="कैलेंडर में जोड़ें">
-              Add to Calendar
-            </button>
-            <a class="pill-btn pill-outline" style="color: var(--white); border-color: rgba(255,255,255,0.4);" href="https://www.google.com/maps/search/?api=1&amp;query=Brilliant+Convention+Centre+Indore" target="_blank" rel="noopener" data-en="Get Directions" data-hi="दिशा-निर्देश">
-              Get Directions ↗
-            </a>
+            <div class="meta-row-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <div data-en="Orion Hall, Brilliant Convention Centre, Indore" data-hi="ओरियन हॉल, ब्रिलियंट कन्वेंशन सेंटर, इंदौर">
+                Orion Hall, Brilliant Convention Centre,<br>Indore
+              </div>
+            </div>
           </div>
         </div>
 
-        <!-- Right Column: Live Form -->
-        <div class="rsvp-right-form">
-          <form id="inpage-rsvp-form" onsubmit="handleInpageRSVPSubmit(event)">
+        <!-- Right Form (SheetDB Sync) -->
+        <div class="dark-rsvp-right-form">
+          <form class="dark-rsvp-form" id="dark-rsvp-form" onsubmit="handleDarkRSVPSubmit(event)">
             
-            <div class="field-group">
-              <label class="field-label" for="inp-name" data-en="Full Name *" data-hi="पूरा नाम *">Full Name *</label>
-              <input type="text" class="field-input" id="inp-name" required placeholder="e.g. Rajesh Sharma">
-            </div>
-
-            <div class="field-group">
-              <label class="field-label" for="inp-org" data-en="Organisation / Enterprise *" data-hi="संस्थान / कंपनी *">Organisation / Enterprise *</label>
-              <input type="text" class="field-input" id="inp-org" required placeholder="e.g. Indore Industries Ltd">
-            </div>
-
-            <div class="form-row-2">
-              <div class="field-group">
-                <label class="field-label" for="inp-phone" data-en="Mobile / WhatsApp *" data-hi="मोबाइल नंबर *">Mobile / WhatsApp *</label>
-                <input type="tel" class="field-input" id="inp-phone" required placeholder="+91 98765 43210">
+            <div class="dark-form-grid-2">
+              <div class="dark-input-field-wrap">
+                <label class="dark-input-label" for="df-name" data-en="Full Name *" data-hi="पूरा नाम *">Full Name *</label>
+                <input type="text" class="dark-input-box" id="df-name" required placeholder="e.g. Rajesh Sharma">
               </div>
-              <div class="field-group">
-                <label class="field-label" for="inp-desig" data-en="Designation *" data-hi="पदनाम *">Designation *</label>
-                <input type="text" class="field-input" id="inp-desig" required placeholder="e.g. Managing Director">
+              <div class="dark-input-field-wrap">
+                <label class="dark-input-label" for="df-email" data-en="Email Address *" data-hi="ईमेल पता *">Email Address *</label>
+                <input type="email" class="dark-input-box" id="df-email" required placeholder="e.g. rajesh@example.com">
               </div>
             </div>
 
-            <div class="field-group">
-              <label class="field-label" for="inp-email" data-en="Official Email Address *" data-hi="ईमेल पता *">Official Email Address *</label>
-              <input type="email" class="field-input" id="inp-email" required placeholder="name@company.com">
+            <div class="dark-form-grid-2">
+              <div class="dark-input-field-wrap">
+                <label class="dark-input-label" for="df-phone" data-en="Mobile Number *" data-hi="मोबाइल नंबर *">Mobile Number *</label>
+                <input type="tel" class="dark-input-box" id="df-phone" required placeholder="e.g. +91 98765 43210">
+              </div>
+              <div class="dark-input-field-wrap">
+                <label class="dark-input-label" for="df-org" data-en="Organisation / Enterprise *" data-hi="संस्थान / कंपनी *">Organisation / Enterprise *</label>
+                <input type="text" class="dark-input-box" id="df-org" required placeholder="e.g. Indore Industries Ltd">
+              </div>
             </div>
 
-            <button type="submit" class="pill-btn pill-gold" id="btn-submit-inpage" style="width: 100%; margin-top: 8px;">
+            <div class="dark-form-grid-2">
+              <div class="dark-input-field-wrap">
+                <label class="dark-input-label" for="df-desig" data-en="Designation" data-hi="पदनाम">Designation</label>
+                <select class="dark-select-box" id="df-desig">
+                  <option value="Managing Director">Managing Director</option>
+                  <option value="Founder / CEO">Founder / CEO</option>
+                  <option value="Director / Partner">Director / Partner</option>
+                  <option value="President / Vice President">President / Vice President</option>
+                  <option value="Industry Delegate">Industry Delegate</option>
+                </select>
+              </div>
+              <div class="dark-input-field-wrap">
+                <label class="dark-input-label" for="df-seats" data-en="Number of Seats" data-hi="सीटों की संख्या">Number of Seats</label>
+                <select class="dark-select-box" id="df-seats">
+                  <option value="1 Seat">1 Seat</option>
+                  <option value="2 Seats">2 Seats</option>
+                  <option value="3 Seats">3 Seats</option>
+                </select>
+              </div>
+            </div>
+
+            <button type="submit" class="btn-confirm-seat-gold" id="btn-submit-dark" style="width: 100%;">
               <span data-en="Confirm My Seat" data-hi="मेरी सीट पक्की करें">Confirm My Seat</span>
-              <span>↗</span>
+              <span>&rarr;</span>
             </button>
-            <p style="font-size: 11.5px; color: rgba(255,255,255,0.6); margin-top: 12px; text-align: center;" data-en="Your details go directly to the ICC Madhya Pradesh Secretariat." data-hi="आपका विवरण सीधे आईसीसी सचिवालय में दर्ज किया जाता है।">
-              Your details go directly to the ICC Madhya Pradesh Secretariat.
+            <p class="dark-form-footer-caption" data-en="Seats are limited. Confirm your attendance today." data-hi="सीटें सीमित हैं। आज ही अपनी उपस्थिति दर्ज करें।">
+              Seats are limited. Confirm your attendance today.
             </p>
           </form>
 
           <!-- Confirmed Success State -->
-          <div class="rsvp-success-state" id="inpage-success-box">
-            <div class="success-tick-circle">✓</div>
-            <h3 style="font-family: var(--font-d); font-size: 24px; font-weight: 800; color: #FFD97A;" data-en="Seat Reserved Successfully!" data-hi="सीट सफलतापूर्वक आरक्षित!">
-              Seat Reserved Successfully!
-            </h3>
-            <p style="font-size: 14.5px; color: rgba(255,255,255,0.85);" data-en="Thank you for confirming your presence. A formal invitation pass has been recorded by the Secretariat." data-hi="आपकी उपस्थिति दर्ज कर ली गई है। सचिवालय द्वारा आपको औपचारिक पास भेजा जाएगा।">
-              Thank you for confirming your presence. A formal invitation pass has been recorded by the Secretariat.
-            </p>
-            <a href="#" id="inpage-wa-share-btn" target="_blank" class="pill-btn" style="background: #25D366; color: #fff; width: 100%;">
-              <span data-en="Share on WhatsApp" data-hi="व्हाट्सएप पर शेयर करें">Share on WhatsApp</span>
-            </a>
+          <div id="dark-rsvp-success" style="display: none; padding: 20px 0; text-align: center;">
+            <div style="width: 50px; height: 50px; border-radius: 50%; background: rgba(229,168,59,0.2); color: #E5A83B; font-size: 26px; display: inline-flex; align-items: center; justify-content: center; margin-bottom: 12px;">✓</div>
+            <h3 style="font-size: 22px; font-weight: 800; color: #FFD97A;" data-en="Seat Reserved Successfully!" data-hi="सीट सफलतापूर्वक आरक्षित!">Seat Reserved Successfully!</h3>
+            <p style="color: #94A3B8; font-size: 14px; margin: 8px 0 16px;">Thank you for confirming your presence. A formal invitation pass has been recorded by the Secretariat.</p>
+            <a href="#" id="dark-wa-share-btn" target="_blank" class="btn-confirm-seat-gold" style="background: #25D366; color: #fff; display: inline-flex;">Share on WhatsApp</a>
           </div>
 
         </div>
 
       </div>
-
     </div>
   </section>
 
 </main>
 
 <!-- ============================================================
-     6. RSVP POPUP MODAL (8-Second Auto Trigger + Button Triggers)
-     ============================================================ -->
-<div class="rsvp-modal-backdrop" id="rsvp-modal-backdrop" onclick="handleBackdropClick(event)">
-  <div class="rsvp-modal-window" role="dialog" aria-modal="true" aria-labelledby="modal-title">
-    
-    <button type="button" class="modal-close-btn" onclick="closeRSVPModal()" aria-label="Close dialog">✕</button>
-
-    <!-- Modal Header with ICC Logo -->
-    <div class="modal-brand-header">
-      <img src="assets/logos/icc100-blue.png" alt="ICC 100 Logo" class="modal-brand-logo">
-      <div>
-        <div class="modal-eyebrow-text" data-en="LAUNCHING ICC'S MP CHAPTER" data-hi="आईसीसी मध्य प्रदेश स्टेट चैप्टर">LAUNCHING ICC'S MP CHAPTER</div>
-        <div style="font-family: var(--font-d); font-weight: 800; font-size: 13px; color: var(--indigo);">MAKERS OF PROGRESS</div>
-      </div>
-    </div>
-
-    <h2 class="modal-title-text" id="modal-title" data-en="Reserve Your Delegate Seat" data-hi="अपनी सीट आरक्षित करें">
-      Reserve Your Delegate Seat
-    </h2>
-
-    <div class="modal-event-pill">
-      <span>📅 Friday, 4th Sept 2026 · Orion Hall, Brilliant Convention Centre, Indore</span>
-    </div>
-
-    <!-- Modal Form -->
-    <div id="modal-form-wrap">
-      <form onsubmit="handleModalRSVPSubmit(event)">
-        
-        <div class="form-row-2">
-          <div class="field-group">
-            <label class="field-label" style="color: var(--ink);" for="pop-name" data-en="Full Name *" data-hi="पूरा नाम *">Full Name *</label>
-            <input type="text" class="field-input" style="background: var(--paper); border: 1px solid rgba(27,120,190,0.2);" id="pop-name" required placeholder="e.g. Rajesh Sharma">
-          </div>
-          <div class="field-group">
-            <label class="field-label" style="color: var(--ink);" for="pop-phone" data-en="Mobile / WhatsApp *" data-hi="मोबाइल नंबर *">Mobile / WhatsApp *</label>
-            <input type="tel" class="field-input" style="background: var(--paper); border: 1px solid rgba(27,120,190,0.2);" id="pop-phone" required placeholder="+91 98765 43210">
-          </div>
-        </div>
-
-        <div class="field-group">
-          <label class="field-label" style="color: var(--ink);" for="pop-email" data-en="Official Email Address *" data-hi="ईमेल पता *">Official Email Address *</label>
-          <input type="email" class="field-input" style="background: var(--paper); border: 1px solid rgba(27,120,190,0.2);" id="pop-email" required placeholder="name@company.com">
-        </div>
-
-        <div class="form-row-2">
-          <div class="field-group">
-            <label class="field-label" style="color: var(--ink);" for="pop-org" data-en="Organisation / Enterprise *" data-hi="संस्थान / कंपनी *">Organisation / Enterprise *</label>
-            <input type="text" class="field-input" style="background: var(--paper); border: 1px solid rgba(27,120,190,0.2);" id="pop-org" required placeholder="e.g. Indore Industries Ltd">
-          </div>
-          <div class="field-group">
-            <label class="field-label" style="color: var(--ink);" for="pop-desig" data-en="Designation *" data-hi="पदनाम *">Designation *</label>
-            <input type="text" class="field-input" style="background: var(--paper); border: 1px solid rgba(27,120,190,0.2);" id="pop-desig" required placeholder="e.g. Managing Director">
-          </div>
-        </div>
-
-        <button type="submit" class="pill-btn pill-gold" id="btn-submit-modal" style="width: 100%; margin-top: 10px;">
-          <span data-en="Confirm Delegate Seat" data-hi="सीट आरक्षित करें">Confirm Delegate Seat</span>
-          <span>↗</span>
-        </button>
-      </form>
-    </div>
-
-    <!-- Modal Success State -->
-    <div class="rsvp-success-state" id="modal-success-box" style="padding: 10px 0;">
-      <div class="success-tick-circle" style="background: rgba(33,64,142,0.1); border-color: var(--royal); color: var(--royal);">✓</div>
-      <h3 style="font-family: var(--font-d); font-size: 22px; font-weight: 800; color: var(--indigo);" data-en="Seat Reserved Successfully!" data-hi="सीट सफलतापूर्वक आरक्षित!">
-        Seat Reserved Successfully!
-      </h3>
-      <p style="font-size: 14.5px; color: var(--ink-muted);" data-en="Thank you for confirming your presence at the Makers of Progress launch." data-hi="मेकर्स ऑफ़ प्रोग्रेस शुभारंभ में आपकी उपस्थिति दर्ज कर ली गई है।">
-        Thank you for confirming your presence at the Makers of Progress launch.
-      </p>
-      <a href="#" id="modal-wa-share-btn" target="_blank" class="pill-btn" style="background: #25D366; color: #fff; width: 100%;">
-        <span data-en="Share on WhatsApp" data-hi="व्हाट्सएप पर शेयर करें">Share on WhatsApp</span>
-      </a>
-    </div>
-
-  </div>
-</div>
-
-<!-- ============================================================
-     7. FOOTER
+     8. FOOTER (Exact Match)
      ============================================================ -->
 <footer class="site-footer">
   <div class="container">
     
-    <div class="footer-top-row">
-      <img src="assets/logos/icc100-blue.png" alt="ICC 100 Centenary Logo" class="footer-logo-img">
-      <div>
-        <div style="font-family: var(--font-d); font-weight: 800; font-size: 16px;">INDIAN CHAMBER OF COMMERCE</div>
-        <div style="font-size: 13px; color: rgba(255,255,255,0.7); margin-top: 4px;">Madhya Pradesh State Chapter · <a href="https://www.indianchamber.org" target="_blank" rel="noopener" style="color: var(--sky);">indianchamber.org</a></div>
+    <div class="footer-top-split">
+      <div class="footer-left-brand">
+        <img src="assets/logos/icc100-blue.png" alt="ICC 100 Centenary Logo" class="footer-icc-logo">
+        <div>
+          <div class="footer-org-name">INDIAN CHAMBER OF COMMERCE</div>
+          <div class="footer-chapter-email">Madhya Pradesh State Chapter | indore@iccindia.org</div>
+        </div>
+      </div>
+
+      <div class="footer-center-credo">
+        A Century of Service to the Nation
+      </div>
+
+      <div class="footer-social-icons">
+        <a href="https://linkedin.com" target="_blank" rel="noopener" class="social-circle-link" aria-label="LinkedIn">in</a>
+        <a href="https://twitter.com" target="_blank" rel="noopener" class="social-circle-link" aria-label="Twitter / X">𝕏</a>
+        <a href="https://instagram.com" target="_blank" rel="noopener" class="social-circle-link" aria-label="Instagram">IG</a>
       </div>
     </div>
 
-    <div class="footer-credo">
-      A Century of Service to the Nation
-    </div>
-
-    <div class="footer-bottom-bar">
+    <div class="footer-bottom-legal">
       <div>&copy; 2026 Indian Chamber of Commerce (ICC). All rights reserved.</div>
-      <div>Makers of Progress · Madhya Pradesh Chapter Launch</div>
+      <div>Makers of Progress – Madhya Pradesh Chapter Launch | Privacy Policy | Terms &amp; Conditions</div>
     </div>
 
   </div>
 </footer>
 
 <!-- ============================================================
-     JAVASCRIPT LOGIC ENGINE
+     9. RSVP POPUP MODAL (8-Second Auto Trigger)
+     ============================================================ -->
+<div class="rsvp-modal-backdrop" id="rsvp-modal-backdrop" onclick="handleBackdropClick(event)">
+  <div class="rsvp-modal-window" role="dialog" aria-modal="true">
+    <button type="button" class="modal-close-btn" onclick="closeRSVPModal()" aria-label="Close dialog">✕</button>
+
+    <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 12px;">
+      <img src="assets/logos/icc100-blue.png" alt="ICC 100" style="height: 34px; width: auto;">
+      <div>
+        <div style="font-size: 11px; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; color: var(--royal-blue);">MADHYA PRADESH CHAPTER</div>
+        <div style="font-size: 13px; font-weight: 800; color: var(--navy-dark);">MAKERS OF PROGRESS</div>
+      </div>
+    </div>
+
+    <h2 style="font-size: 22px; font-weight: 800; color: var(--navy-dark); margin-bottom: 6px;" data-en="Reserve Your Delegate Seat" data-hi="अपनी सीट आरक्षित करें">
+      Reserve Your Delegate Seat
+    </h2>
+    <div style="font-size: 12.5px; color: var(--royal-blue); font-weight: 600; margin-bottom: 16px;">
+      📅 Friday, 4th Sept 2026 · Orion Hall, BCC, Indore
+    </div>
+
+    <form id="pop-modal-form" onsubmit="handleModalRSVPSubmit(event)" style="display: flex; flex-direction: column; gap: 12px;">
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+        <input type="text" class="dark-input-box" style="border: 1px solid var(--border-mid);" id="pop-name" required placeholder="Full Name *">
+        <input type="tel" class="dark-input-box" style="border: 1px solid var(--border-mid);" id="pop-phone" required placeholder="Mobile Number *">
+      </div>
+      <input type="email" class="dark-input-box" style="border: 1px solid var(--border-mid);" id="pop-email" required placeholder="Email Address *">
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+        <input type="text" class="dark-input-box" style="border: 1px solid var(--border-mid);" id="pop-org" required placeholder="Organisation *">
+        <input type="text" class="dark-input-box" style="border: 1px solid var(--border-mid);" id="pop-desig" placeholder="Designation">
+      </div>
+      <button type="submit" class="btn-confirm-seat-gold" id="btn-submit-modal" style="width: 100%; margin-top: 6px;">
+        <span data-en="Confirm My Seat" data-hi="मेरी सीट पक्की करें">Confirm My Seat</span>
+        <span>&rarr;</span>
+      </button>
+    </form>
+
+    <div id="pop-modal-success" style="display: none; padding: 16px 0; text-align: center;">
+      <div style="width: 44px; height: 44px; border-radius: 50%; background: #EFF6FF; color: var(--royal-blue); font-size: 22px; display: inline-flex; align-items: center; justify-content: center; margin-bottom: 8px;">✓</div>
+      <h3 style="font-size: 20px; font-weight: 800; color: var(--navy-dark);">Seat Reserved!</h3>
+      <p style="color: var(--text-muted); font-size: 13.5px; margin: 6px 0 14px;">Your presence has been recorded by the Secretariat.</p>
+      <a href="#" id="pop-wa-share-btn" target="_blank" class="btn-confirm-seat-gold" style="background: #25D366; color: #fff; width: 100%;">Share on WhatsApp</a>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================
+     JAVASCRIPT ENGINE
      ============================================================ -->
 <script>
 /* ------------------------------------------------------------
-   1. COUNCIL DATA
+   1. COUNCIL DATA (14 Members)
    ------------------------------------------------------------ */
 const COUNCIL = [
-  { tier:'lead', name:'Brij Bhushan Agarwal', nameHi:'बृज भूषण अग्रवाल', role:'President, ICC', roleHi:'अध्यक्ष, आईसीसी (राष्ट्रीय)', org:'Indian Chamber of Commerce', sector:'National Leadership', sectorHi:'राष्ट्रीय नेतृत्व', photo:'assets/council/brij-bhushan-agarwal.jpeg' },
-  { tier:'lead', name:'Ankit Mehta', nameHi:'अंकित मेहता', role:'Chairman, ICC MP Chapter', roleHi:'अध्यक्ष, आईसीसी म.प्र. चैप्टर', org:'ICC Madhya Pradesh', sector:'State Leadership', sectorHi:'राज्य नेतृत्व', photo:'assets/council/ankit-mehta.png' },
-  { tier:'lead', name:'Tapan Agrawal', nameHi:'तपन अग्रवाल', role:'Co-Chair, ICC MP Chapter', roleHi:'सह-अध्यक्ष, आईसीसी म.प्र. चैप्टर', org:'Agarwal Coal Corporation', sector:'State Leadership', sectorHi:'राज्य नेतृत्व', photo:'assets/council/tapan-agrawal.jpg' },
-  { tier:'lead', name:'Ankur Khaitan', nameHi:'अंकुर खेतान', role:'Co-Chair · MD & CEO, TACC', roleHi:'सह-अध्यक्ष · प्रबंध निदेशक व सीईओ, टीएसीसी', org:'TACC (LNJ Bhilwara Group)', sector:'State Leadership', sectorHi:'राज्य नेतृत्व', photo:'assets/council/ankur-khaitan.jpg' },
+  { name:'Brij Bhushan Agarwal', nameHi:'बृज भूषण अग्रवाल', role:'President', roleHi:'अध्यक्ष', company:'ICC National', photo:'assets/council/brij-bhushan-agarwal.jpeg' },
+  { name:'Ankit Mehta', nameHi:'अंकित मेहता', role:'Chairman', roleHi:'अध्यक्ष', company:'ICC MP Chapter', photo:'assets/council/ankit-mehta.png' },
+  { name:'Tapan Agrawal', nameHi:'तपन अग्रवाल', role:'Co-Chair', roleHi:'सह-अध्यक्ष', company:'Agarwal Coal Corp.', photo:'assets/council/tapan-agrawal.jpg' },
+  { name:'Ankur Khaitan', nameHi:'अंकुर खेतान', role:'Co-Chair · MD & CEO', roleHi:'सह-अध्यक्ष', company:'TACC (LNJ Bhilwara)', photo:'assets/council/ankur-khaitan.jpg' },
+  { name:'Saksham Agrawal', nameHi:'सक्षम अग्रवाल', role:'Director', roleHi:'निदेशक', company:'PATH India', photo:'assets/council/saksham-agrawal.jpg' },
 
-  { tier:'sect', name:'Saksham Agrawal', nameHi:'सक्षम अग्रवाल', role:'Director, PATH India', roleHi:'निदेशक, पाथ इंडिया', org:'PATH India', sector:'Infrastructure', sectorHi:'इन्फ्रास्ट्रक्चर', photo:'assets/council/saksham-agrawal.jpg' },
-  { tier:'sect', name:'Ankit Agrawal', nameHi:'अंकित अग्रवाल', role:'Director, MDPH (Zed Black)', roleHi:'निदेशक, एमडीपीएच (ज़ेड ब्लैक)', org:'Mysore Deep Perfumery House', sector:'FMCG & Consumer Goods', sectorHi:'एफएमसीजी', photo:'assets/council/ankit-agrawal.jpeg' },
-  { tier:'sect', name:'Sarthak Doshi', nameHi:'सार्थक दोशी', role:'CEO, Indo Thai Securities', roleHi:'सीईओ, इंडो थाई सिक्योरिटीज़', org:'Indo Thai Securities', sector:'Investments & Finance', sectorHi:'निवेश एवं वित्त', photo:'assets/council/sarthak-doshi.jpg' },
-  { tier:'sect', name:'Minaal Sahlot', nameHi:'मीनाल सहलोत', role:'Director, Raj Group', roleHi:'निदेशक, राज ग्रुप', org:'Raj Homes', sector:'Real Estate & Urban Spaces', sectorHi:'रियल एस्टेट', photo:'assets/council/minaal-sahlot.jpg' },
-  { tier:'sect', name:'Rishabh Mehta', nameHi:'ऋषभ मेहता', role:'Director, BCM Group', roleHi:'निदेशक, बीसीएम ग्रुप', org:'MID India Creations LLP', sector:'Hospitality & Tourism', sectorHi:'हॉस्पिटैलिटी', photo:'assets/council/rishabh-mehta.png' },
-  { tier:'sect', name:'Siddharth Bhargava', nameHi:'सिद्धार्थ भार्गव', role:'MD, Rajshree Engineering', roleHi:'प्रबंध निदेशक, राजश्री इंजीनियरिंग', org:'Rajshree Engineering', sector:'Manufacturing & Heavy Eng.', sectorHi:'विनिर्माण', photo:'assets/council/siddharth-bhargav.png' },
-  { tier:'sect', name:'Priyesh Nagar', nameHi:'प्रियेश नागर', role:'Managing Partner, JMC', roleHi:'प्रबंध भागीदार, जेएमसी', org:'Maganlal Chhaganlal', sector:'Agri-Trade & Retail', sectorHi:'कृषि व्यापार', photo:'assets/council/priyesh-nagar.jpeg' },
-  { tier:'sect', name:'Udit Birla', nameHi:'उदित बिड़ला', role:'Director, Swara Baby Products', roleHi:'निदेशक, स्वरा बेबी प्रोडक्ट्स', org:'Swara Baby Products', sector:'Health & Hygiene', sectorHi:'हेल्थकेयर', photo:'assets/council/udit-birla.jpeg' },
-  { tier:'sect', name:'Sumit Ghorawat', nameHi:'सुमित घोरावत', role:'Co-Founder, ShopKirana', roleHi:'सह-संस्थापक, शॉपकिराना', org:'ShopKirana', sector:'Technology & Supply Chain', sectorHi:'टेक्नोलॉजी', photo:'assets/council/sumit-ghorawat.jpg' },
-  { tier:'sect', name:'Shanu Mehta', nameHi:'शानु मेहता', role:'Co-Founder, MMC Convert', roleHi:'सह-संस्थापक, एमएमसी कंवर्ट', org:'MMC Convert', sector:'International Trade', sectorHi:'अंतरराष्ट्रीय व्यापार', photo:'assets/council/shanu-mehta.jpg' }
+  { name:'Ankit Agrawal', nameHi:'अंकित अग्रवाल', role:'Director', roleHi:'निदेशक', company:'MDPH (Zed Black)', photo:'assets/council/ankit-agrawal.jpeg' },
+  { name:'Sarthak Doshi', nameHi:'सार्थक दोशी', role:'CEO', roleHi:'सीईओ', company:'Indo Thai Securities', photo:'assets/council/sarthak-doshi.jpg' },
+  { name:'Minaal Sahlot', nameHi:'मीनाल सहलोत', role:'Director', roleHi:'निदेशक', company:'Raj Homes', photo:'assets/council/minaal-sahlot.jpg' },
+  { name:'Rishabh Mehta', nameHi:'ऋषभ मेहता', role:'Director', roleHi:'निदेशक', company:'BCM Group', photo:'assets/council/rishabh-mehta.png' },
+  { name:'Siddharth Bhargava', nameHi:'सिद्धार्थ भार्गव', role:'MD', roleHi:'प्रबंध निदेशक', company:'Rajshree Engineering', photo:'assets/council/siddharth-bhargav.png' },
+
+  { name:'Priyesh Nagar', nameHi:'प्रियेश नागर', role:'Managing Partner', roleHi:'प्रबंध भागीदार', company:'Maganlal Chhaganlal', photo:'assets/council/priyesh-nagar.jpeg' },
+  { name:'Udit Birla', nameHi:'उदित बिड़ला', role:'Director', roleHi:'निदेशक', company:'Swara Baby Products', photo:'assets/council/udit-birla.jpeg' },
+  { name:'Sumit Ghorawat', nameHi:'सुमित घोरावत', role:'Co-Founder', roleHi:'सह-संस्थापक', company:'ShopKirana', photo:'assets/council/sumit-ghorawat.jpg' },
+  { name:'Shanu Mehta', nameHi:'शानु मेहता', role:'Co-Founder', roleHi:'सह-संस्थापक', company:'MMC Convert', photo:'assets/council/shanu-mehta.jpg' }
 ];
 
 let currentLang = "en";
@@ -1631,62 +1336,32 @@ function setLanguage(lang) {
 }
 
 function renderCouncil() {
-  const l = document.getElementById('grid-lead');
-  const s = document.getElementById('grid-sect');
-  if (!l || !s) return;
+  const container = document.getElementById("makers-roster-grid");
+  if (!container) return;
 
-  function buildCard(m) {
-    const isHi = (currentLang === 'hi');
-    const name = isHi ? m.nameHi : m.name;
-    const role = isHi ? m.roleHi : m.role;
-    const sect = isHi ? m.sectorHi : m.sector;
-    const photo = m.photo ? `<img src="${m.photo}" alt="${name}" class="maker-photo" loading="lazy">` : `<div class="maker-initials">${m.name.slice(0,2)}</div>`;
-
+  const isHi = (currentLang === "hi");
+  container.innerHTML = COUNCIL.map(m => {
+    const name = isHi ? (m.nameHi || m.name) : m.name;
+    const role = isHi ? (m.roleHi || m.role) : m.role;
     return `
-      <article class="maker-card">
-        <div class="maker-photo-wrap">${photo}</div>
-        <div class="maker-sector">${sect}</div>
-        <h3 class="maker-name">${name}</h3>
-        <p class="maker-role">${role}</p>
-        <div class="maker-org">${m.org}</div>
+      <article class="maker-profile-card">
+        <div class="maker-card-img-wrap">
+          <img src="${m.photo}" alt="${name}" loading="lazy">
+        </div>
+        <h3 class="maker-card-name">${name}</h3>
+        <p class="maker-card-role">${role}</p>
+        <p class="maker-card-company">${m.company}</p>
       </article>
     `;
-  }
-
-  l.innerHTML = COUNCIL.filter(m => m.tier === 'lead').map(buildCard).join('');
-  s.innerHTML = COUNCIL.filter(m => m.tier === 'sect').map(buildCard).join('');
+  }).join("");
 }
 
 /* ------------------------------------------------------------
-   2. SHUFFLING PILLARS CONTROLLER
-   ------------------------------------------------------------ */
-let currentPillarIndex = 0;
-let pillarInterval = null;
-
-function selectPillar(idx) {
-  currentPillarIndex = idx;
-  for (let i = 0; i < 3; i++) {
-    const card = document.getElementById(`pillar-card-${i}`);
-    const dot = document.querySelectorAll('.shuffling-dot')[i];
-    if (card) card.classList.toggle('active', i === idx);
-    if (dot) dot.classList.toggle('active', i === idx);
-  }
-}
-
-function startPillarShuffler() {
-  pillarInterval = setInterval(() => {
-    currentPillarIndex = (currentPillarIndex + 1) % 3;
-    selectPillar(currentPillarIndex);
-  }, 3500);
-}
-
-/* ------------------------------------------------------------
-   3. IST COUNTDOWN CLOCK
-   Target: 4 September 2026, 11:00 AM IST
+   2. IST COUNTDOWN (4 September 2026, 11:00 AM IST)
    ------------------------------------------------------------ */
 function initCountdown() {
   const target = new Date("2026-09-04T11:00:00+05:30").getTime();
-  
+
   function update() {
     const now = new Date().getTime();
     const diff = target - now;
@@ -1709,7 +1384,7 @@ function initCountdown() {
 }
 
 /* ------------------------------------------------------------
-   4. SHEETDB API SYNC & RSVP HANDLERS
+   3. SHEETDB API INTEGRATION
    ------------------------------------------------------------ */
 const SHEETDB_URL = "https://sheetdb.io/api/v1/ks5ktipunqj4x";
 
@@ -1736,25 +1411,24 @@ async function postRSVP(name, phone, email, org, desig) {
   }
 }
 
-async function handleInpageRSVPSubmit(e) {
+async function handleDarkRSVPSubmit(e) {
   e.preventDefault();
-  const btn = document.getElementById("btn-submit-inpage");
+  const btn = document.getElementById("btn-submit-dark");
   if (btn) { btn.disabled = true; btn.innerHTML = "<span>Saving...</span>"; }
 
-  const name = document.getElementById("inp-name").value.trim();
-  const org = document.getElementById("inp-org").value.trim();
-  const phone = document.getElementById("inp-phone").value.trim();
-  const desig = document.getElementById("inp-desig").value.trim();
-  const email = document.getElementById("inp-email").value.trim();
+  const name = document.getElementById("df-name").value.trim();
+  const email = document.getElementById("df-email").value.trim();
+  const phone = document.getElementById("df-phone").value.trim();
+  const org = document.getElementById("df-org").value.trim();
+  const desig = document.getElementById("df-desig").value;
 
   await postRSVP(name, phone, email, org, desig);
 
-  document.getElementById("inpage-rsvp-form").style.display = "none";
-  const succ = document.getElementById("inpage-success-box");
-  if (succ) succ.classList.add("show");
+  document.getElementById("dark-rsvp-form").style.display = "none";
+  document.getElementById("dark-rsvp-success").style.display = "block";
 
-  const shareText = encodeURIComponent(`I'm attending 'Makers of Progress' — the official Launch of the ICC Madhya Pradesh Chapter on Friday, 4th Sept 2026 at Brilliant Convention Centre, Indore. Register: https://reimaginemp.in`);
-  const wa = document.getElementById("inpage-wa-share-btn");
+  const shareText = encodeURIComponent(`I'm attending 'Makers of Progress' — Launch of ICC MP Chapter on 4th Sept 2026 in Indore. Register: https://reimaginemp.in`);
+  const wa = document.getElementById("dark-wa-share-btn");
   if (wa) wa.href = `https://api.whatsapp.com/send?text=${shareText}`;
 }
 
@@ -1771,17 +1445,16 @@ async function handleModalRSVPSubmit(e) {
 
   await postRSVP(name, phone, email, org, desig);
 
-  document.getElementById("modal-form-wrap").style.display = "none";
-  const succ = document.getElementById("modal-success-box");
-  if (succ) succ.classList.add("show");
+  document.getElementById("pop-modal-form").style.display = "none";
+  document.getElementById("pop-modal-success").style.display = "block";
 
-  const shareText = encodeURIComponent(`I'm attending 'Makers of Progress' — the official Launch of the ICC Madhya Pradesh Chapter on Friday, 4th Sept 2026 at Brilliant Convention Centre, Indore. Register: https://reimaginemp.in`);
-  const wa = document.getElementById("modal-wa-share-btn");
+  const shareText = encodeURIComponent(`I'm attending 'Makers of Progress' — Launch of ICC MP Chapter on 4th Sept 2026 in Indore. Register: https://reimaginemp.in`);
+  const wa = document.getElementById("pop-wa-share-btn");
   if (wa) wa.href = `https://api.whatsapp.com/send?text=${shareText}`;
 }
 
 /* ------------------------------------------------------------
-   5. MODAL POPUP CONTROLLER (8-Second Auto-Trigger)
+   4. MODAL POPUP (8-Second Auto-Trigger)
    ------------------------------------------------------------ */
 function openRSVPModal() {
   const modal = document.getElementById("rsvp-modal-backdrop");
@@ -1808,7 +1481,7 @@ document.addEventListener("keydown", e => {
 });
 
 /* ------------------------------------------------------------
-   6. .ICS CALENDAR GENERATOR
+   5. .ICS CALENDAR DOWNLOAD
    ------------------------------------------------------------ */
 function downloadICSFile() {
   const icsData = [
@@ -1838,32 +1511,11 @@ function downloadICSFile() {
 }
 
 /* ------------------------------------------------------------
-   7. MOBILE DRAWER
-   ------------------------------------------------------------ */
-const mobBtn = document.getElementById("mobile-toggle-btn");
-const mobDrawer = document.getElementById("mobile-drawer");
-
-if (mobBtn && mobDrawer) {
-  mobBtn.addEventListener("click", () => {
-    mobBtn.classList.toggle("open");
-    mobDrawer.classList.toggle("open");
-  });
-}
-
-function closeMobileMenu() {
-  if (mobBtn && mobDrawer) {
-    mobBtn.classList.remove("open");
-    mobDrawer.classList.remove("open");
-  }
-}
-
-/* ------------------------------------------------------------
    INITIALIZATION
    ------------------------------------------------------------ */
 document.addEventListener("DOMContentLoaded", () => {
   renderCouncil();
   initCountdown();
-  startPillarShuffler();
 
   // Automatic 8-Second RSVP Popup Modal
   setTimeout(() => {
