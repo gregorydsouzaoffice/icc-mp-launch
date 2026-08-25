@@ -294,15 +294,15 @@ button {
    DYNAMIC SHUFFLING TAGLINES (Come & Fade Animation)
    ============================================================ */
 .sec-shuffling-taglines {
-  padding: clamp(10px, 2vw, 24px) 0 clamp(32px, 4vw, 52px);
+  padding: clamp(12px, 2vw, 24px) 0 clamp(24px, 3vw, 40px);
   position: relative;
 }
 .taglines-card-wrapper {
-  background: linear-gradient(135deg, #FFFFFF 0%, #F8FAFD 100%);
+  background: #FFFFFF;
   border: 1px solid var(--border-light);
-  border-radius: 24px;
-  padding: clamp(32px, 4.5vw, 48px) clamp(20px, 4vw, 40px);
-  box-shadow: 0 12px 36px -10px rgba(15, 30, 61, 0.05);
+  border-radius: 20px;
+  padding: clamp(28px, 4vw, 40px) clamp(20px, 4vw, 36px);
+  box-shadow: 0 10px 30px -10px rgba(15, 30, 61, 0.05);
   text-align: center;
   position: relative;
   overflow: hidden;
@@ -310,32 +310,25 @@ button {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-.taglines-card-wrapper::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 180px;
-  height: 2px;
-  background: linear-gradient(90deg, transparent, var(--royal-blue), transparent);
+  min-height: 120px;
 }
 .tagline-slides-container {
   position: relative;
   width: 100%;
   max-width: 820px;
-  min-height: 140px;
+  min-height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .tagline-slide {
   position: absolute;
   inset: 0;
   opacity: 0;
-  transform: translateY(18px) scale(0.97);
+  transform: translateY(14px) scale(0.98);
   pointer-events: none;
-  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
@@ -345,76 +338,38 @@ button {
   transform: translateY(0) scale(1);
   pointer-events: auto;
 }
-.tagline-eyebrow-pill {
-  display: inline-flex;
-  padding: 5px 16px;
-  border-radius: var(--r-pill);
-  background: #EEF4FA;
-  color: var(--royal-blue);
-  font-size: 11px;
-  font-weight: 800;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  margin-bottom: 12px;
-}
 .tagline-hero-text {
-  font-size: clamp(26px, 4.2vw, 44px);
-  font-weight: 900;
-  color: var(--navy-dark);
-  line-height: 1.15;
-  letter-spacing: -0.03em;
-  margin-bottom: 10px;
-}
-.tagline-sub-p {
-  font-size: clamp(14px, 1.6vw, 16px);
-  color: var(--text-muted);
-  max-width: 620px;
-  line-height: 1.6;
+  font-size: clamp(26px, 4.2vw, 42px);
+  font-weight: 800;
+  color: var(--royal-blue);
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  margin: 0;
 }
 
-.tagline-progress-nav {
+.tagline-dots-nav {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 12px;
-  margin-top: 26px;
-  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 18px;
   position: relative;
   z-index: 2;
 }
-.tagline-nav-bar {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 6px;
-  padding: 6px 14px;
-  border-radius: 8px;
-  background: transparent;
+.tagline-dot-btn {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #CBD5E1;
+  border: none;
   cursor: pointer;
-  transition: all 0.2s ease;
+  padding: 0;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
-.tagline-nav-title {
-  font-size: 11.5px;
-  font-weight: 700;
-  color: #94A3B8;
-  transition: color 0.2s ease;
-}
-.tagline-nav-fill {
-  width: 52px;
-  height: 3px;
-  border-radius: 2px;
-  background: #E2E8F0;
-  position: relative;
-  overflow: hidden;
-}
-.tagline-nav-bar.active .tagline-nav-title {
-  color: var(--royal-blue);
-}
-.tagline-nav-bar.active .tagline-nav-fill {
+.tagline-dot-btn.active {
+  width: 28px;
+  border-radius: 6px;
   background: var(--royal-blue);
-}
-.tagline-nav-bar:hover .tagline-nav-title {
-  color: var(--navy-dark);
 }
 
 /* ============================================================
@@ -1256,61 +1211,40 @@ button {
 </section>
 
   <!-- ============================================================
-       DYNAMIC SHUFFLING TAGLINES (Come & Fade Animation)
+       DYNAMIC SHUFFLING TAGLINES (Come & Fade Animation - Exact Text)
        ============================================================ -->
   <section class="sec-shuffling-taglines" id="taglines-shuffler" aria-label="Key Theme Pillars">
     <div class="container">
       <div class="taglines-card-wrapper" onmouseenter="pauseTaglineRotation()" onmouseleave="resumeTaglineRotation()">
         
-        <!-- Rotating Tagline Slides -->
+        <!-- Rotating Tagline Slides (Exact Text Only) -->
         <div class="tagline-slides-container">
           
           <div class="tagline-slide active" data-slide-idx="0">
-            <div class="tagline-eyebrow-pill" data-en="PILLAR 01 · VISIONARY VOICES" data-hi="स्तंभ 01 · दूरदर्शी नेतृत्व">PILLAR 01 · VISIONARY VOICES</div>
             <h2 class="tagline-hero-text" data-en="New-Age Thought Leaders." data-hi="न्यू-एज थॉट लीडर्स।">
               New-Age Thought Leaders.
             </h2>
-            <p class="tagline-sub-p" data-en="Uniting seasoned pioneers with forward-thinking visionaries to drive decisive economic momentum." data-hi="अनुभवी अग्रणियों और दूरदर्शी विचारकों को एक साथ लाना ताकि ठोस आर्थिक प्रगति को गति मिल सके।">
-              Uniting seasoned pioneers with forward-thinking visionaries to drive decisive economic momentum.
-            </p>
           </div>
 
           <div class="tagline-slide" data-slide-idx="1">
-            <div class="tagline-eyebrow-pill" data-en="PILLAR 02 · HIGH-IMPACT DIALOGUE" data-hi="स्तंभ 02 · प्रभावशाली संवाद">PILLAR 02 · HIGH-IMPACT DIALOGUE</div>
             <h2 class="tagline-hero-text" data-en="Transformative Ideas." data-hi="परिवर्तनकारी विचार।">
               Transformative Ideas.
             </h2>
-            <p class="tagline-sub-p" data-en="Catalysing breakthrough ideas across industrial expansion, technology, and sustainable growth." data-hi="औद्योगिक विस्तार, तकनीक और सतत विकास में परिवर्तनकारी विचारों को प्रोत्साहित करना।">
-              Catalysing breakthrough ideas across industrial expansion, technology, and sustainable growth.
-            </p>
           </div>
 
           <div class="tagline-slide" data-slide-idx="2">
-            <div class="tagline-eyebrow-pill" data-en="PILLAR 03 · FUTURE FRONTIER" data-hi="स्तंभ 03 · विकास की नई गाथा">PILLAR 03 · FUTURE FRONTIER</div>
             <h2 class="tagline-hero-text" data-en="Reimagining MP's Growth Story." data-hi="रीइमेजिनिंग एमपी'स ग्रोथ स्टोरी।">
               Reimagining MP's Growth Story.
             </h2>
-            <p class="tagline-sub-p" data-en="Unlocking unprecedented opportunities, scale, and global recognition for Madhya Pradesh." data-hi="मध्य प्रदेश के लिए अभूतपूर्व अवसरों, पैमाने और वैश्विक पहचान के नए द्वार खोलना।">
-              Unlocking unprecedented opportunities, scale, and global recognition for Madhya Pradesh.
-            </p>
           </div>
 
         </div>
 
-        <!-- Interactive Progress Navigation Bars -->
-        <div class="tagline-progress-nav" role="tablist">
-          <button type="button" class="tagline-nav-bar active" onclick="jumpToTagline(0)" aria-label="Slide 1: New-Age Thought Leaders">
-            <span class="tagline-nav-title">01 · Thought Leaders</span>
-            <span class="tagline-nav-fill"></span>
-          </button>
-          <button type="button" class="tagline-nav-bar" onclick="jumpToTagline(1)" aria-label="Slide 2: Transformative Ideas">
-            <span class="tagline-nav-title">02 · Transformative Ideas</span>
-            <span class="tagline-nav-fill"></span>
-          </button>
-          <button type="button" class="tagline-nav-bar" onclick="jumpToTagline(2)" aria-label="Slide 3: Reimagining Growth">
-            <span class="tagline-nav-title">03 · Reimagining Growth</span>
-            <span class="tagline-nav-fill"></span>
-          </button>
+        <!-- Dot Navigation Indicators -->
+        <div class="tagline-dots-nav" role="tablist">
+          <button type="button" class="tagline-dot-btn active" onclick="jumpToTagline(0)" aria-label="Slide 1: New-Age Thought Leaders"></button>
+          <button type="button" class="tagline-dot-btn" onclick="jumpToTagline(1)" aria-label="Slide 2: Transformative Ideas"></button>
+          <button type="button" class="tagline-dot-btn" onclick="jumpToTagline(2)" aria-label="Slide 3: Reimagining MP's Growth Story"></button>
         </div>
 
       </div>
@@ -1451,33 +1385,7 @@ button {
     </div>
   </section>
 
-  <!-- ============================================================
-       5. BUILDING A STRONGER MP (Cityscape + Story Row)
-       ============================================================ -->
-  <section class="sec-building-mp" id="overview">
-    <div class="container building-grid">
-      
-      <!-- Left Visual Image -->
-      <div class="building-visual-frame">
-        <img src="assets/mp-cityscape.jpg" alt="Building a stronger Madhya Pradesh Skyline">
-      </div>
 
-      <!-- Right Editorial -->
-      <div class="building-copy-col">
-        <div class="building-tag-heading">
-          <div class="cyan-accent-bar"></div>
-          <h2 class="building-title-text" data-en="Building a stronger Madhya Pradesh." data-hi="सशक्त मध्य प्रदेश का निर्माण।">
-            Building a stronger<br>Madhya Pradesh.
-          </h2>
-        </div>
-
-        <p class="building-body-p" data-en="Across sectors and scale, these makers are creating jobs, strengthening communities and driving sustainable growth. Makers of Progress is our tribute to their journey, their resilience and their vision for a better tomorrow." data-hi="हर क्षेत्र और पैमाने पर, ये निर्माता रोज़गार सृजित कर रहे हैं, समुदायों को सशक्त बना रहे हैं और सतत विकास को गति दे रहे हैं। मेकर्स ऑफ़ प्रोग्रेस उनकी यात्रा, उनकी दृढ़ता और एक बेहतर कल के उनके विज़न को हमारा नमन है।">
-          Across sectors and scale, these makers are creating jobs, strengthening communities and driving sustainable growth. Makers of Progress is our tribute to their journey, their resilience and their vision for a better tomorrow.
-        </p>
-      </div>
-
-    </div>
-  </section>
 
   <!-- ============================================================
        6. MEET THE MAKERS (14 State Leaders & Sectoral Chairs)
@@ -1922,14 +1830,14 @@ const TOTAL_TAGLINES = 3;
 function showTagline(idx) {
   currentTaglineIdx = idx;
   const slides = document.querySelectorAll(".tagline-slide");
-  const navBars = document.querySelectorAll(".tagline-nav-bar");
+  const dots = document.querySelectorAll(".tagline-dot-btn");
 
   slides.forEach((slide, i) => {
     slide.classList.toggle("active", i === idx);
   });
 
-  navBars.forEach((bar, i) => {
-    bar.classList.toggle("active", i === idx);
+  dots.forEach((dot, i) => {
+    dot.classList.toggle("active", i === idx);
   });
 }
 
