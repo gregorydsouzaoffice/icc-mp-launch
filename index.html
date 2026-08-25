@@ -271,82 +271,224 @@ button {
 /* ============================================================
    3. FLOATING EVENT INFO & COUNTDOWN CARD
    ============================================================ */
+/* ============================================================
+   3. FLOATING EVENT INFO & COUNTDOWN CARD (Exact Match to Mockup)
+   ============================================================ */
 .sec-event-card-wrap {
-  padding: 0 0 clamp(40px, 5vw, 60px);
+  padding: 0 0 clamp(48px, 6vw, 72px);
+  position: relative;
 }
 .event-floating-card {
-  background: var(--card-bg);
-  border: 1px solid var(--border-light);
-  border-radius: var(--r-lg);
-  padding: clamp(24px, 3.5vw, 36px);
-  box-shadow: var(--shadow-card);
-  max-width: 820px;
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: 28px;
+  padding: clamp(28px, 4vw, 40px) clamp(20px, 4vw, 44px) clamp(24px, 3.5vw, 32px);
+  box-shadow: 0 20px 50px -10px rgba(15, 30, 61, 0.08);
+  max-width: 900px;
   margin: 0 auto;
   text-align: center;
-}
-.event-card-meta-row {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: clamp(12px, 3vw, 28px);
-  font-size: clamp(12.5px, 1.5vw, 14px);
-  font-weight: 600;
-  color: var(--text-muted);
-  padding-bottom: 20px;
-  border-bottom: 1px solid var(--border-light);
-  flex-wrap: wrap;
-}
-.meta-item-tag {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
+  position: relative;
+  overflow: hidden;
 }
 
-.event-countdown-row {
+/* Background Subtle Cityscape Pattern Watermark */
+.event-floating-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle at 10% 90%, rgba(27, 120, 190, 0.06) 0%, transparent 40%),
+                    radial-gradient(circle at 90% 90%, rgba(27, 120, 190, 0.06) 0%, transparent 40%);
+  pointer-events: none;
+}
+
+.event-card-meta-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #EEF2F6;
+  position: relative;
+  z-index: 2;
+}
+.event-meta-col-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0 16px;
+  text-align: left;
+  position: relative;
+}
+.event-meta-col-item:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 10%;
+  height: 80%;
+  width: 1px;
+  background: #E2E8F0;
+}
+.meta-circle-badge {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #EEF5FC;
+  border: 1px solid #D9E8F8;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: clamp(16px, 4vw, 48px);
-  padding: 24px 0 28px;
+  color: var(--royal-blue);
+  flex-shrink: 0;
 }
-.countdown-unit {
+.meta-circle-badge svg {
+  width: 20px;
+  height: 20px;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 2;
+}
+.meta-stack-txt {
   display: flex;
   flex-direction: column;
-  align-items: center;
 }
-.cd-big-num {
-  font-size: clamp(32px, 4.5vw, 44px);
+.meta-main-bold {
+  font-size: 13.5px;
   font-weight: 800;
   color: var(--navy-dark);
-  line-height: 1;
+  line-height: 1.25;
 }
-.cd-unit-lab {
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--text-light);
-  margin-top: 6px;
+.meta-sub-muted {
+  font-size: 11.5px;
+  color: var(--text-muted);
+  margin-top: 2px;
 }
 
+/* Event Starts In Eyebrow */
+.event-eyebrow-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  margin: 28px 0 20px;
+  position: relative;
+  z-index: 2;
+}
+.event-eyebrow-divider::before,
+.event-eyebrow-divider::after {
+  content: "";
+  width: 42px;
+  height: 1px;
+  background: #CBD5E1;
+}
+.event-eyebrow-txt {
+  font-size: 11.5px;
+  font-weight: 800;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #0C3696;
+}
+
+/* Countdown 4-Boxes Row with Colons */
+.event-countdown-boxes-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(8px, 1.8vw, 16px);
+  margin-bottom: 28px;
+  position: relative;
+  z-index: 2;
+}
+.cd-digit-card {
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: 18px;
+  box-shadow: 0 4px 16px rgba(15, 30, 61, 0.04);
+  padding: clamp(16px, 2.5vw, 22px) clamp(16px, 2.5vw, 24px);
+  min-width: clamp(80px, 13vw, 118px);
+  text-align: center;
+}
+.cd-big-num-bold {
+  font-size: clamp(34px, 4.5vw, 48px);
+  font-weight: 800;
+  color: #0C3696;
+  line-height: 1;
+}
+.cd-label-caption {
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #64748B;
+  margin-top: 6px;
+}
+.cd-colon-separator {
+  font-size: 24px;
+  font-weight: 700;
+  color: #94A3B8;
+  margin-top: -12px;
+  user-select: none;
+}
+
+/* Actions Row */
 .event-card-btn-row {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 14px;
+  position: relative;
+  z-index: 2;
   flex-wrap: wrap;
 }
-.btn-card-royal {
-  background: var(--royal-blue);
+.btn-card-reserve-solid {
+  background: #0B379B;
   color: #FFFFFF;
-  padding: 12px 28px;
+  padding: 13px 32px;
   border-radius: var(--r-pill);
-  font-size: 14px;
+  font-size: 14.5px;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 8px 22px -4px rgba(11, 55, 155, 0.38);
+  transition: all 0.2s ease;
+}
+.btn-card-reserve-solid:hover {
+  background: #082875;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px -4px rgba(11, 55, 155, 0.5);
+}
+.btn-card-calendar-outline {
+  background: #FFFFFF;
+  color: var(--navy-dark);
+  border: 1.5px solid #0B379B;
+  padding: 13px 28px;
+  border-radius: var(--r-pill);
+  font-size: 14.5px;
   font-weight: 700;
   display: inline-flex;
   align-items: center;
   gap: 8px;
   transition: all 0.2s ease;
+}
+.btn-card-calendar-outline:hover {
+  background: #F8FAFC;
+  border-color: #082875;
+  transform: translateY(-1px);
+}
+.download-details-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #1B78BE;
+  margin-top: 18px;
+  transition: color 0.2s ease;
+  position: relative;
+  z-index: 2;
+}
+.download-details-link:hover {
+  color: #0B379B;
+  text-decoration: underline;
 }
 .btn-card-royal:hover {
   background: var(--royal-hover);
@@ -860,9 +1002,13 @@ button {
 
 @media (max-width: 768px) {
   .header-brand-tag { display: none; }
-  .meta-item-tag { font-size: 12px; }
-  .event-countdown-row { gap: 20px; }
-  .cd-big-num { font-size: 28px; }
+  .event-card-meta-grid { grid-template-columns: 1fr; gap: 14px; }
+  .event-meta-col-item:not(:last-child)::after { display: none; }
+  .event-meta-col-item { padding: 0; }
+  .event-countdown-boxes-row { gap: 6px; }
+  .cd-digit-card { min-width: 64px; padding: 12px 8px; border-radius: 14px; }
+  .cd-big-num-bold { font-size: 26px; }
+  .cd-colon-separator { font-size: 18px; margin-top: -8px; }
   .makers-profile-grid { grid-template-columns: repeat(2, 1fr); }
   .dark-form-grid-2 { grid-template-columns: 1fr; }
 }
@@ -873,7 +1019,7 @@ button {
   .hero-display-h1 { font-size: clamp(38px, 12vw, 54px); }
   .makers-profile-grid { grid-template-columns: 1fr; }
   .event-card-btn-row { flex-direction: column; width: 100%; }
-  .btn-card-royal, .btn-card-calendar { width: 100%; justify-content: center; }
+  .btn-card-reserve-solid, .btn-card-calendar-outline { width: 100%; justify-content: center; }
 }
 </style>
 </head>
@@ -953,58 +1099,95 @@ button {
   </section>
 
   <!-- ============================================================
-       3. FLOATING EVENT INFO & COUNTDOWN CARD
+       3. FLOATING EVENT INFO & COUNTDOWN CARD (Exact Match to Mockup)
        ============================================================ -->
   <section class="sec-event-card-wrap">
     <div class="container">
       <div class="event-floating-card">
         
-        <!-- Top Meta Row -->
-        <div class="event-card-meta-row">
-          <div class="meta-item-tag">
-            <span>📍</span>
-            <span data-en="Orion Hall, Brilliant Convention Centre, Indore" data-hi="ओरियन हॉल, ब्रिलियंट कन्वेंशन सेंटर, इंदौर">Orion Hall, Brilliant Convention Centre, Indore</span>
+        <!-- Top Meta 3-Column Grid -->
+        <div class="event-card-meta-grid">
+          
+          <!-- Col 1: Venue -->
+          <div class="event-meta-col-item">
+            <div class="meta-circle-badge">
+              <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+            </div>
+            <div class="meta-stack-txt">
+              <div class="meta-main-bold" data-en="Orion Hall, Brilliant Convention Centre" data-hi="ओरियन हॉल, ब्रिलियंट कन्वेंशन सेंटर">Orion Hall, Brilliant Convention Centre</div>
+              <div class="meta-sub-muted" data-en="Indore, Madhya Pradesh" data-hi="इंदौर, मध्य प्रदेश">Indore, Madhya Pradesh</div>
+            </div>
           </div>
-          <div class="meta-item-tag">
-            <span>📅</span>
-            <strong data-en="Friday, 4th September 2026" data-hi="शुक्रवार, 4 सितंबर 2026">Friday, 4th September 2026</strong>
+
+          <!-- Col 2: Date -->
+          <div class="event-meta-col-item">
+            <div class="meta-circle-badge">
+              <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            </div>
+            <div class="meta-stack-txt">
+              <div class="meta-main-bold" data-en="Friday, 4th September 2026" data-hi="शुक्रवार, 4 सितंबर 2026">Friday, 4th September 2026</div>
+              <div class="meta-sub-muted" data-en="Mark your calendar" data-hi="अपने कैलेंडर में जोड़ें">Mark your calendar</div>
+            </div>
           </div>
-          <div class="meta-item-tag">
-            <span>⏰</span>
-            <span data-en="11:00 AM – 1:30 PM IST" data-hi="प्रातः 11:00 से दोपहर 1:30 बजे">11:00 AM – 1:30 PM IST</span>
+
+          <!-- Col 3: Time -->
+          <div class="event-meta-col-item">
+            <div class="meta-circle-badge">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <div class="meta-stack-txt">
+              <div class="meta-main-bold" data-en="11:00 AM – 1:30 PM IST" data-hi="प्रातः 11:00 से दोपहर 1:30 बजे">11:00 AM – 1:30 PM IST</div>
+              <div class="meta-sub-muted" data-en="India Standard Time" data-hi="भारतीय मानक समय">India Standard Time</div>
+            </div>
           </div>
+
         </div>
 
-        <!-- Middle Countdown Units -->
-        <div class="event-countdown-row" id="event-countdown">
-          <div class="countdown-unit">
-            <div class="cd-big-num tnum" id="cd-d">09</div>
-            <div class="cd-unit-lab" data-en="DAYS" data-hi="दिन">DAYS</div>
+        <!-- Eyebrow: EVENT STARTS IN -->
+        <div class="event-eyebrow-divider">
+          <span class="event-eyebrow-txt" data-en="EVENT STARTS IN" data-hi="कार्यक्रम शुरू होने में शेष">EVENT STARTS IN</span>
+        </div>
+
+        <!-- 4 Digit Cards with Colons -->
+        <div class="event-countdown-boxes-row" id="event-countdown">
+          <div class="cd-digit-card">
+            <div class="cd-big-num-bold tnum" id="cd-d">09</div>
+            <div class="cd-label-caption" data-en="DAYS" data-hi="दिन">DAYS</div>
           </div>
-          <div class="countdown-unit">
-            <div class="cd-big-num tnum" id="cd-h">18</div>
-            <div class="cd-unit-lab" data-en="HOURS" data-hi="घंटे">HOURS</div>
+          <div class="cd-colon-separator">:</div>
+          <div class="cd-digit-card">
+            <div class="cd-big-num-bold tnum" id="cd-h">17</div>
+            <div class="cd-label-caption" data-en="HOURS" data-hi="घंटे">HOURS</div>
           </div>
-          <div class="countdown-unit">
-            <div class="cd-big-num tnum" id="cd-m">18</div>
-            <div class="cd-unit-lab" data-en="MINUTES" data-hi="मिनट">MINUTES</div>
+          <div class="cd-colon-separator">:</div>
+          <div class="cd-digit-card">
+            <div class="cd-big-num-bold tnum" id="cd-m">47</div>
+            <div class="cd-label-caption" data-en="MINUTES" data-hi="मिनट">MINUTES</div>
           </div>
-          <div class="countdown-unit">
-            <div class="cd-big-num tnum" id="cd-s">51</div>
-            <div class="cd-unit-lab" data-en="SECONDS" data-hi="सेकंड">SECONDS</div>
+          <div class="cd-colon-separator">:</div>
+          <div class="cd-digit-card">
+            <div class="cd-big-num-bold tnum" id="cd-s">48</div>
+            <div class="cd-label-caption" data-en="SECONDS" data-hi="सेकंड">SECONDS</div>
           </div>
         </div>
 
         <!-- Buttons Row -->
         <div class="event-card-btn-row">
-          <a href="#rsvp" onclick="openRSVPModal(); return false;" class="btn-card-royal" data-en="Reserve Your Seat &rarr;" data-hi="अपनी सीट आरक्षित करें &rarr;">
+          <a href="#rsvp" onclick="openRSVPModal(); return false;" class="btn-card-reserve-solid" data-en="Reserve Your Seat &rarr;" data-hi="अपनी सीट आरक्षित करें &rarr;">
             <span data-en="Reserve Your Seat" data-hi="अपनी सीट आरक्षित करें">Reserve Your Seat</span>
             <span>&rarr;</span>
           </a>
-          <button type="button" class="btn-card-calendar" onclick="downloadICSFile()" data-en="Add to Calendar 📅" data-hi="कैलेंडर में जोड़ें 📅">
+          <button type="button" class="btn-card-calendar-outline" onclick="downloadICSFile()" data-en="Add to Calendar 📅" data-hi="कैलेंडर में जोड़ें 📅">
             <span data-en="Add to Calendar" data-hi="कैलेंडर में जोड़ें">Add to Calendar</span>
-            <span>📅</span>
+            <svg viewBox="0 0 24 24" style="width:16px;height:16px;stroke:currentColor;fill:none;stroke-width:2;"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
           </button>
+        </div>
+
+        <!-- Download Details Link -->
+        <div>
+          <a href="#rsvp" class="download-details-link" onclick="downloadICSFile(); return false;" data-en="&darr; Download Event Details" data-hi="&darr; कार्यक्रम विवरण डाउनलोड करें">
+            <span data-en="&darr; Download Event Details" data-hi="&darr; कार्यक्रम विवरण डाउनलोड करें">&darr; Download Event Details</span>
+          </a>
         </div>
 
       </div>
