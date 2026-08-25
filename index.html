@@ -371,6 +371,39 @@ button {
   border-radius: 6px;
   background: var(--royal-blue);
 }
+/* ============================================================
+   CHAPTER MISSION STATEMENT / MANIFESTO BANNER
+   ============================================================ */
+.sec-mission-manifesto {
+  padding: 0 0 clamp(28px, 4vw, 48px);
+  position: relative;
+}
+.mission-manifesto-card {
+  background: #FFFFFF;
+  border: 1px solid var(--border-light);
+  border-radius: 20px;
+  padding: clamp(26px, 4vw, 36px) clamp(24px, 4.5vw, 44px);
+  box-shadow: 0 12px 36px -10px rgba(15, 30, 61, 0.06);
+  display: flex;
+  align-items: center;
+  gap: clamp(16px, 3vw, 28px);
+  position: relative;
+  overflow: hidden;
+}
+.mission-accent-bar {
+  width: 4px;
+  min-height: 72px;
+  background: linear-gradient(180deg, var(--royal-blue) 0%, var(--cyan-accent) 100%);
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+.mission-editorial-text {
+  font-size: clamp(15px, 1.9vw, 18.5px);
+  line-height: 1.65;
+  color: var(--navy-dark);
+  font-weight: 500;
+  letter-spacing: -0.01em;
+}
 
 /* ============================================================
    3. FLOATING EVENT INFO & COUNTDOWN CARD (Exact Match to Mockup)
@@ -760,17 +793,34 @@ button {
   color: var(--text-muted);
 }
 
+.makers-group-block {
+  margin-bottom: 44px;
+}
+.makers-group-heading {
+  font-size: 12.5px;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--royal-blue);
+  text-align: center;
+  margin-bottom: 18px;
+}
 .makers-profile-grid {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: clamp(14px, 2vw, 20px);
-  margin-bottom: 32px;
+  margin-bottom: 0;
+}
+.makers-profile-grid.grid-leaders {
+  grid-template-columns: repeat(3, minmax(0, 240px));
+  justify-content: center;
 }
 .maker-profile-card {
   background: var(--card-bg);
   border: 1px solid var(--border-light);
   border-radius: var(--r-md);
-  padding: 12px;
+  padding: 0 0 14px;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   transition: all 0.25s ease;
@@ -780,6 +830,32 @@ button {
   transform: translateY(-4px);
   border-color: var(--border-mid);
   box-shadow: var(--shadow-card);
+}
+.maker-sector-banner {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--navy-dark);
+  color: #FFFFFF;
+  font-size: 9.5px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 8px 10px;
+  line-height: 1.35;
+  min-height: 34px;
+}
+.maker-sector-banner svg {
+  width: 10px;
+  height: 10px;
+  flex-shrink: 0;
+  fill: #FFFFFF;
+}
+.maker-card-body {
+  padding: 12px 12px 0;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 .maker-card-img-wrap {
   width: 100%;
@@ -795,42 +871,30 @@ button {
   object-fit: cover;
   object-position: top center;
 }
+.maker-card-ph {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(160deg, var(--navy-dark), var(--royal-blue));
+  color: #FFFFFF;
+  font-size: 28px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+}
 .maker-card-name {
   font-size: 14.5px;
   font-weight: 800;
   color: var(--royal-blue);
   line-height: 1.2;
 }
-.maker-card-role {
-  font-size: 11.5px;
-  color: var(--text-muted);
-  margin-top: 3px;
-  line-height: 1.35;
-}
 .maker-card-company {
-  font-size: 11px;
-  font-weight: 700;
-  color: var(--navy-dark);
-  margin-top: 2px;
-}
-
-.view-all-makers-btn-wrap {
-  text-align: center;
-}
-.btn-view-all-makers {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  background: #EFF6FF;
-  color: var(--royal-blue);
-  font-size: 13.5px;
-  font-weight: 700;
-  padding: 10px 24px;
-  border-radius: var(--r-pill);
-  transition: all 0.2s ease;
-}
-.btn-view-all-makers:hover {
-  background: #DBEAFE;
+  font-size: 11.5px;
+  font-weight: 600;
+  color: var(--text-muted);
+  margin-top: 4px;
+  line-height: 1.35;
 }
 
 /* ============================================================
@@ -842,29 +906,21 @@ button {
 .dark-rsvp-container-card {
   background: var(--navy-dark);
   border-radius: var(--r-lg);
-  padding: clamp(32px, 5vw, 54px);
+  padding: clamp(28px, 4vw, 44px);
   color: #FFFFFF;
-  display: grid;
-  grid-template-columns: 1fr 1.35fr;
-  gap: clamp(28px, 5vw, 60px);
+  display: block;
+  max-width: 640px;
+  margin: 0 auto;
   box-shadow: 0 30px 70px -10px rgba(15, 30, 61, 0.4);
 }
-.dark-rsvp-left-info {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
 .dark-rsvp-title {
-  font-size: clamp(30px, 4vw, 44px);
-  font-weight: 800;
-  line-height: 1.05;
-  margin-bottom: 14px;
-}
-.dark-rsvp-lead-sub {
   font-size: 15px;
+  font-weight: 800;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
   color: #94A3B8;
-  line-height: 1.6;
-  margin-bottom: 28px;
+  line-height: 1.2;
+  margin-bottom: 22px;
 }
 .dark-rsvp-meta-stack {
   display: flex;
@@ -904,7 +960,14 @@ button {
 .dark-input-label {
   font-size: 12px;
   font-weight: 700;
-  color: #E2E8F0;
+  color: #94A3B8;
+}
+.modal-field-label {
+  font-size: 12px;
+  font-weight: 700;
+  color: #64748B;
+  display: block;
+  margin-bottom: 5px;
 }
 .dark-input-box,
 .dark-select-box {
@@ -986,6 +1049,13 @@ button {
   font-size: 12px;
   color: #94A3B8;
   margin-top: 2px;
+  line-height: 1.55;
+}
+.footer-chapter-email a {
+  color: inherit;
+}
+.footer-chapter-email a:hover {
+  color: #FFD97A;
 }
 .footer-center-credo {
   font-size: 14.5px;
@@ -1097,8 +1167,8 @@ button {
   .pillar-single-item:not(:last-child)::after { display: none; }
   .pillar-single-item:not(:last-child) { border-bottom: 1px solid var(--border-light); }
   .building-grid { grid-template-columns: 1fr; }
-  .makers-profile-grid { grid-template-columns: repeat(3, 1fr); }
-  .dark-rsvp-container-card { grid-template-columns: 1fr; }
+  .makers-profile-grid,
+  .makers-profile-grid.grid-leaders { grid-template-columns: repeat(3, 1fr); }
 }
 
 @media (max-width: 768px) {
@@ -1110,7 +1180,8 @@ button {
   .cd-digit-card { min-width: 64px; padding: 12px 8px; border-radius: 14px; }
   .cd-big-num-bold { font-size: 26px; }
   .cd-colon-separator { font-size: 18px; margin-top: -8px; }
-  .makers-profile-grid { grid-template-columns: repeat(2, 1fr); }
+  .makers-profile-grid,
+  .makers-profile-grid.grid-leaders { grid-template-columns: repeat(2, 1fr); }
   .dark-form-grid-2 { grid-template-columns: 1fr; }
 }
 
@@ -1118,7 +1189,8 @@ button {
   .header-logo-img { height: 32px; }
   .btn-reserve-nav { padding: 7px 14px; font-size: 12px; }
   .hero-display-h1 { font-size: clamp(38px, 12vw, 54px); }
-  .makers-profile-grid { grid-template-columns: 1fr; }
+  .makers-profile-grid,
+  .makers-profile-grid.grid-leaders { grid-template-columns: 1fr; }
   .event-card-btn-row { flex-direction: column; width: 100%; }
   .btn-card-reserve-solid, .btn-card-calendar-outline { width: 100%; justify-content: center; }
 }
@@ -1146,13 +1218,8 @@ button {
 
     <!-- Right Actions -->
     <div class="header-right-actions">
-      <div class="lang-toggle-pill" role="group" aria-label="Language Selector">
-        <button type="button" class="lang-pill-btn active" id="btn-lang-en" onclick="setLanguage('en')">EN</button>
-        <button type="button" class="lang-pill-btn" id="btn-lang-hi" onclick="setLanguage('hi')">हिंदी</button>
-      </div>
-
-      <a href="#rsvp" onclick="openRSVPModal(); return false;" class="btn-reserve-nav" data-en="Reserve Your Seat &rarr;" data-hi="सीट आरक्षित करें &rarr;">
-        <span data-en="Reserve Your Seat" data-hi="सीट आरक्षित करें">Reserve Your Seat</span>
+      <a href="#rsvp" class="btn-reserve-nav">
+        <span>RSVP</span>
         <span>&rarr;</span>
       </a>
     </div>
@@ -1252,6 +1319,29 @@ button {
   </section>
 
   <!-- ============================================================
+       CHAPTER MISSION STATEMENT / MANIFESTO BANNER
+       ============================================================ -->
+  <section class="sec-mission-manifesto" id="mission-manifesto">
+    <div class="container">
+      <div class="mission-manifesto-card">
+        
+        <!-- Left Accent Bar -->
+        <div class="mission-accent-bar" aria-hidden="true"></div>
+
+        <!-- Right Copy Block -->
+        <div class="mission-copy-wrap">
+          <p class="mission-editorial-text" 
+             data-en="&lsquo;Makers of Progress&rsquo; brings together niche experts and industry leaders from diverse verticals who are shaping MP&rsquo;s growth from the ground up. As a bridge between industry and government, the Chapter will enable informed dialogue and relevant policy thinking to unlock opportunities and write MP&rsquo;s next growth story."
+             data-hi="&lsquo;मेकर्स ऑफ़ प्रोग्रेस&rsquo; विभिन्न क्षेत्रों के विशेषज्ञ और उद्योगपतियों को एक साथ लाता है जो जमीनी स्तर से मध्य प्रदेश के विकास को आकार दे रहे हैं। उद्योग और सरकार के बीच एक सेतु के रूप में, यह चैप्टर नए अवसरों को खोलने और मध्य प्रदेश की विकास गाथा लिखने के लिए सार्थक संवाद और नीतिगत सोच को सक्षम करेगा।">
+            <strong style="color: var(--royal-blue);">&lsquo;Makers of Progress&rsquo;</strong> brings together niche experts and industry leaders from diverse verticals who are shaping MP&rsquo;s growth from the ground up. As a bridge between industry and government, the Chapter will enable informed dialogue and relevant policy thinking to unlock opportunities and write MP&rsquo;s next growth story.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
        3. FLOATING EVENT INFO & COUNTDOWN CARD (Exact Match to Mockup)
        ============================================================ -->
   <section class="sec-event-card-wrap">
@@ -1326,20 +1416,9 @@ button {
 
         <!-- Buttons Row -->
         <div class="event-card-btn-row">
-          <a href="#rsvp" onclick="openRSVPModal(); return false;" class="btn-card-reserve-solid" data-en="Reserve Your Seat &rarr;" data-hi="अपनी सीट आरक्षित करें &rarr;">
-            <span data-en="Reserve Your Seat" data-hi="अपनी सीट आरक्षित करें">Reserve Your Seat</span>
+          <a href="#rsvp" class="btn-card-reserve-solid">
+            <span>RSVP</span>
             <span>&rarr;</span>
-          </a>
-          <button type="button" class="btn-card-calendar-outline" onclick="downloadICSFile()" data-en="Add to Calendar 📅" data-hi="कैलेंडर में जोड़ें 📅">
-            <span data-en="Add to Calendar" data-hi="कैलेंडर में जोड़ें">Add to Calendar</span>
-            <svg viewBox="0 0 24 24" style="width:16px;height:16px;stroke:currentColor;fill:none;stroke-width:2;"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-          </button>
-        </div>
-
-        <!-- Download Details Link -->
-        <div>
-          <a href="#rsvp" class="download-details-link" onclick="downloadICSFile(); return false;" data-en="&darr; Download Event Details" data-hi="&darr; कार्यक्रम विवरण डाउनलोड करें">
-            <span data-en="&darr; Download Event Details" data-hi="&darr; कार्यक्रम विवरण डाउनलोड करें">&darr; Download Event Details</span>
           </a>
         </div>
 
@@ -1401,14 +1480,19 @@ button {
         </p>
       </div>
 
-      <!-- Grid of Profile Cards -->
-      <div class="makers-profile-grid" id="makers-roster-grid"></div>
+      <div class="makers-group-block">
+        <h3 class="makers-group-heading">National Leadership</h3>
+        <div class="makers-profile-grid grid-leaders" id="national-roster-grid"></div>
+      </div>
 
-      <div class="view-all-makers-btn-wrap">
-        <a href="#rsvp" class="btn-view-all-makers" onclick="openRSVPModal(); return false;" data-en="View All Makers &rarr;" data-hi="सभी निर्माताओं को देखें &rarr;">
-          <span data-en="View All Makers" data-hi="सभी निर्माताओं को देखें">View All Makers</span>
-          <span>&rarr;</span>
-        </a>
+      <div class="makers-group-block">
+        <h3 class="makers-group-heading">State Leadership</h3>
+        <div class="makers-profile-grid grid-leaders" id="state-roster-grid"></div>
+      </div>
+
+      <div class="makers-group-block">
+        <h3 class="makers-group-heading">Sectoral Chairs</h3>
+        <div class="makers-profile-grid" id="sectoral-roster-grid"></div>
       </div>
 
     </div>
@@ -1420,63 +1504,34 @@ button {
   <section class="sec-dark-rsvp" id="rsvp">
     <div class="container">
       <div class="dark-rsvp-container-card">
-        
-        <!-- Left Info -->
-        <div class="dark-rsvp-left-info">
-          <h2 class="dark-rsvp-title" data-en="Reserve your seat." data-hi="अपनी सीट आरक्षित करें।">
-            Reserve your seat.
-          </h2>
-          <p class="dark-rsvp-lead-sub" data-en="Be part of an evening that celebrates vision, leadership and the spirit of progress." data-hi="एक ऐसी शाम का हिस्सा बनें जो विज़न, नेतृत्व और प्रगति की भावना का उत्सव मनाती है।">
-            Be part of an evening that celebrates vision, leadership and the spirit of progress.
-          </p>
-
-          <div class="dark-rsvp-meta-stack">
-            <div class="meta-row-item">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-              <div>
-                <strong data-en="Friday, 4th September 2026" data-hi="शुक्रवार, 4 सितंबर 2026">Friday, 4th September 2026</strong><br>
-                <span style="font-size: 13px; color: #94A3B8;">11:00 AM – 1:30 PM IST</span>
-              </div>
-            </div>
-
-            <div class="meta-row-item">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-              <div data-en="Orion Hall, Brilliant Convention Centre, Indore" data-hi="ओरियन हॉल, ब्रिलियंट कन्वेंशन सेंटर, इंदौर">
-                Orion Hall, Brilliant Convention Centre,<br>Indore
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Right Form (SheetDB Sync) -->
-        <div class="dark-rsvp-right-form">
+          <h2 class="dark-rsvp-title">RSVP</h2>
           <form class="dark-rsvp-form" id="dark-rsvp-form" onsubmit="handleDarkRSVPSubmit(event)">
             
             <div class="dark-form-grid-2">
               <div class="dark-input-field-wrap">
-                <label class="dark-input-label" for="df-name" data-en="Full Name *" data-hi="पूरा नाम *">Full Name *</label>
-                <input type="text" class="dark-input-box" id="df-name" required placeholder="e.g. Rajesh Sharma">
+                <label class="dark-input-label" for="df-name">Full Name *</label>
+                <input type="text" class="dark-input-box" id="df-name" required autocomplete="name">
               </div>
               <div class="dark-input-field-wrap">
-                <label class="dark-input-label" for="df-email" data-en="Email Address *" data-hi="ईमेल पता *">Email Address *</label>
-                <input type="email" class="dark-input-box" id="df-email" required placeholder="e.g. rajesh@example.com">
-              </div>
-            </div>
-
-            <div class="dark-form-grid-2">
-              <div class="dark-input-field-wrap">
-                <label class="dark-input-label" for="df-phone" data-en="Mobile Number *" data-hi="मोबाइल नंबर *">Mobile Number *</label>
-                <input type="tel" class="dark-input-box" id="df-phone" required placeholder="e.g. +91 98765 43210">
-              </div>
-              <div class="dark-input-field-wrap">
-                <label class="dark-input-label" for="df-org" data-en="Organisation / Enterprise *" data-hi="संस्थान / कंपनी *">Organisation / Enterprise *</label>
-                <input type="text" class="dark-input-box" id="df-org" required placeholder="e.g. Indore Industries Ltd">
+                <label class="dark-input-label" for="df-email">Email Address *</label>
+                <input type="email" class="dark-input-box" id="df-email" required autocomplete="email">
               </div>
             </div>
 
             <div class="dark-form-grid-2">
               <div class="dark-input-field-wrap">
-                <label class="dark-input-label" for="df-desig" data-en="Designation" data-hi="पदनाम">Designation</label>
+                <label class="dark-input-label" for="df-phone">Mobile Number *</label>
+                <input type="tel" class="dark-input-box" id="df-phone" required autocomplete="tel">
+              </div>
+              <div class="dark-input-field-wrap">
+                <label class="dark-input-label" for="df-org">Organisation / Enterprise *</label>
+                <input type="text" class="dark-input-box" id="df-org" required autocomplete="organization">
+              </div>
+            </div>
+
+            <div class="dark-form-grid-2">
+              <div class="dark-input-field-wrap">
+                <label class="dark-input-label" for="df-desig">Designation</label>
                 <select class="dark-select-box" id="df-desig">
                   <option value="Managing Director">Managing Director</option>
                   <option value="Founder / CEO">Founder / CEO</option>
@@ -1486,7 +1541,7 @@ button {
                 </select>
               </div>
               <div class="dark-input-field-wrap">
-                <label class="dark-input-label" for="df-seats" data-en="Number of Seats" data-hi="सीटों की संख्या">Number of Seats</label>
+                <label class="dark-input-label" for="df-seats">Number of Seats</label>
                 <select class="dark-select-box" id="df-seats">
                   <option value="1 Seat">1 Seat</option>
                   <option value="2 Seats">2 Seats</option>
@@ -1496,24 +1551,18 @@ button {
             </div>
 
             <button type="submit" class="btn-confirm-seat-gold" id="btn-submit-dark" style="width: 100%;">
-              <span data-en="Confirm My Seat" data-hi="मेरी सीट पक्की करें">Confirm My Seat</span>
+              <span>Confirm My Seat</span>
               <span>&rarr;</span>
             </button>
-            <p class="dark-form-footer-caption" data-en="Seats are limited. Confirm your attendance today." data-hi="सीटें सीमित हैं। आज ही अपनी उपस्थिति दर्ज करें।">
-              Seats are limited. Confirm your attendance today.
-            </p>
           </form>
 
           <!-- Confirmed Success State -->
           <div id="dark-rsvp-success" style="display: none; padding: 20px 0; text-align: center;">
             <div style="width: 50px; height: 50px; border-radius: 50%; background: rgba(229,168,59,0.2); color: #E5A83B; font-size: 26px; display: inline-flex; align-items: center; justify-content: center; margin-bottom: 12px;">✓</div>
-            <h3 style="font-size: 22px; font-weight: 800; color: #FFD97A;" data-en="Seat Reserved Successfully!" data-hi="सीट सफलतापूर्वक आरक्षित!">Seat Reserved Successfully!</h3>
-            <p style="color: #94A3B8; font-size: 14px; margin: 8px 0 16px;">Thank you for confirming your presence. A formal invitation pass has been recorded by the Secretariat.</p>
+            <h3 style="font-size: 22px; font-weight: 800; color: #FFD97A;">Seat Reserved Successfully!</h3>
+            <p style="color: #94A3B8; font-size: 14px; margin: 8px 0 16px;">Thank you for confirming your presence.</p>
             <a href="#" id="dark-wa-share-btn" target="_blank" class="btn-confirm-seat-gold" style="background: #25D366; color: #fff; display: inline-flex;">Share on WhatsApp</a>
           </div>
-
-        </div>
-
       </div>
     </div>
   </section>
@@ -1531,7 +1580,11 @@ button {
         <img src="assets/logos/icc100-blue.png" alt="ICC 100 Centenary Logo" class="footer-icc-logo">
         <div>
           <div class="footer-org-name">INDIAN CHAMBER OF COMMERCE</div>
-          <div class="footer-chapter-email">Madhya Pradesh State Chapter | indore@iccindia.org</div>
+          <div class="footer-chapter-email">
+            Madhya Pradesh State Chapter<br>
+            <a href="mailto:sunil.sharma@indianchamber.net">sunil.sharma@indianchamber.net</a><br>
+            <a href="tel:+919977074069">9977074069</a>
+          </div>
         </div>
       </div>
 
@@ -1548,7 +1601,6 @@ button {
 
     <div class="footer-bottom-legal">
       <div>&copy; 2026 Indian Chamber of Commerce (ICC). All rights reserved.</div>
-      <div>Makers of Progress – Madhya Pradesh Chapter Launch | Privacy Policy | Terms &amp; Conditions</div>
     </div>
 
   </div>
@@ -1569,25 +1621,35 @@ button {
       </div>
     </div>
 
-    <h2 style="font-size: 22px; font-weight: 800; color: var(--navy-dark); margin-bottom: 6px;" data-en="Reserve Your Delegate Seat" data-hi="अपनी सीट आरक्षित करें">
-      Reserve Your Delegate Seat
-    </h2>
-    <div style="font-size: 12.5px; color: var(--royal-blue); font-weight: 600; margin-bottom: 16px;">
-      📅 Friday, 4th Sept 2026 · Orion Hall, BCC, Indore
-    </div>
+    <h2 style="font-size: 15px; font-weight: 800; letter-spacing: 0.22em; text-transform: uppercase; color: #64748B; margin-bottom: 18px;">RSVP</h2>
 
     <form id="pop-modal-form" onsubmit="handleModalRSVPSubmit(event)" style="display: flex; flex-direction: column; gap: 12px;">
       <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
-        <input type="text" class="dark-input-box" style="border: 1px solid var(--border-mid);" id="pop-name" required placeholder="Full Name *">
-        <input type="tel" class="dark-input-box" style="border: 1px solid var(--border-mid);" id="pop-phone" required placeholder="Mobile Number *">
+        <div>
+          <label class="modal-field-label" for="pop-name">Full Name *</label>
+          <input type="text" class="dark-input-box" style="border: 1px solid var(--border-mid);" id="pop-name" required autocomplete="name">
+        </div>
+        <div>
+          <label class="modal-field-label" for="pop-phone">Mobile Number *</label>
+          <input type="tel" class="dark-input-box" style="border: 1px solid var(--border-mid);" id="pop-phone" required autocomplete="tel">
+        </div>
       </div>
-      <input type="email" class="dark-input-box" style="border: 1px solid var(--border-mid);" id="pop-email" required placeholder="Email Address *">
+      <div>
+        <label class="modal-field-label" for="pop-email">Email Address *</label>
+        <input type="email" class="dark-input-box" style="border: 1px solid var(--border-mid);" id="pop-email" required autocomplete="email">
+      </div>
       <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
-        <input type="text" class="dark-input-box" style="border: 1px solid var(--border-mid);" id="pop-org" required placeholder="Organisation *">
-        <input type="text" class="dark-input-box" style="border: 1px solid var(--border-mid);" id="pop-desig" placeholder="Designation">
+        <div>
+          <label class="modal-field-label" for="pop-org">Organisation *</label>
+          <input type="text" class="dark-input-box" style="border: 1px solid var(--border-mid);" id="pop-org" required autocomplete="organization">
+        </div>
+        <div>
+          <label class="modal-field-label" for="pop-desig">Designation</label>
+          <input type="text" class="dark-input-box" style="border: 1px solid var(--border-mid);" id="pop-desig" autocomplete="organization-title">
+        </div>
       </div>
       <button type="submit" class="btn-confirm-seat-gold" id="btn-submit-modal" style="width: 100%; margin-top: 6px;">
-        <span data-en="Confirm My Seat" data-hi="मेरी सीट पक्की करें">Confirm My Seat</span>
+        <span>Confirm My Seat</span>
         <span>&rarr;</span>
       </button>
     </form>
@@ -1595,7 +1657,7 @@ button {
     <div id="pop-modal-success" style="display: none; padding: 16px 0; text-align: center;">
       <div style="width: 44px; height: 44px; border-radius: 50%; background: #EFF6FF; color: var(--royal-blue); font-size: 22px; display: inline-flex; align-items: center; justify-content: center; margin-bottom: 8px;">✓</div>
       <h3 style="font-size: 20px; font-weight: 800; color: var(--navy-dark);">Seat Reserved!</h3>
-      <p style="color: var(--text-muted); font-size: 13.5px; margin: 6px 0 14px;">Your presence has been recorded by the Secretariat.</p>
+      <p style="color: var(--text-muted); font-size: 13.5px; margin: 6px 0 14px;">Thank you for confirming your presence.</p>
       <a href="#" id="pop-wa-share-btn" target="_blank" class="btn-confirm-seat-gold" style="background: #25D366; color: #fff; width: 100%;">Share on WhatsApp</a>
     </div>
   </div>
@@ -1609,61 +1671,61 @@ button {
    1. COUNCIL DATA (14 Members)
    ------------------------------------------------------------ */
 const COUNCIL = [
-  { name:'Brij Bhushan Agarwal', nameHi:'बृज भूषण अग्रवाल', role:'President', roleHi:'अध्यक्ष', company:'ICC National', photo:'assets/council/brij-bhushan-agarwal.jpeg' },
-  { name:'Ankit Mehta', nameHi:'अंकित मेहता', role:'Chairman', roleHi:'अध्यक्ष', company:'ICC MP Chapter', photo:'assets/council/ankit-mehta.png' },
-  { name:'Tapan Agrawal', nameHi:'तपन अग्रवाल', role:'Co-Chair', roleHi:'सह-अध्यक्ष', company:'Agarwal Coal Corp.', photo:'assets/council/tapan-agrawal.jpg' },
-  { name:'Ankur Khaitan', nameHi:'अंकुर खेतान', role:'Co-Chair · MD & CEO', roleHi:'सह-अध्यक्ष', company:'TACC (LNJ Bhilwara)', photo:'assets/council/ankur-khaitan.jpg' },
-  { name:'Saksham Agrawal', nameHi:'सक्षम अग्रवाल', role:'Director', roleHi:'निदेशक', company:'PATH India', photo:'assets/council/saksham-agrawal.jpg' },
+  { group:'national', name:'Brij Bhushan Agrawal', sector:'President, ICC', company:'Shyam Mettalics and Energy', photo:'assets/council/brij-bhushan-agarwal.jpeg' },
+  { group:'national', name:'Parthiv Neotia', sector:'Senior Vice President, ICC', company:'Ambuja Neotia Group', photo:'' },
+  { group:'national', name:'Keshav Bhajanka', sector:'Vice President, ICC', company:'Century Plyboards', photo:'' },
 
-  { name:'Ankit Agrawal', nameHi:'अंकित अग्रवाल', role:'Director', roleHi:'निदेशक', company:'MDPH (Zed Black)', photo:'assets/council/ankit-agrawal.jpeg' },
-  { name:'Sarthak Doshi', nameHi:'सार्थक दोशी', role:'CEO', roleHi:'सीईओ', company:'Indo Thai Securities', photo:'assets/council/sarthak-doshi.jpg' },
-  { name:'Minaal Sahlot', nameHi:'मीनाल सहलोत', role:'Director', roleHi:'निदेशक', company:'Raj Homes', photo:'assets/council/minaal-sahlot.jpg' },
-  { name:'Rishabh Mehta', nameHi:'ऋषभ मेहता', role:'Director', roleHi:'निदेशक', company:'BCM Group', photo:'assets/council/rishabh-mehta.png' },
-  { name:'Siddharth Bhargava', nameHi:'सिद्धार्थ भार्गव', role:'MD', roleHi:'प्रबंध निदेशक', company:'Rajshree Engineering', photo:'assets/council/siddharth-bhargav.png' },
+  { group:'state', name:'Ankit Mehta', sector:'Chair, ICC MP Chapter', company:'MMC Convert', photo:'assets/council/ankit-mehta.png' },
+  { group:'state', name:'Tapan Agrawal', sector:'Co-Chair, ICC MP Chapter', company:'Agrawal Coal Corporation', photo:'assets/council/tapan-agrawal.jpg' },
+  { group:'state', name:'Ankur Khaitan', sector:'Co-Chair (Bhopal), ICC MP Chapter', company:'LNJ Bhilwara Group', photo:'assets/council/ankur-khaitan.jpg' },
 
-  { name:'Priyesh Nagar', nameHi:'प्रियेश नागर', role:'Managing Partner', roleHi:'प्रबंध भागीदार', company:'Maganlal Chhaganlal', photo:'assets/council/priyesh-nagar.jpeg' },
-  { name:'Udit Birla', nameHi:'उदित बिड़ला', role:'Director', roleHi:'निदेशक', company:'Swara Baby Products', photo:'assets/council/udit-birla.jpeg' },
-  { name:'Sumit Ghorawat', nameHi:'सुमित घोरावत', role:'Co-Founder', roleHi:'सह-संस्थापक', company:'ShopKirana', photo:'assets/council/sumit-ghorawat.jpg' },
-  { name:'Shanu Mehta', nameHi:'शानु मेहता', role:'Co-Founder', roleHi:'सह-संस्थापक', company:'MMC Convert', photo:'assets/council/shanu-mehta.jpg' }
+  { group:'sectoral', name:'Ankit Agrawal', sector:'FMCG', company:'Mysore Deep Perfumery House', photo:'assets/council/ankit-agrawal.jpeg' },
+  { group:'sectoral', name:'Minaal Sahlot', sector:'Real Estate', company:'Raj Group', photo:'assets/council/minaal-sahlot.jpg' },
+  { group:'sectoral', name:'Priyesh Nagar', sector:'Retail', company:'Maganlal Chhaganlal', photo:'assets/council/priyesh-nagar.jpeg' },
+  { group:'sectoral', name:'Rishabh Mehta', sector:'Hospitality', company:'MID India Creations LLP', photo:'assets/council/rishabh-mehta.png' },
+  { group:'sectoral', name:'Saksham Agrawal', sector:'Infrastructure', company:'Path Group', photo:'assets/council/saksham-agrawal.jpg' },
+  { group:'sectoral', name:'Sarthak Doshi', sector:'Investments', company:'Indo Thai Securities', photo:'assets/council/sarthak-doshi.jpg' },
+  { group:'sectoral', name:'Shanu Mehta', sector:'International', company:'MMC Convert', photo:'assets/council/shanu-mehta.jpg' },
+  { group:'sectoral', name:'Siddharth Bhargava', sector:'Manufacturing', company:'Rajshree Engineering', photo:'assets/council/siddharth-bhargav.png' },
+  { group:'sectoral', name:'Sumit Ghorawat', sector:'Technology', company:'Direct (ShopKirana)', photo:'assets/council/sumit-ghorawat.jpg' },
+  { group:'sectoral', name:'Udit Birla', sector:'Health & Hygiene', company:'Swara Baby Products', photo:'assets/council/udit-birla.jpeg' }
 ];
 
-let currentLang = "en";
+function initials(name) {
+  const parts = String(name || '').trim().split(/\s+/);
+  return (parts[0].charAt(0) + (parts.length > 1 ? parts[parts.length - 1].charAt(0) : '')).toUpperCase();
+}
 
-function setLanguage(lang) {
-  currentLang = lang;
-  document.documentElement.lang = lang;
-
-  document.getElementById("btn-lang-en")?.classList.toggle("active", lang === "en");
-  document.getElementById("btn-lang-hi")?.classList.toggle("active", lang === "hi");
-
-  const translatables = document.querySelectorAll("[data-en][data-hi]");
-  translatables.forEach(el => {
-    const text = (lang === "hi") ? el.getAttribute("data-hi") : el.getAttribute("data-en");
-    if (text) el.innerHTML = text;
-  });
-
-  renderCouncil();
+function makerCard(m) {
+  const ini = initials(m.name);
+  const photo = m.photo
+    ? `<img src="${m.photo}" alt="${m.name}" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="maker-card-ph" style="display:none">${ini}</div>`
+    : `<div class="maker-card-ph">${ini}</div>`;
+  return `
+    <article class="maker-profile-card">
+      <div class="maker-sector-banner">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.9L22 10l-5 4.4L18.2 22 12 18.2 5.8 22 7 14.4 2 10l7.1-1.1z"/></svg>
+        <span>${m.sector}</span>
+      </div>
+      <div class="maker-card-body">
+        <div class="maker-card-img-wrap">${photo}</div>
+        <h3 class="maker-card-name">${m.name}</h3>
+        <p class="maker-card-company">${m.company}</p>
+      </div>
+    </article>`;
 }
 
 function renderCouncil() {
-  const container = document.getElementById("makers-roster-grid");
-  if (!container) return;
-
-  const isHi = (currentLang === "hi");
-  container.innerHTML = COUNCIL.map(m => {
-    const name = isHi ? (m.nameHi || m.name) : m.name;
-    const role = isHi ? (m.roleHi || m.role) : m.role;
-    return `
-      <article class="maker-profile-card">
-        <div class="maker-card-img-wrap">
-          <img src="${m.photo}" alt="${name}" loading="lazy">
-        </div>
-        <h3 class="maker-card-name">${name}</h3>
-        <p class="maker-card-role">${role}</p>
-        <p class="maker-card-company">${m.company}</p>
-      </article>
-    `;
-  }).join("");
+  const groups = [
+    { id: 'national-roster-grid', group: 'national' },
+    { id: 'state-roster-grid', group: 'state' },
+    { id: 'sectoral-roster-grid', group: 'sectoral' }
+  ];
+  groups.forEach(({ id, group }) => {
+    const el = document.getElementById(id);
+    if (!el) return;
+    el.innerHTML = COUNCIL.filter(m => m.group === group).map(makerCard).join('');
+  });
 }
 
 /* ------------------------------------------------------------
