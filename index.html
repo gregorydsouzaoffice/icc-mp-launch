@@ -112,7 +112,7 @@ button {
    ============================================================ */
 .site-header {
   background: var(--card-bg);
-  padding: 16px 0;
+  padding: 14px 0;
   border-bottom: 1px solid var(--border-light);
   position: sticky;
   top: 0;
@@ -138,7 +138,7 @@ button {
   transform: translateX(-50%);
 }
 .header-logo-img {
-  height: 42px;
+  height: 72px;
   width: auto;
 }
 .header-right-actions {
@@ -1006,11 +1006,11 @@ button {
   background: var(--gold-hover);
   transform: translateY(-2px);
 }
-.dark-form-footer-caption {
-  font-size: 12px;
-  color: #94A3B8;
+.dark-form-error {
+  font-size: 13px;
+  color: #FCA5A5;
   text-align: center;
-  margin-top: 6px;
+  margin: 0;
 }
 
 /* ============================================================
@@ -1159,6 +1159,7 @@ button {
    RESPONSIVE QUERIES
    ============================================================ */
 @media (max-width: 1024px) {
+  .header-logo-img { height: 60px; }
   .hero-split-grid { grid-template-columns: 1fr; text-align: center; }
   .hero-description-p { margin: 0 auto; }
   .hero-map-col { order: -1; }
@@ -1186,7 +1187,7 @@ button {
 }
 
 @media (max-width: 480px) {
-  .header-logo-img { height: 32px; }
+  .header-logo-img { height: 52px; }
   .btn-reserve-nav { padding: 7px 14px; font-size: 12px; }
   .hero-display-h1 { font-size: clamp(38px, 12vw, 54px); }
   .makers-profile-grid,
@@ -1506,49 +1507,34 @@ button {
       <div class="dark-rsvp-container-card">
           <h2 class="dark-rsvp-title">RSVP</h2>
           <form class="dark-rsvp-form" id="dark-rsvp-form" onsubmit="handleDarkRSVPSubmit(event)">
-            
             <div class="dark-form-grid-2">
               <div class="dark-input-field-wrap">
                 <label class="dark-input-label" for="df-name">Full Name *</label>
                 <input type="text" class="dark-input-box" id="df-name" required autocomplete="name">
               </div>
               <div class="dark-input-field-wrap">
-                <label class="dark-input-label" for="df-email">Email Address *</label>
-                <input type="email" class="dark-input-box" id="df-email" required autocomplete="email">
-              </div>
-            </div>
-
-            <div class="dark-form-grid-2">
-              <div class="dark-input-field-wrap">
                 <label class="dark-input-label" for="df-phone">Mobile Number *</label>
                 <input type="tel" class="dark-input-box" id="df-phone" required autocomplete="tel">
               </div>
-              <div class="dark-input-field-wrap">
-                <label class="dark-input-label" for="df-org">Organisation / Enterprise *</label>
-                <input type="text" class="dark-input-box" id="df-org" required autocomplete="organization">
-              </div>
+            </div>
+
+            <div class="dark-input-field-wrap">
+              <label class="dark-input-label" for="df-email">Email Address *</label>
+              <input type="email" class="dark-input-box" id="df-email" required autocomplete="email">
             </div>
 
             <div class="dark-form-grid-2">
               <div class="dark-input-field-wrap">
-                <label class="dark-input-label" for="df-desig">Designation</label>
-                <select class="dark-select-box" id="df-desig">
-                  <option value="Managing Director">Managing Director</option>
-                  <option value="Founder / CEO">Founder / CEO</option>
-                  <option value="Director / Partner">Director / Partner</option>
-                  <option value="President / Vice President">President / Vice President</option>
-                  <option value="Industry Delegate">Industry Delegate</option>
-                </select>
+                <label class="dark-input-label" for="df-org">Organisation *</label>
+                <input type="text" class="dark-input-box" id="df-org" required autocomplete="organization">
               </div>
               <div class="dark-input-field-wrap">
-                <label class="dark-input-label" for="df-seats">Number of Seats</label>
-                <select class="dark-select-box" id="df-seats">
-                  <option value="1 Seat">1 Seat</option>
-                  <option value="2 Seats">2 Seats</option>
-                  <option value="3 Seats">3 Seats</option>
-                </select>
+                <label class="dark-input-label" for="df-desig">Designation</label>
+                <input type="text" class="dark-input-box" id="df-desig" autocomplete="organization-title">
               </div>
             </div>
+
+            <p class="dark-form-error" id="dark-rsvp-error" hidden>Could not save your RSVP. Please try again.</p>
 
             <button type="submit" class="btn-confirm-seat-gold" id="btn-submit-dark" style="width: 100%;">
               <span>Confirm My Seat</span>
@@ -1648,6 +1634,7 @@ button {
           <input type="text" class="dark-input-box" style="border: 1px solid var(--border-mid);" id="pop-desig" autocomplete="organization-title">
         </div>
       </div>
+      <p id="pop-rsvp-error" hidden style="color:#B91C1C;font-size:13px;text-align:center;margin:0;">Could not save your RSVP. Please try again.</p>
       <button type="submit" class="btn-confirm-seat-gold" id="btn-submit-modal" style="width: 100%; margin-top: 6px;">
         <span>Confirm My Seat</span>
         <span>&rarr;</span>
@@ -1672,8 +1659,8 @@ button {
    ------------------------------------------------------------ */
 const COUNCIL = [
   { group:'national', name:'Brij Bhushan Agrawal', sector:'President, ICC', company:'Shyam Mettalics and Energy', photo:'assets/council/brij-bhushan-agarwal.jpeg' },
-  { group:'national', name:'Parthiv Neotia', sector:'Senior Vice President, ICC', company:'Ambuja Neotia Group', photo:'' },
-  { group:'national', name:'Keshav Bhajanka', sector:'Vice President, ICC', company:'Century Plyboards', photo:'' },
+  { group:'national', name:'Parthiv Neotia', sector:'Senior Vice President, ICC', company:'Ambuja Neotia Group', photo:'assets/council/parthiv-neotia.png' },
+  { group:'national', name:'Keshav Bhajanka', sector:'Vice President, ICC', company:'Century Plyboards', photo:'assets/council/keshav-bhajanka.png' },
 
   { group:'state', name:'Ankit Mehta', sector:'Chair, ICC MP Chapter', company:'MMC Convert', photo:'assets/council/ankit-mehta.png' },
   { group:'state', name:'Tapan Agrawal', sector:'Co-Chair, ICC MP Chapter', company:'Agrawal Coal Corporation', photo:'assets/council/tapan-agrawal.jpg' },
@@ -1767,46 +1754,55 @@ async function postRSVP(name, phone, email, org, desig) {
       "Mobile": phone,
       "email": email,
       "Organisation/enterprise": org,
-      "designation ": desig || "Delegate",
-      "designation": desig || "Delegate"
+      "designation ": desig || "Delegate"
     }]
   };
 
-  try {
-    await fetch(SHEETDB_URL, {
-      method: "POST",
-      headers: { "Content-Type": "application/json", "Accept": "application/json" },
-      body: JSON.stringify(payload)
-    });
-  } catch(e) {
-    console.error("SheetDB error:", e);
-  }
+  const res = await fetch(SHEETDB_URL, {
+    method: "POST",
+    headers: { "Content-Type": "application/json", "Accept": "application/json" },
+    body: JSON.stringify(payload)
+  });
+  if (!res.ok) throw new Error("SheetDB " + res.status);
+  return res.json().catch(function () { return {}; });
+}
+
+function setShareLink(id) {
+  const shareText = encodeURIComponent("I'm attending 'Makers of Progress' — Launch of ICC MP Chapter on 4th Sept 2026 in Indore. Register: https://reimaginemp.in");
+  const wa = document.getElementById(id);
+  if (wa) wa.href = "https://api.whatsapp.com/send?text=" + shareText;
 }
 
 async function handleDarkRSVPSubmit(e) {
   e.preventDefault();
   const btn = document.getElementById("btn-submit-dark");
+  const err = document.getElementById("dark-rsvp-error");
+  if (err) err.hidden = true;
   if (btn) { btn.disabled = true; btn.innerHTML = "<span>Saving...</span>"; }
 
   const name = document.getElementById("df-name").value.trim();
   const email = document.getElementById("df-email").value.trim();
   const phone = document.getElementById("df-phone").value.trim();
   const org = document.getElementById("df-org").value.trim();
-  const desig = document.getElementById("df-desig").value;
+  const desig = document.getElementById("df-desig").value.trim();
 
-  await postRSVP(name, phone, email, org, desig);
-
-  document.getElementById("dark-rsvp-form").style.display = "none";
-  document.getElementById("dark-rsvp-success").style.display = "block";
-
-  const shareText = encodeURIComponent(`I'm attending 'Makers of Progress' — Launch of ICC MP Chapter on 4th Sept 2026 in Indore. Register: https://reimaginemp.in`);
-  const wa = document.getElementById("dark-wa-share-btn");
-  if (wa) wa.href = `https://api.whatsapp.com/send?text=${shareText}`;
+  try {
+    await postRSVP(name, phone, email, org, desig);
+    document.getElementById("dark-rsvp-form").style.display = "none";
+    document.getElementById("dark-rsvp-success").style.display = "block";
+    setShareLink("dark-wa-share-btn");
+  } catch (ex) {
+    console.error("SheetDB error:", ex);
+    if (err) err.hidden = false;
+    if (btn) { btn.disabled = false; btn.innerHTML = "<span>Confirm My Seat</span><span>&rarr;</span>"; }
+  }
 }
 
 async function handleModalRSVPSubmit(e) {
   e.preventDefault();
   const btn = document.getElementById("btn-submit-modal");
+  const err = document.getElementById("pop-rsvp-error");
+  if (err) err.hidden = true;
   if (btn) { btn.disabled = true; btn.innerHTML = "<span>Saving...</span>"; }
 
   const name = document.getElementById("pop-name").value.trim();
@@ -1815,14 +1811,16 @@ async function handleModalRSVPSubmit(e) {
   const org = document.getElementById("pop-org").value.trim();
   const desig = document.getElementById("pop-desig").value.trim();
 
-  await postRSVP(name, phone, email, org, desig);
-
-  document.getElementById("pop-modal-form").style.display = "none";
-  document.getElementById("pop-modal-success").style.display = "block";
-
-  const shareText = encodeURIComponent(`I'm attending 'Makers of Progress' — Launch of ICC MP Chapter on 4th Sept 2026 in Indore. Register: https://reimaginemp.in`);
-  const wa = document.getElementById("pop-wa-share-btn");
-  if (wa) wa.href = `https://api.whatsapp.com/send?text=${shareText}`;
+  try {
+    await postRSVP(name, phone, email, org, desig);
+    document.getElementById("pop-modal-form").style.display = "none";
+    document.getElementById("pop-modal-success").style.display = "block";
+    setShareLink("pop-wa-share-btn");
+  } catch (ex) {
+    console.error("SheetDB error:", ex);
+    if (err) err.hidden = false;
+    if (btn) { btn.disabled = false; btn.innerHTML = "<span>Confirm My Seat</span><span>&rarr;</span>"; }
+  }
 }
 
 /* ------------------------------------------------------------
