@@ -1942,7 +1942,7 @@ button {
           <div id="dark-rsvp-success" style="display: none; padding: 20px 0; text-align: center;">
             <div style="width: 50px; height: 50px; border-radius: 50%; background: rgba(229,168,59,0.2); color: #E5A83B; font-size: 26px; display: inline-flex; align-items: center; justify-content: center; margin-bottom: 12px;">✓</div>
             <h3 style="font-size: 22px; font-weight: 800; color: #FFD97A;">Seat Reserved Successfully!</h3>
-            <p style="color: #94A3B8; font-size: 14px; margin: 8px 0 16px;">Thank you for confirming your presence.</p>
+            <p style="color: #94A3B8; font-size: 14px; margin: 8px 0 16px; line-height: 1.6;">Thank you for confirming your presence in ICC MP Launch Event on 4th September.<br><br>We are looking forward for your gracious presence.</p>
             <a href="#" id="dark-wa-share-btn" target="_blank" class="btn-confirm-seat-gold" style="background: #25D366; color: #fff; display: inline-flex;">Share on WhatsApp</a>
           </div>
       </div>
@@ -2040,7 +2040,7 @@ button {
     <div id="pop-modal-success" style="display: none; padding: 16px 0; text-align: center;">
       <div style="width: 44px; height: 44px; border-radius: 50%; background: #EFF6FF; color: var(--royal-blue); font-size: 22px; display: inline-flex; align-items: center; justify-content: center; margin-bottom: 8px;">✓</div>
       <h3 style="font-size: 20px; font-weight: 800; color: var(--navy-dark);">Seat Reserved!</h3>
-      <p style="color: var(--text-muted); font-size: 13.5px; margin: 6px 0 14px;">Thank you for confirming your presence.</p>
+      <p style="color: var(--text-muted); font-size: 13.5px; margin: 6px 0 14px; line-height: 1.6;">Thank you for confirming your presence in ICC MP Launch Event on 4th September.<br><br>We are looking forward for your gracious presence.</p>
       <a href="#" id="pop-wa-share-btn" target="_blank" class="btn-confirm-seat-gold" style="background: #25D366; color: #fff; width: 100%;">Share on WhatsApp</a>
     </div>
   </div>
@@ -2169,7 +2169,7 @@ async function postRSVP(name, phone, email, org, desig) {
 }
 
 function setShareLink(id) {
-  const shareText = encodeURIComponent("I'm attending 'Makers of Progress' — Launch of ICC MP Chapter on 4th Sept 2026 in Indore. Register: https://reimaginemp.in");
+  const shareText = encodeURIComponent("Thank you for confirming your presence in ICC MP Launch Event on 4th September.\n\nWe are looking forward for your gracious presence.");
   const wa = document.getElementById(id);
   if (wa) wa.href = "https://api.whatsapp.com/send?text=" + shareText;
 }
