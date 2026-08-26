@@ -151,6 +151,18 @@ function knockOut(png, mode) {
 }
 
 fs.mkdirSync(DEST, { recursive: true });
+
+if (process.argv[2]) {
+  const srcPath = process.argv[2];
+  const destPath = process.argv[3];
+  const png = readImage(srcPath);
+  const mode = process.argv[4] || detectBg(png);
+  knockOut(png, mode);
+  fs.writeFileSync(destPath, PNG.sync.write(png));
+  console.log(`${path.basename(destPath)}  (${mode} bg, ${png.width}x${png.height})`);
+  process.exit(0);
+}
+
 const files = fs.readdirSync(SRC);
 
 for (const [key, destName] of Object.entries(PEOPLE)) {

@@ -3,18 +3,18 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
-<meta name="description" content="Makers of Progress — Official Launch of the Indian Chamber of Commerce (ICC) Madhya Pradesh State Chapter. Friday, 4th September 2026, Orion Hall, Brilliant Convention Centre, Indore.">
+<meta name="description" content="Makers of Progress — Official Launch of the Indian Chamber of Commerce (ICC) Madhya Pradesh State Chapter. Friday, 4th September 2026, Brilliant Convention Centre, Indore.">
 <meta name="theme-color" content="#0F1E3D">
 
 <!-- Social Open Graph -->
 <meta property="og:title" content="Makers of Progress — Launching ICC's MP Chapter">
-<meta property="og:description" content="The forces driving MP forward. Friday, 4th September 2026 · Orion Hall, Brilliant Convention Centre, Indore.">
+<meta property="og:description" content="The forces driving MP forward. Friday, 4th September 2026 · Brilliant Convention Centre, Indore.">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Indian Chamber of Commerce — Madhya Pradesh">
 <meta property="og:image" content="assets/theme-logo.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Makers of Progress — Launching ICC's MP Chapter">
-<meta name="twitter:description" content="The forces driving MP forward. Friday, 4th September 2026 · Orion Hall, Brilliant Convention Centre, Indore.">
+<meta name="twitter:description" content="The forces driving MP forward. Friday, 4th September 2026 · Brilliant Convention Centre, Indore.">
 <meta name="twitter:image" content="assets/theme-logo.png">
 
 <link rel="icon" type="image/png" href="assets/logos/icc100-blue.png">
@@ -765,6 +765,75 @@ button {
 }
 
 /* ============================================================
+   WORKING IN COLLABORATION WITH
+   ============================================================ */
+.sec-collab {
+  padding: 0 0 clamp(52px, 7vw, 84px);
+  scroll-margin-top: 110px;
+}
+.collab-head {
+  text-align: center;
+  margin-bottom: clamp(24px, 3vw, 32px);
+}
+.collab-eyebrow {
+  font-size: 11.5px;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--royal-blue);
+  margin-bottom: 8px;
+}
+.collab-heading {
+  font-size: clamp(26px, 3.4vw, 36px);
+  font-weight: 800;
+  color: var(--navy-dark);
+  letter-spacing: -0.03em;
+  line-height: 1.15;
+}
+.collab-heading::after {
+  content: "";
+  display: block;
+  width: 48px;
+  height: 3px;
+  background: var(--gold-btn);
+  margin: 14px auto 0;
+  border-radius: 2px;
+}
+.collab-panel {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  background: #FFFFFF;
+  border: 1px solid var(--border-light);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+}
+.collab-item {
+  margin: 0;
+  min-height: 148px;
+  padding: 28px 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-right: 1px solid var(--border-light);
+  transition: background 0.25s ease;
+}
+.collab-item:last-child {
+  border-right: none;
+}
+.collab-item:hover {
+  background: #F8FAFD;
+}
+.collab-item img {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 92px;
+  object-fit: contain;
+}
+
+/* ============================================================
    6. MEET THE MAKERS GRID (14 Leaders)
    ============================================================ */
 .sec-the-makers {
@@ -811,11 +880,62 @@ button {
   grid-template-columns: repeat(5, 1fr);
   gap: clamp(18px, 2.2vw, 24px);
   margin-bottom: 0;
-  padding: 6px 8px 4px;
+  padding: 10px 12px 8px 16px;
+  overflow: visible;
 }
 .makers-profile-grid.grid-leaders {
   grid-template-columns: repeat(3, minmax(0, 250px));
   justify-content: center;
+}
+.makers-profile-grid.grid-leaders-4 {
+  grid-template-columns: repeat(4, minmax(0, 230px));
+  justify-content: center;
+}
+.secretariat-band {
+  max-width: 540px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 4px 8px;
+  background: #FFFFFF;
+  border: 1px solid #E6ECF4;
+  border-radius: 20px;
+  padding: 10px 32px 10px 6px;
+  box-shadow: 0 12px 32px rgba(15, 30, 61, 0.08);
+}
+.secretariat-band .maker-card-photo {
+  width: 210px;
+  height: 210px;
+  flex-shrink: 0;
+  border-radius: 0;
+  background: transparent;
+}
+.secretariat-band-copy {
+  flex: 1;
+  min-width: 0;
+  padding: 8px 0 8px 8px;
+  text-align: left;
+}
+.secretariat-band-kicker {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--royal-blue);
+  margin-bottom: 8px;
+}
+.secretariat-band-name {
+  font-size: clamp(22px, 2.8vw, 28px);
+  font-weight: 800;
+  color: var(--navy-dark);
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+}
+.secretariat-band-org {
+  margin-top: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #6B7A90;
 }
 .maker-profile-card {
   background: #FFFFFF;
@@ -835,8 +955,8 @@ button {
 }
 .maker-sector-banner {
   position: absolute;
-  top: 16px;
-  left: -8px;
+  top: 14px;
+  left: -10px;
   z-index: 4;
   display: inline-flex;
   align-items: center;
@@ -849,7 +969,7 @@ button {
   text-transform: uppercase;
   padding: 7px 12px 7px 14px;
   line-height: 1.3;
-  max-width: calc(100% - 18px);
+  max-width: calc(100% - 16px);
   border-radius: 0 4px 4px 0;
   box-shadow: 0 4px 10px rgba(15, 30, 61, 0.18);
 }
@@ -857,9 +977,9 @@ button {
   content: "";
   position: absolute;
   left: 0;
-  bottom: -7px;
+  bottom: -8px;
   border-style: solid;
-  border-width: 7px 8px 0 0;
+  border-width: 8px 10px 0 0;
   border-color: #0A1633 transparent transparent transparent;
 }
 .maker-sector-banner svg {
@@ -871,39 +991,41 @@ button {
 .maker-card-photo {
   position: relative;
   width: 100%;
-  height: 228px;
+  height: 216px;
   overflow: hidden;
   border-radius: 16px 16px 0 0;
   background: #FFFFFF;
 }
-.maker-card-halo {
+.maker-card-halo,
+.maker-card-photo img,
+.maker-card-ph {
   position: absolute;
   left: 50%;
-  top: 22%;
-  transform: translateX(-50%);
-  width: 78%;
+  top: 56%;
+  transform: translate(-50%, -50%);
   aspect-ratio: 1;
   border-radius: 50%;
+}
+.maker-card-halo {
+  width: 72%;
   background: var(--royal-blue);
   z-index: 0;
 }
 .maker-card-photo img {
-  position: relative;
+  width: 78%;
+  height: auto;
   z-index: 1;
-  width: 100%;
-  height: 112%;
   object-fit: contain;
   object-position: center 12%;
   filter: grayscale(1) contrast(1.06);
 }
 .maker-card-ph {
-  position: relative;
+  width: 72%;
   z-index: 1;
-  width: 100%;
-  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
+  background: var(--royal-blue);
   color: #FFFFFF;
   font-size: 28px;
   font-weight: 800;
@@ -928,6 +1050,148 @@ button {
   color: #6B7A90;
   margin-top: 4px;
   line-height: 1.35;
+}
+
+/* ============================================================
+   ABOUT ICC
+   ============================================================ */
+.sec-about-icc {
+  padding: clamp(28px, 4vw, 48px) 0 clamp(48px, 6vw, 72px);
+  background: linear-gradient(180deg, #F7FAFD 0%, #E8F0F8 100%);
+  scroll-margin-top: 110px;
+}
+.about-icc-panel {
+  display: grid;
+  grid-template-columns: 1.12fr 0.88fr;
+  background: #FFFFFF;
+  border: 1px solid #D5E3F0;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 28px 64px -24px rgba(15, 30, 61, 0.22);
+  min-height: 460px;
+}
+.about-icc-copy-col {
+  position: relative;
+  padding: clamp(32px, 4.5vw, 56px) clamp(28px, 4vw, 52px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 1;
+}
+.about-icc-copy-col::before {
+  content: "100";
+  position: absolute;
+  right: 18px;
+  top: 8px;
+  font-size: clamp(88px, 12vw, 140px);
+  font-weight: 800;
+  letter-spacing: -0.06em;
+  color: var(--royal-blue);
+  opacity: 0.055;
+  line-height: 1;
+  pointer-events: none;
+}
+.about-icc-eyebrow {
+  font-size: 11.5px;
+  font-weight: 800;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--royal-blue);
+  margin-bottom: 12px;
+}
+.about-icc-heading {
+  font-size: clamp(32px, 4.2vw, 46px);
+  font-weight: 800;
+  color: var(--navy-dark);
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+}
+.about-icc-heading::after {
+  content: "";
+  display: block;
+  width: 52px;
+  height: 3px;
+  background: var(--gold-btn);
+  margin: 14px 0 18px;
+  border-radius: 2px;
+}
+.about-icc-copy {
+  font-size: clamp(14.5px, 1.6vw, 16.5px);
+  line-height: 1.75;
+  color: var(--text-muted);
+  max-width: 540px;
+}
+.about-icc-stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+  margin-top: 28px;
+  padding-top: 22px;
+  border-top: 1px solid var(--border-light);
+}
+.about-icc-stats div {
+  padding-right: 8px;
+}
+.about-icc-stats dt {
+  font-size: clamp(22px, 2.4vw, 28px);
+  font-weight: 800;
+  color: var(--royal-blue);
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+}
+.about-icc-stats dd {
+  margin-top: 4px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-muted);
+  line-height: 1.35;
+}
+.about-founder {
+  margin: 0;
+  position: relative;
+  min-height: 460px;
+  background: var(--navy-dark);
+}
+.about-founder img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 12%;
+  filter: grayscale(1) contrast(1.06);
+  display: block;
+}
+.about-founder figcaption {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 64px 28px 24px;
+  background: linear-gradient(180deg, rgba(10, 19, 41, 0) 0%, rgba(10, 19, 41, 0.92) 70%);
+  color: #FFFFFF;
+}
+.about-founder-name {
+  display: block;
+  font-size: 26px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+}
+.about-founder-role {
+  display: block;
+  margin-top: 6px;
+  font-size: 11.5px;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--gold-btn);
+}
+.about-founder-org {
+  display: block;
+  margin-top: 4px;
+  font-size: 13px;
+  color: #C5D0DE;
 }
 
 /* ============================================================
@@ -1201,8 +1465,11 @@ button {
   .pillar-single-item:not(:last-child)::after { display: none; }
   .pillar-single-item:not(:last-child) { border-bottom: 1px solid var(--border-light); }
   .building-grid { grid-template-columns: 1fr; }
+  .about-icc-panel { grid-template-columns: 1fr; }
+  .about-founder { min-height: 380px; }
   .makers-profile-grid,
   .makers-profile-grid.grid-leaders { grid-template-columns: repeat(3, 1fr); }
+  .makers-profile-grid.grid-leaders-4 { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media (max-width: 768px) {
@@ -1215,16 +1482,36 @@ button {
   .cd-big-num-bold { font-size: 26px; }
   .cd-colon-separator { font-size: 18px; margin-top: -8px; }
   .makers-profile-grid,
-  .makers-profile-grid.grid-leaders { grid-template-columns: repeat(2, 1fr); }
+  .makers-profile-grid.grid-leaders,
+  .makers-profile-grid.grid-leaders-4 { grid-template-columns: repeat(2, 1fr); }
   .dark-form-grid-2 { grid-template-columns: 1fr; }
+  .about-icc-stats { grid-template-columns: repeat(3, 1fr); }
+  .about-founder { min-height: 340px; }
+  .collab-panel { grid-template-columns: 1fr 1fr; }
+  .collab-item {
+    border-bottom: 1px solid var(--border-light);
+  }
+  .collab-item:nth-child(2n) { border-right: none; }
+  .collab-item:nth-child(n + 3) { border-bottom: none; }
+  .collab-item:last-child { border-right: none; }
 }
 
 @media (max-width: 480px) {
   .header-logo-img { height: 52px; }
   .btn-reserve-nav { padding: 7px 14px; font-size: 12px; }
   .hero-display-h1 { font-size: clamp(38px, 12vw, 54px); }
+  .about-icc-copy-col::before { display: none; }
+  .about-founder { min-height: 300px; }
+  .secretariat-band {
+    flex-direction: column;
+    text-align: center;
+    padding: 8px 20px 22px;
+    max-width: 320px;
+  }
+  .secretariat-band-copy { padding: 0; text-align: center; }
   .makers-profile-grid,
-  .makers-profile-grid.grid-leaders { grid-template-columns: 1fr; }
+  .makers-profile-grid.grid-leaders,
+  .makers-profile-grid.grid-leaders-4 { grid-template-columns: 1fr; }
   .event-card-btn-row { flex-direction: column; width: 100%; }
   .btn-card-reserve-solid, .btn-card-calendar-outline { width: 100%; justify-content: center; }
 }
@@ -1376,6 +1663,43 @@ button {
   </section>
 
   <!-- ============================================================
+       ABOUT ICC
+       ============================================================ -->
+  <section class="sec-about-icc" id="about-icc">
+    <div class="container">
+      <div class="about-icc-panel">
+        <div class="about-icc-copy-col">
+          <p class="about-icc-eyebrow">A Century of Service</p>
+          <h2 class="about-icc-heading">About ICC</h2>
+          <p class="about-icc-copy">The Indian Chamber of Commerce, founded by Shri GD Birla in Kolkata in the year 1925, has in recent years been scaling across the globe as India’s National Chamber of Commerce. Having already established offices in 15 states within India and 25 foreign countries, ICC is now setting up its Madhya Pradesh Chapter to actively initiate its operations in the state.</p>
+          <dl class="about-icc-stats">
+            <div>
+              <dt>1925</dt>
+              <dd>Founded in Kolkata</dd>
+            </div>
+            <div>
+              <dt>15</dt>
+              <dd>State offices</dd>
+            </div>
+            <div>
+              <dt>25</dt>
+              <dd>Countries worldwide</dd>
+            </div>
+          </dl>
+        </div>
+        <figure class="about-founder">
+          <img src="assets/council/gd-birla.png" alt="GD Birla, Founder, Indian Chamber of Commerce">
+          <figcaption>
+            <span class="about-founder-name">G D Birla</span>
+            <span class="about-founder-role">Founder</span>
+            <span class="about-founder-org">Indian Chamber of Commerce</span>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
        3. FLOATING EVENT INFO & COUNTDOWN CARD (Exact Match to Mockup)
        ============================================================ -->
   <section class="sec-event-card-wrap">
@@ -1413,7 +1737,7 @@ button {
               <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
             </div>
             <div class="meta-stack-txt">
-              <div class="meta-main-bold" data-en="Orion Hall, Brilliant Convention Centre" data-hi="ओरियन हॉल, ब्रिलियंट कन्वेंशन सेंटर">Orion Hall, Brilliant Convention Centre</div>
+              <div class="meta-main-bold" data-en="Brilliant Convention Centre" data-hi="ब्रिलियंट कन्वेंशन सेंटर">Brilliant Convention Centre</div>
               <div class="meta-sub-muted" data-en="Indore, Madhya Pradesh" data-hi="इंदौर, मध्य प्रदेश">Indore, Madhya Pradesh</div>
             </div>
           </div>
@@ -1498,7 +1822,31 @@ button {
     </div>
   </section>
 
-
+  <!-- ============================================================
+       WORKING IN COLLABORATION WITH
+       ============================================================ -->
+  <section class="sec-collab" id="collaboration">
+    <div class="container">
+      <div class="collab-head">
+        <p class="collab-eyebrow">Government &amp; Trade Bodies</p>
+        <h2 class="collab-heading">Working in collaboration with</h2>
+      </div>
+      <div class="collab-panel">
+        <figure class="collab-item">
+          <img src="assets/partners/mpidc.png" alt="MP Industrial Development Corporation Limited">
+        </figure>
+        <figure class="collab-item">
+          <img src="assets/partners/mpsedc.png" alt="Madhya Pradesh State Electronics Development Corporation">
+        </figure>
+        <figure class="collab-item">
+          <img src="assets/partners/dgft.png" alt="Directorate General of Foreign Trade">
+        </figure>
+        <figure class="collab-item">
+          <img src="assets/partners/fieo.png" alt="Federation of Indian Export Organisations">
+        </figure>
+      </div>
+    </div>
+  </section>
 
   <!-- ============================================================
        6. MEET THE MAKERS (14 State Leaders & Sectoral Chairs)
@@ -1516,7 +1864,7 @@ button {
 
       <div class="makers-group-block">
         <h3 class="makers-group-heading">National Leadership</h3>
-        <div class="makers-profile-grid grid-leaders" id="national-roster-grid"></div>
+        <div class="makers-profile-grid grid-leaders-4" id="national-roster-grid"></div>
       </div>
 
       <div class="makers-group-block">
@@ -1525,8 +1873,23 @@ button {
       </div>
 
       <div class="makers-group-block">
-        <h3 class="makers-group-heading">Sectoral Chairs</h3>
+        <h3 class="makers-group-heading">Sectoral Chairs &amp; Co-Chairs</h3>
         <div class="makers-profile-grid" id="sectoral-roster-grid"></div>
+      </div>
+
+      <div class="makers-group-block">
+        <h3 class="makers-group-heading">Secretariat</h3>
+        <article class="secretariat-band">
+          <div class="maker-card-photo">
+            <div class="maker-card-halo" aria-hidden="true"></div>
+            <img src="assets/council/sunil-sharma.png?v=4" alt="Sunil Sharma, Secretariat, ICC MP">
+          </div>
+          <div class="secretariat-band-copy">
+            <p class="secretariat-band-kicker">Secretariat</p>
+            <h3 class="secretariat-band-name">Sunil Sharma</h3>
+            <p class="secretariat-band-org">ICC MP</p>
+          </div>
+        </article>
       </div>
 
     </div>
@@ -1694,20 +2057,22 @@ const COUNCIL = [
   { group:'national', name:'Brij Bhushan Agrawal', sector:'President, ICC', company:'Shyam Mettalics and Energy', photo:'assets/council/brij-bhushan-agarwal.png' },
   { group:'national', name:'Parthiv Neotia', sector:'Senior Vice President, ICC', company:'Ambuja Neotia Group', photo:'assets/council/parthiv-neotia.png' },
   { group:'national', name:'Keshav Bhajanka', sector:'Vice President, ICC', company:'Century Plyboards', photo:'assets/council/keshav-bhajanka.png' },
+  { group:'national', name:'Dr Rajeev Singh', sector:'Director General, ICC', company:'ICC', photo:'assets/council/rajeev-singh.png?v=7' },
 
-  { group:'state', name:'Ankit Mehta', sector:'Chair, ICC MP Chapter', company:'MMC Convert', photo:'assets/council/ankit-mehta.png' },
-  { group:'state', name:'Tapan Agrawal', sector:'Co-Chair, ICC MP Chapter', company:'Agrawal Coal Corporation', photo:'assets/council/tapan-agrawal.png' },
-  { group:'state', name:'Ankur Khaitan', sector:'Co-Chair (Bhopal), ICC MP Chapter', company:'LNJ Bhilwara Group', photo:'assets/council/ankur-khaitan.png' },
+  { group:'state', name:'Ankit Mehta', sector:'Chair, ICC MP Chapter', company:'MMC Convert', photo:'assets/council/ankit-mehta.png?v=5' },
+  { group:'state', name:'Tapan Agrawal', sector:'Co-Chair, ICC MP Chapter', company:'Emerald Developers', photo:'assets/council/tapan-agrawal.png' },
+  { group:'state', name:'Ankur Khaitan', sector:'Co-Chair (Bhopal), ICC MP Chapter', company:'LNJ Bhilwara Group', photo:'assets/council/ankur-khaitan.png?v=4' },
 
-  { group:'sectoral', name:'Ankit Agrawal', sector:'FMCG', company:'Mysore Deep Perfumery House', photo:'assets/council/ankit-agrawal.png' },
-  { group:'sectoral', name:'Minaal Sahlot', sector:'Real Estate', company:'Raj Group', photo:'assets/council/minaal-sahlot.png' },
-  { group:'sectoral', name:'Priyesh Nagar', sector:'Retail', company:'Maganlal Chhaganlal', photo:'assets/council/priyesh-nagar.png' },
-  { group:'sectoral', name:'Rishabh Mehta', sector:'Hospitality', company:'MID India Creations LLP', photo:'assets/council/rishabh-mehta.png' },
-  { group:'sectoral', name:'Saksham Agrawal', sector:'Infrastructure', company:'Path Group', photo:'assets/council/saksham-agrawal.png' },
+  { group:'sectoral', name:'Ankit Agrawal', sector:'FMCG', company:'Mysore Deep Perfumery House (Zed Black)', photo:'assets/council/ankit-agrawal.png?v=4' },
+  { group:'sectoral', name:'Minaal Sahlot', sector:'Real Estate Co-Chair (Bhopal)', company:'Raj Group', photo:'assets/council/minaal-sahlot.png' },
+  { group:'sectoral', name:'Priyesh Nagar', sector:'Retail', company:'Jewellers Madanlal Chhaganlal', photo:'assets/council/priyesh-nagar.png?v=5' },
+  { group:'sectoral', name:'Rishabh Mehta', sector:'Hospitality', company:'BCM Group', photo:'assets/council/rishabh-mehta.png' },
+  { group:'sectoral', name:'Saksham Agrawal', sector:'Infrastructure', company:'Path Group', photo:'assets/council/saksham-agrawal.png?v=4' },
   { group:'sectoral', name:'Sarthak Doshi', sector:'Investments', company:'Indo Thai Securities', photo:'assets/council/sarthak-doshi.png' },
   { group:'sectoral', name:'Shanu Mehta', sector:'International', company:'MMC Convert', photo:'assets/council/shanu-mehta.png' },
   { group:'sectoral', name:'Siddharth Bhargava', sector:'Manufacturing', company:'Rajshree Engineering', photo:'assets/council/siddharth-bhargav.png' },
   { group:'sectoral', name:'Sumit Ghorawat', sector:'Technology', company:'Direct (ShopKirana)', photo:'assets/council/sumit-ghorawat.png' },
+  { group:'sectoral', name:'Tapan Agrawal', sector:'Real Estate Chair', company:'Emerald Developers', photo:'assets/council/tapan-agrawal.png' },
   { group:'sectoral', name:'Udit Birla', sector:'Health & Hygiene', company:'Swara Baby Products', photo:'assets/council/udit-birla.png' }
 ];
 
@@ -1901,7 +2266,7 @@ function downloadICSFile() {
     "DTEND:20260904T080000Z",
     "SUMMARY:Makers of Progress — ICC Madhya Pradesh Chapter Launch",
     "DESCRIPTION:Official launch of the Indian Chamber of Commerce (ICC) Madhya Pradesh State Chapter.",
-    "LOCATION:Orion Hall, Brilliant Convention Centre, Indore, Madhya Pradesh, India",
+    "LOCATION:Brilliant Convention Centre, Indore, Madhya Pradesh, India",
     "STATUS:CONFIRMED",
     "END:VEVENT",
     "END:VCALENDAR"
